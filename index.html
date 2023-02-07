@@ -6,10 +6,9 @@ title: LC-Linkous.github.io
 <div id="home">
 
   <div class="homePage">
-      {% assign homePage = site.homePage}
       {% for hp in homePage %}
       <h2>{{ hp.title }}</h2>
-      <p> {{hp.content}}</p>
+      <p> {{ hp.content }}</p>
       {% endfor %}
   </div>
 

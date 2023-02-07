@@ -1,18 +1,11 @@
 ---
 layout: home-page
 title:  "Home Page Text Test"
+date: "2023-02-07"
 categories: hometestpost
 ---
 
 <p> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida tincidunt purus quis blandit. Ut mauris diam, placerat nec sapien nec, mattis sagittis diam. Donec id dolor sagittis dolor aliquet mollis. In laoreet convallis ipsum. Fusce risus mauris, commodo eget orci quis, sollicitudin iaculis ante. Aenean volutpat hendrerit porttitor. Phasellus ligula felis, cursus non tortor eget, euismod lacinia lacus. Suspendisse aliquet orci id urna bibendum, finibus interdum ex gravida. Suspendisse id elementum dui. Nulla ultrices finibus euismod.
-    
-        Vestibulum nisl eros, viverra sed tristique id, convallis et elit. Sed luctus leo augue, quis viverra libero rutrum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras in venenatis metus. Cras elit orci, pellentesque et ex et, viverra tempor turpis. Cras mollis eu quam in gravida. Sed ut ornare nulla. Sed ut euismod est. Aliquam varius euismod magna, at bibendum nisl vulputate eget. Fusce suscipit imperdiet iaculis. Pellentesque eget vestibulum quam. Vestibulum consequat eu risus in posuere. In lobortis turpis tincidunt velit congue porta. Ut justo mi, efficitur laoreet magna vel, varius congue magna.
-        
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis pellentesque ante sit amet mattis. Praesent vel mi a eros viverra lobortis. Fusce quis magna vulputate augue porttitor gravida. Mauris erat ante, placerat at justo non, malesuada placerat nisi. Sed pellentesque diam metus, quis dictum nunc laoreet eu. Aenean ultricies, magna quis facilisis varius, nunc quam rhoncus arcu, blandit malesuada arcu nisi in sapien. Praesent aliquet, enim aliquet elementum convallis, orci orci tempus ipsum, in eleifend enim ante at dui. Fusce non dolor lectus.
-        
-        Sed sed pretium magna, sit amet elementum est. Maecenas dictum, leo quis ullamcorper auctor, nunc dui dapibus arcu, vitae congue nunc leo et felis. Fusce aliquet, lectus eu tempor pellentesque, est ante pharetra tortor, sit amet venenatis turpis metus nec nibh. Morbi at magna scelerisque, malesuada tortor sit amet, aliquet leo. Aenean ut tellus ullamcorper, porta nisi sed, interdum ante. Cras sit amet viverra diam. Etiam consequat risus vel massa placerat, id accumsan lacus accumsan. Vivamus aliquam quam consectetur eros eleifend volutpat. In suscipit augue in sapien scelerisque, sed aliquet purus dapibus. Integer in sapien sed felis iaculis rutrum nec eu massa. Vivamus porta dolor eu justo scelerisque, eu aliquet odio tempus. Suspendisse potenti. Mauris dictum magna sed tortor volutpat, finibus facilisis quam scelerisque. Praesent ultrices maximus est, eu congue orci elementum id. Nunc ac diam porta, sollicitudin arcu maximus, tempus tortor.
-        
-        Donec laoreet convallis dolor, eget elementum odio. Ut eu pellentesque velit. Aliquam vel lacus maximus, sagittis nisi ut, egestas felis. Vestibulum dapibus quis eros congue sodales. Ut sit amet justo eget tellus fermentum sagittis. Maecenas tempus, erat nec mattis molestie, purus tellus condimentum ante, nec feugiat est erat vel leo. Suspendisse massa felis, pellentesque non malesuada non, mattis id elit. Nullam mattis sapien lorem, sed aliquam quam imperdiet non. Ut id libero dui. Aenean commodo nisl vitae quam convallis aliquam. Pellentesque sed arcu at nibh elementum feugiat. 
-    
+   
 </p>
