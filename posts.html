@@ -7,20 +7,16 @@ title: LC-Linkous.github.io
 					
 	<article id="projects" class="projects page type-page status-publish hentry">
 		<header class="entry-header">
-			<!-- .entry-header aka post title--> 
 			<h1 class="entry-title">Post Archive</h1>	</header>
-	<div class="entry-content">	
-	<!-- post text  -->
+	  <div class="entry-content">	
 
-  <ul class="posts">
-    {% for post in posts %}
-      {{post}}
-      <p></p>
-    {% endfor %}
+      <h1>Recent Posts</h1>
+      <ul class="posts">
+        {% for post in paginator.posts %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
 
-
-	</article><!-- #projects -->
-	</main><!-- .site-main -->
-
-
+	</article>
+</main>
   
