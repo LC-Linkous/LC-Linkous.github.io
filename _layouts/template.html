@@ -8,157 +8,7 @@
 <title>ForScience.Space – A personal project blog for an engineering Ph.D in progress</title>
 <meta name="robots" content="max-image-preview:large">
 
-<!-- Async WordPress.com Remote Login
-<script id="wpcom_remote_login_js">
-var wpcom_remote_login_extra_auth = '';
-function wpcom_remote_login_remove_dom_node_id( element_id ) {
-	var dom_node = document.getElementById( element_id );
-	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
-}
-function wpcom_remote_login_remove_dom_node_classes( class_name ) {
-	var dom_nodes = document.querySelectorAll( '.' + class_name );
-	for ( var i = 0; i < dom_nodes.length; i++ ) {
-		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
-	}
-}
-function wpcom_remote_login_final_cleanup() {
-	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
-	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
-	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
-	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
-	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
-	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
-}
-
-// Watch for messages back from the remote login
-window.addEventListener( "message", function( e ) {
-	if ( e.origin === "https://r-login.wordpress.com" ) {
-		var data = {};
-		try {
-			data = JSON.parse( e.data );
-		} catch( e ) {
-			wpcom_remote_login_final_cleanup();
-			return;
-		}
-
-		if ( data.msg === 'LOGIN' ) {
-			// Clean up the login check iframe
-			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
-
-			var id_regex = new RegExp( /^[0-9]+$/ );
-			var token_regex = new RegExp( /^.*|.*|.*$/ );
-			if (
-				token_regex.test( data.token )
-				&& id_regex.test( data.wpcomid )
-			) {
-				// We have everything we need to ask for a login
-				var script = document.createElement( "script" );
-				script.setAttribute( "id", "wpcom_remote_login_validate" );
-				script.src = '/remote-login.php?wpcom_remote_login=validate'
-					+ '&wpcomid=' + data.wpcomid
-					+ '&token=' + encodeURIComponent( data.token )
-					+ '&host=' + window.location.protocol
-					+ '//' + window.location.hostname
-					+ '&postid=22'
-					+ '&is_singular=';
-				document.body.appendChild( script );
-			}
-
-			return;
-		}
-
-		// Safari ITP, not logged in, so redirect
-		if ( data.msg === 'LOGIN-REDIRECT' ) {
-			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
-			return;
-		}
-
-		// Safari ITP, storage access failed, remove the request
-		if ( data.msg === 'LOGIN-REMOVE' ) {
-			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
-			var style_zap = document.createElement( 'style' );
-			style_zap.type = 'text/css';
-			style_zap.appendChild( document.createTextNode( css_zap ) );
-			document.body.appendChild( style_zap );
-
-			var e = document.getElementById( 'wpcom_request_access_iframe' );
-			e.parentNode.removeChild( e );
-
-			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
-
-			return;
-		}
-
-		// Safari ITP
-		if ( data.msg === 'REQUEST_ACCESS' ) {
-			console.log( 'request access: safari' );
-
-			// Check ITP iframe enable/disable knob
-			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
-				return;
-			}
-
-			// If we are in a "private window" there is no ITP.
-			var private_window = false;
-			try {
-				var opendb = window.openDatabase( null, null, null, null );
-			} catch( e ) {
-				private_window = true;
-			}
-
-			if ( private_window ) {
-				console.log( 'private window' );
-				return;
-			}
-
-			var iframe = document.createElement( 'iframe' );
-			iframe.id = 'wpcom_request_access_iframe';
-			iframe.setAttribute( 'scrolling', 'no' );
-			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
-			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
-
-			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
-
-			var style = document.createElement( 'style' );
-			style.type = 'text/css';
-			style.id = 'wpcom_request_access_styles';
-			style.appendChild( document.createTextNode( css ) );
-			document.body.appendChild( style );
-
-			document.body.appendChild( iframe );
-		}
-
-		if ( data.msg === 'DONE' ) {
-			wpcom_remote_login_final_cleanup();
-		}
-	}
-}, false );
-
-// Inject the remote login iframe after the page has had a chance to load
-// more critical resources
-window.addEventListener( "DOMContentLoaded", function( e ) {
-	var iframe = document.createElement( "iframe" );
-	iframe.style.display = "none";
-	iframe.setAttribute( "scrolling", "no" );
-	iframe.setAttribute( "id", "wpcom_remote_login_key" );
-	iframe.src = "https://r-login.wordpress.com/remote-login.php"
-		+ "?wpcom_remote_login=key"
-		+ "&origin=aHR0cHM6Ly9mb3JzY2llbmNlLnNwYWNl"
-		+ "&wpcomid=170421242"
-		+ "&time=1675732439";
-	document.body.appendChild( iframe );
-}, false );
-</script> -->
-
-
-<!-- <link rel="dns-prefetch" href="https://s0.wp.com/"> -->
-<!-- <link rel="dns-prefetch" href="https://forsciencespace.wordpress.com/"> -->
-<!-- <link rel="dns-prefetch" href="https://wordpress.com/"> -->
-<!-- <link rel="dns-prefetch" href="https://fonts-api.wp.com/"> -->
-<!-- <link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect"> -->
-<!-- <link rel="alternate" type="application/rss+xml" title="ForScience.Space » Feed" href="https://forscience.space/feed/"> -->
-<!-- <link rel="alternate" type="application/rss+xml" title="ForScience.Space » Comments Feed" href="https://forscience.space/comments/feed/"> -->
-	<script type="text/javascript">
+<script type="text/javascript">
 		/* <![CDATA[ */
 		function addLoadEvent(func) {
 			var oldonload = window.onload;
@@ -236,44 +86,16 @@ var actionbardata = {"siteID":"170421242","siteURL":"https:\/\/forscience.space"
 		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
 	} );
 </script>
-<!-- <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://forsciencespace.wordpress.com/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml">
-<meta name="generator" content="WordPress.com">
-<link rel="canonical" href="https://forscience.space/">
-<link rel="shortlink" href="https://wp.me/Pbx4lI-m">
-<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fforscience.space%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fforscience.space%2F&amp;for=wpcom-auto-discovery"> -->
 
-
-<!-- Jetpack Open Graph Tags -->
-<!-- <meta property="og:type" content="website">
-<meta property="og:title" content="ForScience.Space">
-<meta property="og:description" content="A personal project blog for an engineering Ph.D in progress">
-<meta property="og:url" content="https://forscience.space/">
-<meta property="og:site_name" content="ForScience.Space">
-<meta property="og:image" content="https://forsciencespace.files.wordpress.com/2020/07/icon_plant-frame-2.jpg?w=925">
-<meta property="og:image:alt" content="">
-<meta property="og:locale" content="en_US">
-<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
-<meta name="twitter:text:title" content="Projects">
-<meta name="twitter:image" content="https://forsciencespace.files.wordpress.com/2020/07/icon_plant-frame-2.jpg?w=144">
-<meta name="twitter:card" content="summary"> -->
-
-<!-- End Jetpack Open Graph Tags -->
-
-<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<!-- <link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
 <link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
-<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png">
-<!-- <link rel="search" type="application/opensearchdescription+xml" href="https://forscience.space/osd.xml" title="ForScience.Space">
-<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com"> -->
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png"> -->
 <meta name="theme-color" content="#7d9385">
 <meta name="application-name" content="https://lc-linkous.github.io/">
 <meta name="msapplication-window" content="width=device-width;height=device-height">
 <meta name="msapplication-tooltip" content="A personal project blog for an engineering Ph.D in progress">
-<meta name="msapplication-task" content="name=Subscribe;action-uri=https://lc-linkous.github.io/;icon-uri=https://s0.wp.com/i/favicon.ico">
-<!-- <meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico">
-<meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico">
-<meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico"> -->
-<meta name="description" content="SAMPLE DESCRIPTION">
+<!-- <meta name="msapplication-task" content="name=Subscribe;action-uri=https://lc-linkous.github.io/;icon-uri=https://s0.wp.com/i/favicon.ico"> -->
+<meta name="description" content="SAMPLE DESCRIPTION DEFAULT TEMPLATE">
 <style id="custom-background-css">
 body.custom-background { background-color: #7d9385; }
 </style>
@@ -781,7 +603,7 @@ blockquote,
 
 		<footer id="colophon" class="site-footer">
 							<nav class="main-navigation" aria-label="Footer Primary Menu">
-					<div class="menu-primary-container"><ul id="menu-primary-1" class="primary-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://forscience.space/blog-feed/">Blog Feed</a></li>
+					<!-- <div class="menu-primary-container"><ul id="menu-primary-1" class="primary-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://forscience.space/blog-feed/">Blog Feed</a></li> -->
 <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="https://forscience.space/my-research/">My Research</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item menu-item-29"><a href="https://forscience.space/" aria-current="page">Projects</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="https://forscience.space/blurry-cat-pics/">Gallery</a></li>
@@ -938,9 +760,9 @@ window.addEventListener( "load", function( event ) {
 		</div> -->
 
 		
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		window.WPCOM_sharing_counts = {"https:\/\/forscience.space\/":22};
-	</script>
+	</script> -->
 				<link crossorigin="anonymous" rel="stylesheet" id="all-css-0-2" href="template_files/index_006.css" type="text/css" media="all">
 <script id="comment-like-js-extra">
 var comment_like_text = {"loading":"Loading...","swipeUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
