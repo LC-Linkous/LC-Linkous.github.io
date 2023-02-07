@@ -5,11 +5,13 @@ title: LC-Linkous.github.io
 
 <div id="home">
 
-  <h1> homePageText: </h1>
-  <ul class="homePage">
-    {{home content}}
-  </ul>
-
+  <div class="homePage">
+      {% assign homePage = site.homePage}
+      {% for hp in homePage %}
+      <h2>{{ hp.title }}</h2>
+      <p> {{hp.content}}</p>
+      {% endfor %}
+  </div>
 
   <!-- <h1> Most Recent: </h1>
   <ul class="posts">
@@ -17,7 +19,7 @@ title: LC-Linkous.github.io
     {{content.title}}
   </ul> -->
 
-  <h1>Most Recent Posts</h1>
+  <h1>Recent Posts</h1>
   <ul class="posts">
     {% for post in paginator.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
