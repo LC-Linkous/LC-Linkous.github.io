@@ -5,17 +5,15 @@ title: LC-Linkous.github.io
 
 <main id="main" class="site-main">
 					
-  <div class="post-archive-body">
-    <ul class="listing">
-      {% assign po = site.posts}
-      {% for p in po %}
-      <li>
-        <h2>{{ p.title }}</h2>
-        {{ p.content }}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <ul class="posts">
+    <h3>Latest Posts</h3> 
+    {% for posts in site.posts %}
+    <li>
+        <a href="#">{{posts.title}}</a>
+        <p>{{posts.content}}</p>
+    </li>
+    {% endfor %}
+</ul>
 
 </main>
   
