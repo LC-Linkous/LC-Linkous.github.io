@@ -9,3 +9,7 @@ collections:
     output: true
   homePage:
     output: true
+  projects:
+    output: true
+  resources:
+    output: true
