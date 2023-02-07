@@ -514,14 +514,15 @@ blockquote,
 	
 	<div class="entry-content">
 		
-<p>Main Text</p>
+<p>{{content}}</p>
 
 
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow">
 <p class="has-text-align-center"></p>
 
-<!-- These are blocks that can be linked to with images -->
+
+
 <div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-3 column1-desktop-grid__row-1 column2-desktop-grid__span-3 column2-desktop-grid__start-4 column2-desktop-grid__row-1 column3-desktop-grid__span-3 column3-desktop-grid__start-7 column3-desktop-grid__row-1 column4-desktop-grid__span-3 column4-desktop-grid__start-10 column4-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column3-tablet-grid__span-4 column3-tablet-grid__row-2 column4-tablet-grid__span-4 column4-tablet-grid__start-5 column4-tablet-grid__row-2 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 column3-mobile-grid__span-4 column3-mobile-grid__row-3 column4-mobile-grid__span-4 column4-mobile-grid__row-4">
 <div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
 <!-- CONTENT?? -->
@@ -641,13 +642,49 @@ blockquote,
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 
+<!--  -->
+<!-- <script src="template_files/gprofiles.js" id="grofiles-cards-js"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":""};
+</script> -->
+<!-- <script crossorigin="anonymous" type="text/javascript" src="template_files/wpgroho.js"></script> -->
 
+	<!-- <script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script> -->
 
 		<div style="display:none">
 	</div>
 
 <link crossorigin="anonymous" rel="stylesheet" id="all-css-0-2" href="template_files/index_006.css" type="text/css" media="all">
 
+<!-- <script id="comment-like-js-extra">
+var comment_like_text = {"loading":"Loading...","swipeUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
+</script> -->
 
 <script id="coblocks-lightbox-js-extra">
 var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
@@ -656,3 +693,106 @@ var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous",
 <script id="twentysixteen-script-js-extra">
 var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
 </script>
+
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="template_files/index_002"></script>
+<script type="text/javascript">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+</script>
+
+<script src="template_files/w.js" defer="defer"></script> 
+
+
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+
+<!-- 
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script> -->
+
+<!-- <div class="comment-likes-overlay" style="display: none;"></div><iframe style="display: none;" scrolling="no" id="wpcom_remote_login_key" src="template_files/remote-login.htm"></iframe><script src="template_files/actionbar.js" defer="defer"></script></body></html> -->
