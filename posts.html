@@ -6,15 +6,17 @@ title: LC-Linkous.github.io
 <main id="main" class="site-main">
 					
   <ul class="posts">
-    <h3>Latest Posts</h3> 
-    {% for posts in site.posts %}
+    <h2>Part Archive</h2> 
+    {% for post in site.posts %}
     <li>
-        <a href="#">{{posts.title}}</a>
-        <p>{{posts.content}}</p>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <!-- <a href="#">{{post.title}}</a> -->
+        <p>{{post.datePosted}}</p>
+        <p>{{post.summary}}</p>
+        <p>{{post.categories}}</p>
     </li>
     {% endfor %}
 </ul>
 
 </main>
   
-
