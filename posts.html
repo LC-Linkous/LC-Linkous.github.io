@@ -3,9 +3,26 @@ layout: main-template
 title: LC-Linkous.github.io
 ---
 
-<div id="home">
+<main id="main" class="site-main">
+					
+	<article id="projects" class="projects page type-page status-publish hentry">
+		<header class="entry-header">
+			<!-- .entry-header aka post title--> 
+			<h1 class="entry-title">Post Archive</h1>	</header>
+	<div class="entry-content">	
+	<!-- post text  -->
 
-    <p> Test static posts page </p>
-
+    <div class="posts">
+      {% for p in posts %}
+      <p> {{ hp.content }}</p>
+      {% endfor %}
+      <p></p>
   </div>
+
+
+
+	</article><!-- #projects -->
+	</main><!-- .site-main -->
+
+
   
