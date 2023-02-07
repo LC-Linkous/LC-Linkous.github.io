@@ -2,6 +2,20 @@
 <!-- layout: default -->
 layout: main-template
 ---
-<div id="post">
-    {{ ontent }}
-</div>
+
+<header class="intro post-header">
+    <h1>{{ page.title}}</h1>
+    <h2>{{ page.date }}</h2>
+  </header>
+  
+  <div class="post-body">
+    {{ page.content }}
+  </div>
+
+
+
+<!-- <div id="post">
+    {{ content }}
+</div> -->
+
+

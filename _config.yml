@@ -1,3 +1,11 @@
 markdown: kramdown
 pygments: true
 paginate: 4
+
+collections:
+  posts:
+    output: true
+  gallery:
+    output: true
+  homePage:
+    output: true
