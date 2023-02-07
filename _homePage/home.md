@@ -1,11 +1,10 @@
 ---
-<!-- layout: default -->
-layout: main-template
+layout: home-page
+title:  "Home Page Text Test"
+categories: hometestpost
 ---
-<div id="home">
-    <p>
 
-
+<p> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida tincidunt purus quis blandit. Ut mauris diam, placerat nec sapien nec, mattis sagittis diam. Donec id dolor sagittis dolor aliquet mollis. In laoreet convallis ipsum. Fusce risus mauris, commodo eget orci quis, sollicitudin iaculis ante. Aenean volutpat hendrerit porttitor. Phasellus ligula felis, cursus non tortor eget, euismod lacinia lacus. Suspendisse aliquet orci id urna bibendum, finibus interdum ex gravida. Suspendisse id elementum dui. Nulla ultrices finibus euismod.
     
         Vestibulum nisl eros, viverra sed tristique id, convallis et elit. Sed luctus leo augue, quis viverra libero rutrum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras in venenatis metus. Cras elit orci, pellentesque et ex et, viverra tempor turpis. Cras mollis eu quam in gravida. Sed ut ornare nulla. Sed ut euismod est. Aliquam varius euismod magna, at bibendum nisl vulputate eget. Fusce suscipit imperdiet iaculis. Pellentesque eget vestibulum quam. Vestibulum consequat eu risus in posuere. In lobortis turpis tincidunt velit congue porta. Ut justo mi, efficitur laoreet magna vel, varius congue magna.
@@ -16,7 +15,4 @@ layout: main-template
         
         Donec laoreet convallis dolor, eget elementum odio. Ut eu pellentesque velit. Aliquam vel lacus maximus, sagittis nisi ut, egestas felis. Vestibulum dapibus quis eros congue sodales. Ut sit amet justo eget tellus fermentum sagittis. Maecenas tempus, erat nec mattis molestie, purus tellus condimentum ante, nec feugiat est erat vel leo. Suspendisse massa felis, pellentesque non malesuada non, mattis id elit. Nullam mattis sapien lorem, sed aliquam quam imperdiet non. Ut id libero dui. Aenean commodo nisl vitae quam convallis aliquam. Pellentesque sed arcu at nibh elementum feugiat. 
     
-    
-      </p>
-    
-</div>
+</p>
