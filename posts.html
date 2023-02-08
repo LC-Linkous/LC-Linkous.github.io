@@ -10,10 +10,11 @@ title: LC-Linkous.github.io
     {% for post in site.posts %}
     <li>
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <!-- <a href="#">{{post.title}}</a> -->
-      <p><b>{{post.datePosted}}</b></p>
-      <p>{{post.summary}}</p>
-      <b>categories: {{post.categories}}</b>
+        <p>
+          <b>{{post.datePosted}}</b>
+          {{post.summary}}
+          <b>categories: {{post.categories}}</b>
+        </p>
     </li>
     {% endfor %}
 </ul>
