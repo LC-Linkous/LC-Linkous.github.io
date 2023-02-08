@@ -9,11 +9,11 @@ title: LC-Linkous.github.io
     <h2>Part Archive</h2> 
     {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <!-- <a href="#">{{post.title}}</a> -->
         <p>{{post.datePosted}}</p>
         <p>{{post.summary}}</p>
-        <p>{{post.categories}}</p>
+         "categories:" {{post.categories}}
     </li>
     {% endfor %}
 </ul>
