@@ -11,19 +11,16 @@ title: LC-Linkous.github.io
   {{ content }}    
 
 	</article><!-- #post -->
-	</main><!-- .site-main -->
 
+  <!-- related posts by tags -->
+  <h1>Related Posts</h1>
+  <ul class="posts">
+    {% for post in paginator.posts %}
+      {% if post.category contains page.category %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+      
+    {% endfor %}
+  </ul>
 
-
-
-
-<!-- <div class="project-body">
-  {{ page.content }}
-  <a href="{{ page.wikipedia-url }}">Read more about {{ page.title }} on Wikipedia</a>
-</div> -->
-
-<!-- <div id="post">
-    {{ content }}
-</div> -->
-
-
+</main><!-- .site-main -->
