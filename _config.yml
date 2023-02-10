@@ -13,3 +13,6 @@ collections:
     output: true
   resources:
     output: true
+  tags:
+    output: true
+    permalink: tags/:path/
