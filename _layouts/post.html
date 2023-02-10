@@ -14,10 +14,10 @@ title: LC-Linkous.github.io
 
   <!-- related posts by tags -->
   <h3>Related Posts</h3>
-  <h1>page.data</h1>
+  <h1>{{page.data}}</h1>
   <ul class="posts">
-    {% for post in paginator.posts %}
-      <h1>post.tags</h1>
+    {% for post in posts limit:4 %}
+      <h1>{{post.tags}}</h1>
 
       <!-- {% if post.tags contains page.tag %} -->
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
