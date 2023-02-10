@@ -21,7 +21,7 @@ title: LC-Linkous.github.io
 
   <h1>Recent Posts</h1>
   <ul class="posts">
-    {% for post in posts limit:4 %}
+    {% for post in paginator.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
