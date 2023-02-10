@@ -11,12 +11,13 @@ title: LC-Linkous.github.io
   {{ content }}    
 
 	</article><!-- #post -->
-
+  <h1>{{page.data}}</h1>
   <!-- related posts by tags -->
   <h3>Related Posts</h3>
-  <h1>{{page.data}}</h1>
+
   <ul class="posts">
-    {% for post in paginator.posts %}
+    <!-- {% for post in paginator.posts %} -->
+    {% for post in site.posts %}
       <h1>{{post.tags}}</h1>
 
       <!-- {% if post.tags contains page.tag %} -->
