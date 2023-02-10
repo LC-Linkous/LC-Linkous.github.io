@@ -14,15 +14,15 @@ title: LC-Linkous.github.io
 
   <!-- related posts by tags -->
   <h3>Related Posts</h3>
-  <h1>page.category</h1>
+  <h1>page.data</h1>
   <ul class="posts">
     {% for post in paginator.posts %}
       <h1>post.tags</h1>
 
-      {% if post.tags contains page.tag %}
+      <!-- {% if post.tags contains page.tag %} -->
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
         <p class="link_tags">{{ page.tags }}</p>
-      {% endif %}
+      <!-- {% endif %} -->
       
     {% endfor %}
   </ul>
