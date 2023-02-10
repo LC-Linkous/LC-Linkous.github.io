@@ -16,16 +16,21 @@ title: LC-Linkous.github.io
   <h3>Related Posts</h3>
 
   <ul class="posts">
+    {% assign posts = site.posts %}
+      {% for post in posts limit:5 %}
+        {{ post.title }}
+      {% endfor %}
+
     <!-- {% for post in paginator.posts %} -->
-    {% for post in site.posts %}
-      <h1>{{post.tags}}</h1>
+    <!-- {% for post in posts %} -->
+      <!-- <h1>{{post.tags}}</h1> -->
 
       <!-- {% if post.tags contains page.tag %} -->
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        <p class="link_tags">{{ page.tags }}</p>
+        <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> -->
+        <!-- <p class="link_tags">{{ page.tags }}</p> -->
       <!-- {% endif %} -->
       
-    {% endfor %}
+    <!-- {% endfor %} -->
   </ul>
 
 </main><!-- .site-main -->
