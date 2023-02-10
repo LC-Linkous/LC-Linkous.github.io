@@ -17,10 +17,11 @@ title: LC-Linkous.github.io
   <h1>page.category</h1>
   <ul class="posts">
     {% for post in paginator.posts %}
-      <h1>post.category</h1>
+      <h1>post.tags</h1>
 
-      {% if post.category ==  page.category %}
+      {% if post.tags contains page.tag %}
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <p class="link_tags">{{ page.tags }}</p>
       {% endif %}
       
     {% endfor %}
