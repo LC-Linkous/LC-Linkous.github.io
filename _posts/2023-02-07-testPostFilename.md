@@ -5,6 +5,7 @@ summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orna
 datePosted: "2023-02-07"
 category: testpostCategory
 tag: [testTag,  testTag1]
+tag-name: tag1 tag2 tag3
 ---
 
 <p> 
