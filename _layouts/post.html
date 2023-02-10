@@ -10,10 +10,9 @@ title: LC-Linkous.github.io
   <h3>{{ page.datePosted }}</h3>
   {{ content }}    
   <br>
-  <h4>{{ page.tags }}</h4>
+
+  <h4>{{ page.tags[0] }}</h4>
 	</article><!-- #post -->
-  <!-- <h1>{{page.data}}</h1> -->
-  <!-- related posts by tags -->
   <h3>Related Posts</h3>
   <ul class="posts">
     {% assign counter = 0 %}
