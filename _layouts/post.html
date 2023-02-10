@@ -19,6 +19,9 @@ title: LC-Linkous.github.io
 
 <ul class="posts">
     {% assign posts = site.posts %}
+      {% for post in posts %}
+        {{ post.title }}
+      {% endfor %}
 
   </ul>
 
