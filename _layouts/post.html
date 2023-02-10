@@ -17,18 +17,13 @@ title: LC-Linkous.github.io
   <p>text here</p>
 
 
-<ul class="posts">
-    {% assign posts = site.posts %}
-      <!-- {% for post in posts %}
-        {{ post.title }}
-      {% endfor %} -->
+  <ul class="posts">
+      {% assign posts = site.posts %}
+        {% for post in posts %}
+          {{ post.title }}
+        {% endfor %}
 
 
-    {% for post in posts %}
-      <!-- {% for post in posts %} -->
-      <h1>{{post.title}}</h1>
-      <!-- <p class="link_tags">{{ page.tags }}</p> -->
-    {% endfor %}
 
   </ul>
 
