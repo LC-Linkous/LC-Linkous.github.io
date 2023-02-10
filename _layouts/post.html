@@ -19,9 +19,18 @@ title: LC-Linkous.github.io
 
 <ul class="posts">
     {% assign posts = site.posts %}
-      {% for post in posts %}
+      <!-- {% for post in posts %}
         {{ post.title }}
-      {% endfor %}
+      {% endfor %} -->
+
+
+    {% for post in posts limit:2 %}
+      <!-- {% for post in posts %} -->
+      <h1>{{post.tags}}</h1>
+      <p class="link_tags">{{ page.tags }}</p>
+    {% endfor %}
+
+
 
   </ul>
 
