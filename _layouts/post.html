@@ -24,7 +24,7 @@ title: LC-Linkous.github.io
       {% endfor %} -->
 
 
-    {% for post in posts limit:2 %}
+    {% for post in paginator.posts %}
       <!-- {% for post in posts %} -->
       <h1>{{post.tags}}</h1>
       <p class="link_tags">{{ page.tags }}</p>
