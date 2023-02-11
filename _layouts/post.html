@@ -18,10 +18,15 @@ title: LC-Linkous.github.io
  
   <h3>Related Posts</h3>
   <ul class="posts">
-    <!-- {% assign counter = 0 %} -->
+    {% assign counter = 0 %}
     {% assign posts = site.posts %}
       {% for post in posts %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% if counter<=3 %} 
+          {% if post.tags contains page.tag %} 
+              <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% assign counter=counter | plus:1 %}
+          {% endif %} 
+        {% endif %} 
       {% endfor %}
 
   </ul>
@@ -35,3 +40,13 @@ title: LC-Linkous.github.io
             
           <!-- {% endif %}   -->
         <!-- {% endif %}         -->
+
+<!-- 
+        {% assign posts = site.posts %}
+        {% for post in posts %}
+          {% if counter<=3 %} 
+              <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% assign counter=counter | plus:1 %}
+          {% endif %} 
+        {% endfor %} -->
+  
