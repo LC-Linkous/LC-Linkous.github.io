@@ -6,7 +6,7 @@
 html{font-family:'Open Sans', "Helvetica Neue", sans-serif;
     font-size:10px;font-weight:700;
     -webkit-font-smoothing:antialiased;}
-.wordpress-follow-button *{-webkit-box-sizing:border-box;
+/* .wordpress-follow-button *{-webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;}
     body{margin:0;width:99%;}
@@ -22,8 +22,8 @@ html{font-family:'Open Sans', "Helvetica Neue", sans-serif;
     text-align:center;
     white-space:nowrap;
     border-radius:2px;
-    color:#888;}
-.follow-button a{text-decoration:none;
+    color:#888;} */
+/* .follow-button a{text-decoration:none;
     color:#fff;
     background:#2ea2cc;
     border-radius:2px;
@@ -54,8 +54,8 @@ html{font-family:'Open Sans', "Helvetica Neue", sans-serif;
     -webkit-transition:all 0.3s ease-out;
     -moz-transition:all 0.3s ease-out;
     -o-transition:all 0.3s ease-out;
-    transition:all 0.3s ease-out;}
-.following-button a:hover{background:#2ea2cc;}
+    transition:all 0.3s ease-out;} */
+/* .following-button a:hover{background:#2ea2cc;}
 .following-button a:active{background:#0074a2;}
 .follow-count-arrow{height:0;
     left:2px;
@@ -71,4 +71,4 @@ html{font-family:'Open Sans', "Helvetica Neue", sans-serif;
     position:relative;
     top:1px;}
 .follow-count-arrow span:nth-child(2){border-right-color:#fff;
-    left:2px;top:-7px;}
+    left:2px;top:-7px;} */
