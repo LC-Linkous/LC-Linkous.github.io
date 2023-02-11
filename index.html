@@ -19,14 +19,30 @@ title: LC-Linkous.github.io
       </p>
 </div>
 
-<!-- last 4 recent posts on the bottom of the page -->
 
+<!-- related posts -->
+<h3>Related Posts</h3>
+<ul class="posts">
+  {% assign counter = 0 %}
+  {% assign posts = site.posts %}
+    {% for post in posts %}
+      {% if counter<=3 %} 
+        {% if post.tags contains page.tag-name %} 
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% assign counter=counter | plus:1 %}
+        {% endif %} 
+      {% endif %} 
+    {% endfor %}
+</ul>
+
+
+<!-- last 4 recent posts on the bottom of the page -->
+<!-- 
   <h1>Recent Posts</h1>
   <ul class="posts">
     {% for post in paginator.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
-  <!-- <a href="{{ paginator.previous_page_path }}">Previous Page</a>
-  <a href="{{ paginator.next_page_path }}">Next Page</a> -->
+  </ul> -->
+
 </div>

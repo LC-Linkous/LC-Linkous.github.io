@@ -205,13 +205,21 @@ hr,
 					
 					<!-- Top part of widget window -->
 					<div >
-					<h2 class="widget-title">Popular Posts &amp; Pages</h2>
+					<!-- last 4 recent posts on the bottom of the page -->
+
+					<h2>Recent Posts</h2>
+					<ul class="posts">
+					{% for post in paginator.posts %}
+						<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endfor %}
+					</ul>
+<!-- 				<h2 class="widget-title">Popular Posts &amp; Pages</h2>
 					<ul>
 						<li>
 						<a href="https://lc-linkous.github.io/projects" class="bump-view" data-bump-view="tp" aria-current="page">Projects</a>
 						</li>
 					</ul>
-					
+					 -->
 					</div>
 
 					<div >
