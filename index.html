@@ -6,8 +6,9 @@ title: LC-Linkous.github.io
 <div id="home">
 
 <!-- recent projects -->
-<ul class="posts">
+<ul>
   <li>
+    {% assign post = site.posts.first %}
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <p>
         <b>{{post.datePosted}}</b> <br>
