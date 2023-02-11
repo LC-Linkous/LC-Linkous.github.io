@@ -1,4 +1,4 @@
 ---
 layout: tags
-tag-name: testTag1
+tag-name: tag2
 ---
