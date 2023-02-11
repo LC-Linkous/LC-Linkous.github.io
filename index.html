@@ -17,30 +17,7 @@ title: LC-Linkous.github.io
           <a href="/tags/{{tag}}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
         {% endfor %}
       </p>
- 
-  <br>
-  <br>
-
-  <!-- recent posts -->
-  {% for post in paginator.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}     
-
 </div>
-
-
-
-
-
-
-
-
-
-<!-- most recent post -->
-
-
-
-
 
 <!-- last 4 recent posts on the bottom of the page -->
 
