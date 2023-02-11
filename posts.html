@@ -12,8 +12,11 @@ title: LC-Linkous.github.io
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <p>
           <b>{{post.datePosted}}</b> <br>
-          {{post.summary}} <br>
-          <b>category: {{post.category}}</b>
+          {{post.summary}} 
+          <br>
+          {% for tag in page.tags %}
+          <a class="post" href="/tags/{{tag}}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
 
         </p>
     </li>
