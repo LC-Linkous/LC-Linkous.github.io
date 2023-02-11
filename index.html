@@ -25,9 +25,10 @@ title: LC-Linkous.github.io
 <ul class="posts">
   {% assign counter = 0 %}
   {% assign posts = site.posts %}
+  {% assign firstPost = site.posts.first %}
     {% for post in posts %}
       {% if counter<=3 %} 
-        {% if post.tags contains page.tag-name %} 
+        {% if post.tags contains firstPost.tag-name %} 
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
             {% assign counter=counter | plus:1 %}
         {% endif %} 
