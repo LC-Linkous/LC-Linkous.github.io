@@ -13,27 +13,23 @@ title: LC-Linkous.github.io
 	<!-- post text  -->
 	<!-- <p> Click on an image to view the project page</p> -->
 
-	<!-- project preview grid pattern -->
-	<div class="wp-block-group">
-		<div class="wp-block-group__inner-container is-layout-flow">
-		<p class="has-text-align-center"></p>
-			<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-3 column1-desktop-grid__row-1 column2-desktop-grid__span-3 column2-desktop-grid__start-4 column2-desktop-grid__row-1 column3-desktop-grid__span-3 column3-desktop-grid__start-7 column3-desktop-grid__row-1 column4-desktop-grid__span-3 column4-desktop-grid__start-10 column4-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column3-tablet-grid__span-4 column3-tablet-grid__row-2 column4-tablet-grid__span-4 column4-tablet-grid__start-5 column4-tablet-grid__row-2 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 column3-mobile-grid__span-4 column3-mobile-grid__row-3 column4-mobile-grid__span-4 column4-mobile-grid__row-4">
-				<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
-            		<img src="https://LC-Linkous.github.io/media/icon_plant-frame-2.JPG" width="150" height="150"> 
+	<ul class="gallery">
+		<!-- project preview grid pattern -->
+		<div class="wp-block-group">
+			<div class="wp-block-group__inner-container is-layout-flow">
+			<p class="has-text-align-center"></p>
+				<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-3 column1-desktop-grid__row-1 column2-desktop-grid__span-3 column2-desktop-grid__start-4 column2-desktop-grid__row-1 column3-desktop-grid__span-3 column3-desktop-grid__start-7 column3-desktop-grid__row-1 column4-desktop-grid__span-3 column4-desktop-grid__start-10 column4-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column3-tablet-grid__span-4 column3-tablet-grid__row-2 column4-tablet-grid__span-4 column4-tablet-grid__start-5 column4-tablet-grid__row-2 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 column3-mobile-grid__span-4 column3-mobile-grid__row-3 column4-mobile-grid__span-4 column4-mobile-grid__row-4">
+					{% for img in site.media.imgs %}
+						<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+							<img src=img width="150" height="150"> 
+						</div>
+					{% endfor %}
 				</div>
 
-				<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
-            		<img src="https://LC-Linkous.github.io/media/ga-example.PNG" width="150" height="150">
-       			</div>
-
-				<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none"></div>
-
-				<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none"></div>
+				<p></p>
 			</div>
-
-			<p></p>
 		</div>
-	</div>
+	</ul>
 
 	</article><!-- #gallery -->
 	</main><!-- .site-main -->
