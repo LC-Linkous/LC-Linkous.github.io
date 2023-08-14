@@ -4,6 +4,9 @@
 This repo is a semi-migration from a previous project blog, but not intended to be a full blog. Instead, it is being used to host several tutorials for projects shared on gitub that have additional hardware or physical components. Acedemic research and project highlights are also included. 
 
 
+View the main page here: https://lc-linkous.github.io/
+
+
 ## References
 
 
