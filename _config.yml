@@ -11,7 +11,7 @@ collections:
     output: true
   projects:
     output: true
-  resources:
+  publications:
     output: true
   tags:
     output: true
