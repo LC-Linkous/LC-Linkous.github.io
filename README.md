@@ -11,13 +11,13 @@ View the main page here: https://lc-linkous.github.io/
 
 
 General examples for using Jekyll on Github:
-https://github.com/javasteve99/jekyll-content-modeling-example
-https://github.com/pages-themes/minimal 
+* https://github.com/javasteve99/jekyll-content-modeling-example
+* https://github.com/pages-themes/minimal 
 
 
 Tagging examples:
-https://www.untangled.dev/2020/06/02/tag-management-jekyll/
-https://www.smashingmagazine.com/2016/02/content-modeling-with-jekyll/
+* https://www.untangled.dev/2020/06/02/tag-management-jekyll/
+* https://www.smashingmagazine.com/2016/02/content-modeling-with-jekyll/
 
 
 Image Gallery:
