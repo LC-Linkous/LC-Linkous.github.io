@@ -3,10 +3,17 @@ layout: default
 title: LC-Linkous.github.io
 ---
 
+<!-- <main id="main" class="site-main"> -->
 <main id="main" class="site-main">
-					
+  <article id="posts" class="posts page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1 class="entry-title">Post ARchive</h1>
+    </header>
+
+    <div class="entry-content">
+				
   <ul class="posts">
-    <h1>Post Archive</h1> 
+    <!-- <h1>Post Archive</h1>  -->
     {% for post in site.posts %}
     <li>
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
@@ -24,5 +31,5 @@ title: LC-Linkous.github.io
     {% endfor %}
 </ul>
 
-</main>
+<!-- </main> -->
   
