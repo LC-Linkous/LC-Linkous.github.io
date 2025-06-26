@@ -13,6 +13,8 @@ collections:
     output: true
   publications:
     output: true
+  bookshelf:
+    output: true
   tags:
     output: true
     permalink: tags/:path/
