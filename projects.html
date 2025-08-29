@@ -11,110 +11,124 @@ title: LC-Linkous.github.io
 
     <div class="entry-content">
 
-
-      <!-- AntennaCAT Projects Section -->
-      <h2>AntennaCAT Project</h2>
+      <!-- AntennaCAT and Related Projects Section -->
+      <h2>AntennaCAT Software Suite</h2>
       <dl>
         <dt> Antenna Calculation and Autotuning Tool <a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool"> (AntennaCAT)</a></dt>
         <dd> AntennaCAT is a comprehensive implementation of machine learning to automate, evaluate, and optimize the antenna 
-			design process using EM simulation software. It utilizes a combined antenna designer and internal calculator to 
-			accelerate the CAD construction and EM simulation of several common topologies, while eliminating model disparity
-			 for automated data collection. </dd>
+            design process using EM simulation software. It utilizes a combined antenna designer and internal calculator to 
+            accelerate the CAD construction and EM simulation of several common topologies, while eliminating model disparity
+             for automated data collection. </dd>
 
-		<dd> See the  <a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/edit/main/README.md#release-schedule"> Release Schedule</a> on the main project README for the immediate feature release plans. 
-			For long-term development, feature documentation, how-to guides, and all other information, 
-			refer to the <a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/wiki"> official AntennaCAT Wiki</a>.</dd>
+        <dd> See the  <a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/edit/main/README.md#release-schedule"> Release Schedule</a> on the main project README for the immediate feature release plans. 
+            For long-term development, feature documentation, how-to guides, and all other information, 
+            refer to the <a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/wiki"> official AntennaCAT Wiki</a>.</dd>
 
-		<dd> Less formal information, discussion, and planning happens with the <a href="https://lc-linkous.github.io/tags/antennacat/"> #antennacat tag </a> .</dd>
-		
+        <dd> Less formal information, discussion, and planning happens with the <a href="https://lc-linkous.github.io/tags/antennacat/"> #antennacat tag </a> .</dd>
+        
 
       </dl>
 
+      <!-- Small Hardware Projects Section -->
+      <h2>Hardware Projects</h2>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/TinySA_Python">Python Library for the tinySA device line</a></dt>
+        <dd>The tinySA device line is a series of handheld spectrum analyzers (with some generation capability). This is an unofficial, non-GUI Python API designed 
+            to make serial interfacing a little easier. The repository uses official resources and documentation but is NOT endorsed by the official tinySA product or company. 
+            The python package is available at <a href="https://pypi.org/project/tsapython/">https://pypi.org/project/tsapython/</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/TinySA_Python">Python Library for the NanoVNA device line</a></dt>
+        <dd>This is an unofficial, non-GUI Python API designed to make serial interfacing a little easier. The repository uses official resources and documentation but is NOT endorsed by the official tinySA product or company. 
+        </dd>
+      </dl>
 
       <!-- Optimizer Projects Section -->
       <h2>Optimizer Projects</h2>
       <dl>
         <dt>The <a href="https://github.com/LC-Linkous/objective_function_suite">Objective Function Library and Test Suite</a></dt>
         <dd> This on-going collection of objective functions pulled from popular literature for testing optimizers has 60+ objective functions with 
-			documented solution space, decision space, and objective space with Pareto Front. See README for citations. </dd>
+            documented solution space, decision space, and objective space with Pareto Front. See README for citations. </dd>
       </dl>
 
-	  <dl>
-		<dt>State-Machine Based Optimizer Collection</dt>
-		<dd>This is an on-going collection of optimizers that integrate with the AntennaCAT project. Some are serious, some are not. </a></dd>
-	  
-		<ul>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_python">pso_python</a> 
-			<br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_basic">pso_basic</a>
-			<br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_quantum">pso_quantum</a>
-			<br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
-		  </li>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python">cat_swarm_python</a>
-			<br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/sand_cat_python">sand_cat_python</a>
-			<br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/cat_swarm_quantum">cat_swarm_quantum</a>
-			<br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
-		  </li>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python">chicken_swarm_python</a>
-			<br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm">2015 improved chicken swarm</a>
-			<br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/chicken_swarm_quantum">chicken_swarm_quantum</a>
-			<br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
-		  </li>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/sweep_python">sweep_python</a>
-			<br><strong>Alternate Version:</strong> alternates in base repo
-			<br><strong>Quantum-Inspired Optimizer:</strong> N/A
-			<br><strong>Surrogate Model Version:</strong> N/A
-		  </li>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/bayesian_optimization_python">bayesian optimization_python</a>
-			<br><strong>Alternate Version:</strong> N/A
-			<br><strong>Quantum-Inspired Optimizer:</strong> N/A
-			<br><strong>Surrogate Model Version:</strong> interchangeable surrogate model approximators included in base repo
-		  </li>
-		  <li>
-			<strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/multi_glods_python">multi_glods_python</a>
-			<br><strong>Alternate Version:</strong> N/A
-			<br><strong>Quantum-Inspired Optimizer:</strong> N/A
-			<br><strong>Surrogate Model Version:</strong> N/A
-		  </li>
-		</ul>
-	  </dl>
-	  
-	  
-      <!-- Hardware Projects Section -->
+      <dl>
+        <dt>State-Machine Based Optimizer Collection</dt>
+        <dd>This is an on-going collection of optimizers that integrate with the AntennaCAT project. Some are serious, some are not. </a></dd>
+      
+        <ul>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_python">pso_python</a> 
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_basic">pso_basic</a>
+            <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_quantum">pso_quantum</a>
+            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python">cat_swarm_python</a>
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/sand_cat_python">sand_cat_python</a>
+            <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/cat_swarm_quantum">cat_swarm_quantum</a>
+            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python">chicken_swarm_python</a>
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm">2015 improved chicken swarm</a>
+            <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/chicken_swarm_quantum">chicken_swarm_quantum</a>
+            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/sweep_python">sweep_python</a>
+            <br><strong>Alternate Version:</strong> alternates in base repo
+            <br><strong>Quantum-Inspired Optimizer:</strong> N/A
+            <br><strong>Surrogate Model Version:</strong> N/A
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/bayesian_optimization_python">bayesian optimization_python</a>
+            <br><strong>Alternate Version:</strong> N/A
+            <br><strong>Quantum-Inspired Optimizer:</strong> N/A
+            <br><strong>Surrogate Model Version:</strong> interchangeable surrogate model approximators included in base repo
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/multi_glods_python">multi_glods_python</a>
+            <br><strong>Alternate Version:</strong> N/A
+            <br><strong>Quantum-Inspired Optimizer:</strong> N/A
+            <br><strong>Surrogate Model Version:</strong> N/A
+          </li>
+        </ul>
+      </dl>
+      
+      
+      <!-- Hardware Projects Section (to be updated more with the robotics and computer visions projects)
       <h2>Hardware Projects</h2>
       <dl>
         <dt> <a href="https://github.com/LC-Linkous/TinySA_Python">Python Library for tinySA Ultra</a></dt>
         <dd> A Non-GUI Python API class for the Tiny SA Ultra written to support several personal projects. See README for references. </dd>
       </dl>
-	  <dl>
+      <dl>
         <dt> (Forked) <a href="https://github.com/LC-Linkous/JTAGenum">JTAGenum</a></dt>
         <dd> Forked from cyphunk/JTAGenum. A personal documentation version with some Arduino hardware documentation updates. See README & Wiki for references. </dd>
-      </dl>
-
+      </dl>-->
 
       <!-- Conference Projects Section -->
       <h2>Conference Projects with Code</h2>
       <dl>
         <dt> 2025 <a href="https://github.com/LC-Linkous/2025_URSI_RL_Reconfigurable_Antennas">"Reinforcement Learning Controlled Mechanically Reconfigurable Antennas"</a> </dt>
         <dd> USNC-URSI 2025 NRSM Paper #1237 . Repository for code and demo featured in "Reinforcement Learning Controlled Mechanically Reconfigurable Antennas" presented at the 2025 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA.
-			 Repository will be updated pending publication release + with some additional tutorial material as suggested at the conference. NOTE: there have been some official hardware and firmware updates of the equipment used, so this repo is private until a rework can be done.</dd>
+             Repository will be updated pending publication release + with some additional tutorial material as suggested at the conference. NOTE: there have been some official hardware and firmware updates of the equipment used, so this repo is private until a rework can be done.</dd>
       </dl>
 
       <dl>
         <dt> 2024 <a href="https://github.com/LC-Linkous/2024-APS-URSI-3323">"Machine Learning Assisted Hyperparameter Tuning for Optimization"</a> </dt>
         <dd> The Repository hosting data and select machine learning examples from the paper "Machine Learning Assisted Hyperparameter Tuning for Optimization" 
-			   presented in IEEE AP-S 2024 in Florence, Italy, July 14-19, 2024.</dd>
+               presented in IEEE AP-S 2024 in Florence, Italy, July 14-19, 2024.</dd>
       </dl>
 
-	  <dl>
+      <dl>
         <dt> 2024 <a href="https://github.com/LC-Linkous/2024-URSI-NRSM-1265">"Machine Learning Assisted Optimization Methods for Automated Antenna Design"</a> </dt>
         <dd> The Repository hosting data and select examples from the paper  "Machine Learning Assisted Optimization Methods for Automated Antenna Design"
-			presented at the 2024 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA., 2024.</dd>
+            presented at the 2024 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA., 2024.</dd>
       </dl>
+
+      <!-- Educational Projects and Samples Section -->
 
 
       <!-- Collaborative Projects Section -->
@@ -127,7 +141,8 @@ title: LC-Linkous.github.io
 
 
 
-
     </div> <!-- .entry-content -->
   </article> <!-- #projects -->
 </main> <!-- .site-main -->
+
+
