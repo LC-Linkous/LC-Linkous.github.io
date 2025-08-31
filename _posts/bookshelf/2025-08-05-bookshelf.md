@@ -15,7 +15,7 @@ tags: [bookshelf, antennas, reference_guide]
 
 <div class="justified-content">
 
-<img src="/media/imgs/bookshelf/bookshelf_antenna_books_1.jpg" alt="Antenna Physics by R.J.Zavrel, and Basic Antennas by J.R. Hallas" style="height: 150px; width: auto; max-width: 100%;">
+<img src="/media/imgs/bookshelf/bookshelf_antenna_books_1.jpg" alt="Antenna Physics by R.J.Zavrel, and Basic Antennas by J.R. Hallas" style="height: 350px; width: auto; max-width: 100%;">
 
 <br>
 <h3> From the Shelf: </h3>
