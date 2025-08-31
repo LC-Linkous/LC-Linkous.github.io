@@ -16,12 +16,12 @@ tags: [bookshelf, antennas, sdr]
 
 <div class="justified-content">
 
-<img src="/media/imgs/bookshelf/bookshelf_practical_SDR.jpg" alt="Practical SDR by D. Clark and P. Clark" height="150px">
+<img src="/media/imgs/bookshelf/bookshelf_practical_SDR.jpg" alt="Practical SDR by D. Clark and P. Clark" style="height: 350px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
 
 <br>
 <h3> From the Shelf: </h3>
 <ul>
-    <li>D. Clark and P. Clark, Practical SDR. No Starch Press, 2025. (https://nostarch.com/practical-sdr)</li>
+    <li>D. Clark and P. Clark, Practical SDR. No Starch Press, 2025. (<a href="https://nostarch.com/practical-sdr" target="_blank">https://nostarch.com/practical-sdr</a>)</li>
 </ul>
 
 <p>

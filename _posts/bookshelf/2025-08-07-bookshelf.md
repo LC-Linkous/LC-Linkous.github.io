@@ -15,14 +15,15 @@ tags: [bookshelf, reference_guide, red_team, purple_team]
 
 <div class="justified-content">
 
-<img src="/media/imgs/bookshelf/bookshelf_field_guides.JPG" alt="Antenna Physics by R.J.Zavrel, and Basic Antennas by J.R. Hallas" height="150px">
+<img src="/media/imgs/bookshelf/bookshelf_field_guides.JPG" alt="Red Team Field Manual V2 by B. Clark and N. Downer, Linux Field Manual by T. Bryant, and Purple Team Manual by T. Bryant" style="height: 350px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
 
 <br>
 <h3> From the Shelf: </h3>
 <ul>
-    <li>B. Clark, N. Downer, RTFM: Red Team Field Manual v2. 2022. (https://www.amazon.com/RTFM-Red-Team-Field-Manual/dp/1075091837/)</li>
-    <li>T. Bryant, LFM: Linux Field Manual. 2024. (https://www.amazon.com/dp/1736526782)</li>
-    <li>T. Bryant, PTFM, Purple Team Field Manual. 2024. (https://www.amazon.com/PTFM-2nd-Purple-Field-Manual/dp/1736526790/)</li>
+    <li>B. Clark, N. Downer, RTFM: Red Team Field Manual v2. 2022. (<a href="https://www.amazon.com/RTFM-Red-Team-Field-Manual/dp/1075091837/" target="_blank">https://www.amazon.com/RTFM-Red-Team-Field-Manual/dp/1075091837/</a>)</li>
+    <li>T. Bryant, LFM: Linux Field Manual. 2024. (<a href="https://www.amazon.com/dp/1736526782" target="_blank">https://www.amazon.com/dp/1736526782</a>)</li>
+    <li>T. Bryant, PTFM, Purple Team Field Manual. 2024. (<a href="https://www.amazon.com/PTFM-2nd-Purple-Field-Manual/dp/1736526790/" target="_blank">https://www.amazon.com/PTFM-2nd-Purple-Field-Manual/dp/1736526790/</a>)</li>
+              
 </ul>
 
 <p>

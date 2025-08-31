@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Bookshelf:  "
-summary: "AntennaCAT is now live! ."
+title:  "Bookshelf: Black Hat Bash"
+summary: "Black Hat Bash by N. Aleks and D. Farhi"
 datePosted: "2025-08-13"
 category: bookshelf
 tags: [bookshelf, scripting]
@@ -15,12 +15,13 @@ tags: [bookshelf, scripting]
 
 <div class="justified-content">
 
-<img src="/media/imgs/bookshelf/bookshelf_black_hat_bash.jpg" alt="Black Hat Bash by N. Aleks and D. Farhi" height="150px">
+<img src="/media/imgs/bookshelf/bookshelf_black_hat_bash.jpg" alt="Black Hat Bash by N. Aleks and D. Farhi" style="height: 350px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
 
 <br>
 <h3> From the Shelf: </h3>
 <ul>
-    <li>N. Aleks and D. Farhi, Black Hat Bash. NO STARCH PRESS, INC, 2024. (https://nostarch.com/black-hat-bash)</li>
+    <li>N. Aleks and D. Farhi, Black Hat Bash. NO STARCH PRESS, INC, 2024. (<a href="https://nostarch.com/black-hat-bash" target="_blank">https://nostarch.com/black-hat-bash</a>)</li>
+              
 </ul>
 
 <p>

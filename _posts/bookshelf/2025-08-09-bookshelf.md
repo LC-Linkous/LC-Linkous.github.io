@@ -15,13 +15,14 @@ tags: [bookshelf, reference_guide, red_team, blue_team, osint]
 
 <div class="justified-content">
 
-<img src="/media/imgs/bookshelf/bookshelf_operator_handbook.JPG" alt="Operator Handbook:search.copy.paste.L33T;) : Red Team + OSINT + Blue Team, by J. Picolet (with Netmux)" height="150px">
+<img src="/media/imgs/bookshelf/bookshelf_operator_handbook.JPG" alt="Operator Handbook:search.copy.paste.L33T;) : Red Team + OSINT + Blue Team, by J. Picolet (with Netmux)" style="height: 350px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
 
 <br>
 <h3> From the Shelf: </h3>
 <ul>
     <li>J. Picolet, Operator Handbook: search.copy.paste.L33T;) : Red Team + OSINT + Blue Team. Herndon, Va: Netmux, 2020. 
-    (https://www.amazon.com/Operator-Handbook-Team-OSINT-Reference/dp/B085RR67H5)</li>
+              (<a href="https://www.amazon.com/Operator-Handbook-Team-OSINT-Reference/dp/B085RR67H5" target="_blank">https://www.amazon.com/Operator-Handbook-Team-OSINT-Reference/dp/B085RR67H5</a>)</li>
+              
 </ul>
 
 <p>
