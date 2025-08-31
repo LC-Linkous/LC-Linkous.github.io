@@ -4,7 +4,7 @@ title:  "Cat Antennas"
 summary: "We have AntennaCAT, but also cat antennas made by AntennaCAT"
 datePosted: "2025-08-10"
 category: antennas
-tags: [antennacat, open_source]
+tags: [antennacat, antennas, examples]
 ---
 
 <p> 
