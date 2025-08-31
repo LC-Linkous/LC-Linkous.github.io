@@ -7,16 +7,26 @@ category: antennas
 tags: [antennacat, antennas, examples]
 ---
 
+<style>
+.justified-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+</style>
+
+<div class="justified-content">
+
+
 <p> 
 This material was first featured in the 'Cat Antennas' section of my <a href="https://github.com/LC-Linkous/research_antenna_collection?tab=readme-ov-file#cat-antennas"> research antenna collection GitHub repository</a>.
 </p>
 
 <figure>
-<img src="/media/imgs/antennacat/CatAntenna_2.png" alt="Experimental samples of WiFi antennas with copper conductors shaped like cats." style="width:400px">
+<img src="/media/imgs/antennacat/CatAntenna_2.png" alt="Experimental samples of WiFi antennas with copper conductors shaped like cats." style="width:500px">
 <figcaption>Fig.1 - Experimental samples of WiFi antennas with copper conductors shaped like cats. On the left side are three combinations of the dual-band design labeled with their frequencies. On the right side, Sybil (the inspiration for the design) delicately knocks over carefully placed samples. </figcaption>
 </figure> 
 
-</p>
+<p>
 The Cat Antenna Collection is a group of design where the conductor on the planar patch looks like the outline of a cat's face, complete with ears. These antennas are modified oval patches on double-sided copper FR4 with permittivity of ~4.4. They are designed to operate at two independent and tunable frequencies.
 </p>
 
