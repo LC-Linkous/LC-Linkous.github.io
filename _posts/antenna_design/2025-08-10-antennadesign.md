@@ -44,6 +44,6 @@ AntennaCAT was used to test Particle Swarm Optimization (PSO) variations on the 
 </p>
 
 <p>
-A build of materials, measurement results, and .DXF files for some of the cat antennas are available at <a href="https://github.com/LC-Linkous/research_antenna_collection?tab=readme-ov-file#cat-antennas"> "https://github.com/LC-Linkous/research_antenna_collection</a> 
+A build of materials, measurement results, and .DXF files for some of the cat antennas are available at <a href="https://github.com/LC-Linkous/research_antenna_collection?tab=readme-ov-file#cat-antennas"> https://github.com/LC-Linkous/research_antenna_collection</a> 
 </P>
 
