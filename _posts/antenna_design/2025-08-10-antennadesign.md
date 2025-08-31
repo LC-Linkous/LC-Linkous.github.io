@@ -26,6 +26,8 @@ This material was first featured in the 'Cat Antennas' section of my <a href="ht
 <figcaption>Fig.1 - Experimental samples of WiFi antennas with copper conductors shaped like cats. On the left side are three combinations of the dual-band design labeled with their frequencies. On the right side, Sybil (the inspiration for the design) delicately knocks over carefully placed samples. </figcaption>
 </figure> 
 
+<br>
+
 <p>
 The Cat Antenna Collection is a group of design where the conductor on the planar patch looks like the outline of a cat's face, complete with ears. These antennas are modified oval patches on double-sided copper FR4 with permittivity of ~4.4. They are designed to operate at two independent and tunable frequencies.
 </p>
