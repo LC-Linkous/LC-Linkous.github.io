@@ -27,8 +27,16 @@ tags: [bookshelf, reference_guide, red_team, purple_team]
 </ul>
 
 <p>
-Still waiting on Blue Team Field Manual for pictures, but I also recommend that one 
-
-FORMAT FIX FOR CENTERED
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare mauris at porta ultricies. Aenean a augue non dolor venenatis auctor. Etiam consectetur, tellus ut euismod viverra, purus augue vulputate dui, id pulvinar massa mauris eget orci. Quisque id ullamcorper odio. Phasellus ipsum ex, tincidunt non sodales ac, finibus sit amet eros. Maecenas vel purus orci. In maximus augue ullamcorper posuere fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nisi diam, vehicula eget ornare in, feugiat in quam. Sed volutpat blandit dolor, non auctor diam porta at. Suspendisse a interdum est. Fusce ac posuere ipsum. Ut et tincidunt quam. Quisque aliquam erat et metus mollis fermentum. Mauris et vulputate lectus, eu venenatis enim. 
+This post is to highlight some features of the <i>Red Team Field Manual</i>, <i>Linux Field Manual</i>, and <i>Purple Team Field Manual</i> books. I’ve also got an order placed for the <i>Blue Team Field Manual</i> by A. White and B. Clark, but that was a separate order and will be a few days. 
 </p>
+<p>
+These are books that desperately need to be highlighted, marked up, sticky-noted, and loved until they’re held together with tape and binder clips. I’ve used different variations of the field guide books (red team, blue team, purple team, Linux, etc.) for several years, and I was thrilled to see V2 start being published for some of them. These are some of my favorite reference guides because they’re a great size to stuff in a binder, or to let live in <em>The Stack</em> next to whatever active project needs it. The books cover a broad range of material, and with enough familiarity on the topic you can guess what the contents are based on which ‘team’ the book is geared towards. Some of them are also $10 when on sale, so its easy enough to leave a copy with a project or to have multiple versions floating around.
+
+</p>
+<p>
+Discussion, if there is any, in these books is brief and meant only to contextualize a tool or process. These books are filled with detailed methodologies related to manual (or automated, if you're scripting ) reconnaissance, open-source tool usage, some no-longer-open-source tools (depending on the version of the book), and collectively hundreds of pages of tables with example commands. These books are full of examples that are short, to the point, and meant to demonstrate standard tool format rather than all possible input options…which make them great reference guides. This particular style may not be friendly to all beginners, as it’s meant as supplemental material rather than primary instruction. 
+</p>
+<p>
+The field guides listed at the top of the page are not written by the same author in all instances, and they aren’t necessarily a part of the same series. There are many ‘Team Field Guide’ books available on Amazon and other places online; and some of these may be related, while others only appear to be. While I do recommend these particular listed books, there are variations in quality from other books looking to monetize on title similarities. 
+</p>
+
