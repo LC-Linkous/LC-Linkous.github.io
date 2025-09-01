@@ -26,6 +26,9 @@ tags: [bookshelf, reference_guide, red_team, blue_team, osint]
 </ul>
 
 <p>
-FORMAT FIX FOR CENTERED
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare mauris at porta ultricies. Aenean a augue non dolor venenatis auctor. Etiam consectetur, tellus ut euismod viverra, purus augue vulputate dui, id pulvinar massa mauris eget orci. Quisque id ullamcorper odio. Phasellus ipsum ex, tincidunt non sodales ac, finibus sit amet eros. Maecenas vel purus orci. In maximus augue ullamcorper posuere fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nisi diam, vehicula eget ornare in, feugiat in quam. Sed volutpat blandit dolor, non auctor diam porta at. Suspendisse a interdum est. Fusce ac posuere ipsum. Ut et tincidunt quam. Quisque aliquam erat et metus mollis fermentum. Mauris et vulputate lectus, eu venenatis enim. 
+The <i> Operator Handbook </i> is designed in a similar way to the field guides featured in a previous post  (<a href="https://lc-linkous.github.io/bookshelf/2025/08/07/bookshelf.html" target="_blank">Bookshelf: Red Team Field Manual, Linux Field Manual, Purple Team Manual</a>)</li>, but it has a little more generality to it. Listed right in the table of contents are sections for AWS, Azure, Docker, Linuz, Mac OS, Windows , and more. The pages are primarily filled with tables where the left column is the command, and the right column is the description. However, there are sections where specific types of logs, actions, or standardizations are described in functional detail. 
 </p>
+<p>
+A major point for this book in particular is that almost every page is covered in links to references. This book is not a field guide, and it’s not pretending to be one. Instead, it’s a list of (potentially) thousands of tools and resources for Open-Source Intelligence (OSINT). Some of these are for particular websites or GitHub repositories, or they may be official tools. This makes it an interesting sort of reference; information dense, with a little bit of everything for all operating systems, and hovering a little out of reach of beginners but not self-contained enough to be a singular source.  Overall, it’s a useful book, and you’ll find something new every time you flip through it.
+</p>
+
