@@ -15,6 +15,7 @@ title: LC-Linkous.github.io
     {% endfor %}
   </article><!-- #post -->
 
-  {% include related-posts.html tag=page.tags[0] exclude=page.url %}
+  {% assign firstTag = page.tags | first %}
+  {% include related-posts.html tag=firstTag exclude=page.url %}
 
 </main><!-- .site-main -->
