@@ -660,6 +660,17 @@ a:hover, a:active { outline: 0; }
 }
 .widget > :last-child { margin-bottom: 0; }
 
+/* --- Profile / social icon row (publications page) --- */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin: 0 0 1.75em;
+}
+.profile-links figure { text-align: center; }
+.profile-links figcaption { font-style: normal; }
+
 /* --- Footer --- */
 .site-footer { padding: 0 7.6923% 1.75em; }
 
