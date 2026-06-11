@@ -5,44 +5,20 @@ title: LC-Linkous.github.io
 
 <div id="home">
 
-<!-- newest  -->
-<div>
-    {% assign firstPost = site.posts.first %}
+  <!-- newest post -->
+  {% assign firstPost = site.posts.first %}
+  <div>
     <h1><a href="{{ firstPost.url }}">{{ firstPost.title }}</a></h1>
-      <p>
-        <b>{{firstPost.datePosted}}</b> <br>
-        {{firstPost.summary}} <br>
-        <b>tags:</b>    
-        {% for tag in firstPost.tags %}
-          <a href="/tags/{{tag}}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
-      </p>
-</div>
+    <p>
+      <b>{{ firstPost.datePosted }}</b> <br>
+      {{ firstPost.summary }} <br>
+      <b>tags:</b>
+      {% for tag in firstPost.tags %}
+        <a href="/tags/{{ tag }}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  </div>
 
-
-<!-- related posts -->
-<h3>Related Posts</h3>
-<ul class="posts">
-  {% assign counter = 0 %}
-  {% assign posts = site.posts %}
-  {% for post in posts %}
-      {% if counter<=3 %} 
-        {% if post.tags contains firstPost.tags[0] %} 
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% assign counter=counter | plus:1 %}
-        {% endif %} 
-      {% endif %} 
-    {% endfor %}
-</ul>
-
-
-<!-- last 4 recent posts on the bottom of the page -->
-<!-- 
-  <h1>Recent Posts</h1>
-  <ul class="posts">
-    {% for post in paginator.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul> -->
+  {% include related-posts.html tag=firstPost.tags[0] exclude=firstPost.url %}
 
 </div>

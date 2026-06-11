@@ -4,23 +4,16 @@ title: LC-Linkous.github.io
 ---
 
 <main id="main" class="site-main">
-					
-	<article id="gallery" class="gallery page type-page status-publish hentry">
-		<header class="entry-header">
-			<!-- .entry-header aka post title--> 
-			<h1 class="entry-title">Gallery</h1>	</header>
-	<div class="entry-content">	
-	<!-- post text  -->
-	<!-- <p> Click on an image to view the project page</p> -->
 
-	<ul class="gallery">
-			<p></p>
-			<!-- adds images in cols of 5, JPG only-->
-			{% include image-gallery.html folder="/media/gallery" %}
-			<p></p>
+  <article id="gallery" class="gallery page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1 class="entry-title">Gallery</h1>
+    </header>
 
-	</ul>
+    <div class="entry-content">
+      <!-- adds images in cols of 5, jpg/png only -->
+      {% include image-gallery.html folder="/media/gallery" %}
+    </div>
 
-	</article><!-- #gallery -->
-	</main><!-- .site-main -->
-
+  </article><!-- #gallery -->
+</main><!-- .site-main -->

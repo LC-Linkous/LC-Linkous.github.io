@@ -1,6 +1,16 @@
+title: lc-linkous.github.io
+description: >-
+  not-a-blog with tutorials/examples for projects shared on GitHub that have
+  additional hardware or physical components. Academic research and project
+  highlights included
+url: "https://lc-linkous.github.io"
+
 markdown: kramdown
 pygments: true
 paginate: 4
+
+plugins:
+  - jekyll-feed
 
 collections:
   posts:

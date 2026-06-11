@@ -1,0 +1,14 @@
+{% comment %}
+  Lists up to 4 posts that share a tag.
+  Usage: {% include related-posts.html tag=page.tags[0] exclude=page.url %}
+{% endcomment %}
+<h3>Related Posts</h3>
+<ul class="posts">
+  {% assign counter = 0 %}
+  {% for post in site.posts %}
+    {% if counter < 4 and post.tags contains include.tag and post.url != include.exclude %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+</ul>
