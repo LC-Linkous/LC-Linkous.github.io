@@ -1,6 +1,8 @@
 {% comment %}
   Lists up to 4 posts that share a tag.
-  Usage: {% include related-posts.html tag=page.tags[0] exclude=page.url %}
+  Usage (from a layout or page):
+    assign firstTag = page.tags | first
+    include related-posts.html tag=firstTag exclude=page.url
 {% endcomment %}
 <h3>Related Posts</h3>
 <ul class="posts">
