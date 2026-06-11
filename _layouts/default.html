@@ -1,156 +1,30 @@
 <!DOCTYPE html>
-<html class="js" lang="en"><head>
-
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html class="js" lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- texton the page tab -->
-<title>LC-Linkous</title> 
+<title>LC-Linkous</title>
 
 <meta name="robots" content="max-image-preview:large">
-<link crossorigin="anonymous" rel="stylesheet" id="all-css-0-1" href="/css/index_005.css" type="text/css" media="all"> 
-<link crossorigin="anonymous" rel="stylesheet" id="all-css-2-1" href="/css/index_003.css" type="text/css" media="all">
-<!-- keep until I have time to replace the fonts used with that template -->
-<link rel="stylesheet" id="twentysixteen-fonts-css" href="/css/css.css" media="all"> 
-<!--css.ss does th emain page frame, img and set up
-003 might not do anything
-005 added some boarder in, but did not do much visually
-002 is the main layout
-004 might not do anything.
--->
- 
-<link crossorigin="anonymous" rel="stylesheet" id="all-css-4-1" href="/css/index_002.css" type="text/css" media="all">
-<link crossorigin="anonymous" rel="stylesheet" id="all-css-10-1" href="/css/index_004.css" type="text/css" media="all"> 
-<style id="jetpack-global-styles-frontend-style-inline-css">
-:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
-</style>
+<meta name="description" content="not-a-blog with tutorials/examples for projects shared on gitub that have additional hardware or physical components. Academic research and project highlights included">
+<meta name="theme-color" content="#7d9385">
 
-<link crossorigin="anonymous" rel="stylesheet" id="all-css-12-1" href="/css/index.css" type="text/css" media="all">
+<!-- Single consolidated stylesheet: fonts + TwentySixteen theme/layout + code highlighting -->
+<link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+
 <link rel="shortcut icon" type="image/x-icon" href="/css/succulent-icon.ico" sizes="16x16 24x24 32x32 48x48">
 <link rel="icon" type="image/x-icon" href="/css/succulent-icon.ico" sizes="16x16 24x24 32x32 48x48">
-<meta name="theme-color" content="#7d9385">
-<meta name="application-name" content="https://lc-linkous.github.io/">
-<meta name="msapplication-window" content="width=device-width;height=device-height">
-<!-- TODO -->
-<meta name="description" content="not-a-blog with tutorials/examples for projects shared on gitub that have additional hardware or physical components. Academic research and project highlights included ">
+
 <style id="custom-background-css">
-body.custom-background { background-color: #7d9385; }
+  body.custom-background { background-color: #7d9385; }
+  body { background-color: #7d9385; }
+  .site,
+  .main-navigation ul ul li { background-color: #eeeeee; }
 </style>
-<style type="text/css" id="custom-colors-css">	input[type="text"],
-body { background-color: #7d9385;}
-.site,
-		.main-navigation ul ul li { background-color: #eeeeee;}
-		body #infinite-footer .container { background-color: #eeeeee;}
-		body #infinite-footer .container { background-color: rgba( 238, 238, 238, 0.9 );}
-		.main-navigation ul ul:after { border-top-color: #eeeeee;}
-		.main-navigation ul ul:after { border-bottom-color: #eeeeee;}
-mark,
-		ins,
-		button,
-		button[disabled]:hover,
-		button[disabled]:focus,
-		input[type="button"],
-		input[type="button"][disabled]:hover,
-		input[type="button"][disabled]:focus,
-		.pagination .prev,
-		.pagination .next,
-		.pagination .prev:hover,
-		.pagination .prev:focus,
-		.pagination .next:hover,
-		.pagination .next:focus,
-		.pagination .nav-links:before,
-		.pagination .nav-links:after,
-		.page-links a,
-		.page-links a:hover,
-		.page-links a:focus,
-		.site-main #infinite-handle span,
-/* .menu-toggle:hover,
-		.menu-toggle:focus,
-		a,
-		.main-navigation a:hover,
-		.main-navigation a:focus,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus,
-		.post-navigation a:hover .post-title,
-		.post-navigation a:focus .post-title,
-		.site-branding .site-title a:hover,
-		.site-branding .site-title a:focus,
-		.entry-title a:hover,
-		.entry-title a:focus,
-		.entry-footer a:hover,
-		.entry-footer a:focus,
-		.required,
-		.site-info a:hover,
-		.site-info a:focus,
-		.main-navigation li:hover > a,
-		.main-navigation li.focus > a,
-		body #infinite-footer .blog-info a:hover,
-		body #infinite-footer .blog-info a:focus,
-		body #infinite-footer .blog-info a:hover,
-		body #infinite-footer .blog-info a:focus,
-		body #infinite-footer .blog-credits a:hover,
-		body #infinite-footer .blog-credits a:focus, */
-mark,
-		ins,
-		button:hover,
-		button:focus,
-		input[type="button"]:hover,
-		input[type="button"]:focus,
-		.pagination .prev:hover,
-		.pagination .prev:focus,
-		.pagination .next:hover,
-		.pagination .next:focus,
-		.page-links a:hover,
-		.page-links a:focus,
-		#infinite-handle span:hover,
-body,
-		blockquote cite,
-		blockquote small,
-		.main-navigation a,
-		.post-navigation a,
-		.widget-title a,
-		.site-branding .site-title a,
-		.entry-title a,
-		.page-links > .page-links-title,
-/* blockquote,
-		.post-navigation,
-		.post-navigation div + div,
-		.pagination,
-		.widget,
-		.page-header,
-		.page-links a, */
-fieldset,
-		pre,
-		abbr,
-		acronym,
-		table,
-		th,
-		td,
-		textarea,
-		.main-navigation li,
-		.main-navigation .primary-menu,
-		.dropdown-toggle:after,
-		.image-navigation,
-		.entry-content,
-		.entry-summary,
-		.page-links a,
-		.page-links > span,
-		.main-navigation ul ul,
-		.main-navigation ul ul li,
-		body #infinite-footer .container { border-color: rgba( 84, 84, 84, 0.2 );}
-.main-navigation ul ul:before { border-top-color: #545454;}
-.main-navigation ul ul:before { border-top-color: rgba( 84, 84, 84, 0.2 );}
-.main-navigation ul ul:before { border-bottom-color: #545454;}
-.main-navigation ul ul:before { border-bottom-color: rgba( 84, 84, 84, 0.2 );}
-hr,
-		code { background-color: #545454;}
-hr,
-		code { background-color: rgba( 84, 84, 84, 0.2 );}
-</style>
+</head>
 
-
-<body class="home page-template-default page page-id-22 custom-background wp-embed-responsive customizer-styles-applied highlander-enabled highlander-light">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><div id="page" class="site">
+<body class="custom-background">
+<div id="page" class="site">
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
@@ -162,42 +36,40 @@ hr,
 					<p class="site-description"> Project documentation, tutorials, cat pictures</p>
 				</div><!-- .site-branding -->
 
-				<!-- <button id="menu-toggle" class="menu-toggle">Menu</button> -->
-
 				<div id="site-header-menu" class="site-header-menu">
 				<nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
 					<div class="menu-primary-container">
 					<ul id="menu-primary" class="primary-menu">
-					<li id="menu-item-main-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item menu-item-main-page-btn">
+					<li id="menu-item-main-page-btn" class="menu-item menu-item-home current-menu-item">
 						<a href="https://lc-linkous.github.io/">Main Page</a>
 					</li>
-					<li id="menu-item-project-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-project-page-btn"> <!-- current-menu-item page_item page-item-22 current_page_item menu-item-project-page-btn"> -->
+					<li id="menu-item-project-page-btn" class="menu-item">
 						<a href="https://lc-linkous.github.io/projects" aria-current="page">Projects</a>
 					</li>
-					<li id="menu-item-posts-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-posts-page-btn">
+					<li id="menu-item-posts-page-btn" class="menu-item">
 						<a href="https://lc-linkous.github.io/posts">Posts</a>
 					</li>
-					<li id="menu-item-gallery-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-gallery-page-btn">
+					<li id="menu-item-gallery-page-btn" class="menu-item">
 						<a href="https://lc-linkous.github.io/gallery">Gallery</a>
 					</li>
-					<li id="menu-item-publications-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-publications-page-btn">
+					<li id="menu-item-publications-page-btn" class="menu-item">
 						<a href="https://lc-linkous.github.io/publications">Publications</a>
 					</li>
-					<li id="menu-item-bookshelf-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-bookshelf-page-btn">
+					<li id="menu-item-bookshelf-page-btn" class="menu-item">
 						<a href="https://lc-linkous.github.io/bookshelf">Bookshelf</a>
 					</li>
-					<li id="menu-item-github-page-btn" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-github-page-btn">
+					<li id="menu-item-github-page-btn" class="menu-item">
 						<a href="https://github.com/LC-Linkous">GitHub</a>
 					</li>
 					</ul>
-					</div>		
-				</nav><!-- .main-navigation -->						
+					</div>
+				</nav><!-- .main-navigation -->
 				</div><!-- .site-header-menu -->
 			</div><!-- .site-header-main -->
 
 			<div class="header-image">
 				<a href="https://lc-linkous.github.io/" rel="home">
-					<img src="/css/succulents.webp" srcset="" sizes="" alt="https://lc-linkous.github.io/" width="1200" height="280">
+					<img src="/css/succulents.webp" alt="lc-linkous.github.io" width="1200" height="280">
 				</a>
 			</div><!-- .header-image -->
 		</header><!-- .site-header -->
@@ -206,29 +78,18 @@ hr,
 			<div id="primary" class="content-area">
 
 			{{ content }}
-		
+
 			</div><!-- .content-area -->
 
 			<aside id="secondary" class="sidebar widget-area">
 				<section id="recent-posts" class="widget widget_top-posts">
-					
-					<!-- Top part of widget window -->
-					<div >
-					<!-- last 6 recent posts on the bottom of the page -->
-
+					<div>
 					<h2>Recent Posts</h2>
 					<ul class="posts">
-					{% for post in site.posts  limit:6 %}
+					{% for post in site.posts limit:6 %}
 						<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 					{% endfor %}
 					</ul>
-<!-- 				<h2 class="widget-title">Popular Posts &amp; Pages</h2>
-					<ul>
-						<li>
-						<a href="https://lc-linkous.github.io/projects" class="bump-view" data-bump-view="tp" aria-current="page">Projects</a>
-						</li>
-					</ul>
-					 -->
 					</div>
 				</section>
 				<section id="project-highlights" class="widget widget_top-posts">
@@ -236,37 +97,28 @@ hr,
 					<div style="text-align: center;">
 						<figure>
 							<a href="https://github.com/LC-Linkous/AntennaCalculationAutotuningTool">
-								<img src="/media/icons/antennaCAT.PNG" width="180" height="180">
+								<img src="/media/icons/antennaCAT.PNG" width="180" height="180" alt="AntennaCAT">
 							</a>
 							<figcaption>AntennaCAT v2025</figcaption>
-						</figure>          
-						
+						</figure>
+
 						<br>
 						<figure>
 							<a href="https://github.com/LC-Linkous/research_antenna_collection?tab=readme-ov-file#cat-antennas">
-								<img src="/media/imgs/antennacat/CatAntenna_4.png" width="180" height="180">
+								<img src="/media/imgs/antennacat/CatAntenna_4.png" width="180" height="180" alt="Cat-shaped WiFi antennas">
 							</a>
 							<figcaption>Cat-Shaped WiFi Antennas</figcaption>
-						</figure>          
+						</figure>
 					</div>
 				</section>
-				<section id="empty-section">
-					<div >
-
-					
-					</div>
-				</section>
-
-
 			</aside><!-- .sidebar .widget-area -->
 
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer">
-			<nav class="main-navigation" aria-label="Footer Primary Menu">
-
-			</nav><!-- .main-navigation -->		
-
+			<nav class="main-navigation" aria-label="Footer Primary Menu"></nav>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
+</body>
+</html>
