@@ -69,8 +69,28 @@ title: LC-Linkous.github.io
       </dl>
       <dl>
         <dt> <a href="https://github.com/LC-Linkous/nanoVNA_python">Python Library for the NanoVNA device line</a></dt>
-        <dd>This is an unofficial, non-GUI Python API designed to make serial interfacing a little easier. It is still under development and testing.
+        <dd>This is an unofficial, non-GUI Python API designed to make serial interfacing a little easier.
           The repository uses official resources and documentation but is NOT endorsed by the official NanoVNA product or company. 
+          The python package is available at <a href="https://pypi.org/project/nvnapython/">https://pypi.org/project/nvnapython/</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/hackRF_python">Python Library for the HackRF One</a></dt>
+        <dd>A HackRF One tool for Windows using only the bare minimum installs. Like the other device libraries, this is an unofficial, 
+          non-GUI Python API and is NOT endorsed by the official HackRF product or company. 
+          The python package is available at <a href="https://pypi.org/project/hackrfpy/">https://pypi.org/project/hackrfpy/</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/sdr_dsp_python">SDR DSP Python Library</a></dt>
+        <dd>[IN PROGRESS] A personal DSP library in progress for working with software-defined radios. Developed alongside the 
+          device libraries above for signal processing on collected data. 
+        </dd>
+      </dl>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/ArrayCalculator">Array Calculator</a></dt>
+        <dd>A CLI-based array calculation and design tool built for optimizer integration and evaluation. Companion to the AntennaCAT 
+          project and the optimizer collection below. 
         </dd>
       </dl>
 
@@ -83,27 +103,100 @@ title: LC-Linkous.github.io
       </dl>
 
       <dl>
+        <dt><a href="https://github.com/LC-Linkous/surrogate_model_optimization">Surrogate Model Optimization</a></dt>
+        <dd> A unified surrogate-model-assisted optimization framework. Most of the optimizers in the collection below are available as 
+            options in this repository, with interchangeable surrogate model approximators. </dd>
+      </dl>
+
+      <dl>
         <dt>State-Machine Based Optimizer Collection</dt>
-        <dd>This is an on-going collection of optimizers that integrate with the AntennaCAT project. Some are serious, some are not. </a></dd>
-      
+        <dd>This is an on-going collection of optimizers that integrate with the AntennaCAT project. Some are serious, some are not. </dd>
+
+        <!-- ============================================================
+             OPTION A: TABLE FORMAT (matches the GitHub profile README)
+             Delete whichever option you don't want to keep.
+             ============================================================ -->
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>PSO</th>
+              <th>Cat Swarm</th>
+              <th>Chicken Swarm</th>
+              <th>MultiGLODS</th>
+              <th>Genetic</th>
+              <th>Other</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Base</th>
+              <td><a href="https://github.com/LC-Linkous/pso_python">pso_python</a></td>
+              <td><a href="https://github.com/LC-Linkous/cat_swarm_python">cat_swarm</a></td>
+              <td><a href="https://github.com/LC-Linkous/chicken_swarm_python">chicken_swarm</a></td>
+              <td><a href="https://github.com/LC-Linkous/multi_glods_python">multi_glods</a></td>
+              <td><a href="https://github.com/LC-Linkous/ga_python">ga_python</a></td>
+              <td><a href="https://github.com/LC-Linkous/sweep_python">sweep</a>, <a href="https://github.com/LC-Linkous/bayesian_optimization_python">bayesian</a></td>
+            </tr>
+            <tr>
+              <th>Alternate</th>
+              <td><a href="https://github.com/LC-Linkous/pso_python/tree/pso_basic">pso_basic</a></td>
+              <td><a href="https://github.com/LC-Linkous/cat_swarm_python/tree/sand_cat_python">sand_cat</a></td>
+              <td><a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm">2015</a> / <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/2022_improved_chicken_swarm">2022 improved</a></td>
+              <td><a href="https://github.com/LC-Linkous/GLODS_python">GLODS</a> / <a href="https://github.com/LC-Linkous/DIRECT_python">DIRECT</a></td>
+              <td><a href="https://github.com/LC-Linkous/de_python">de_python</a></td>
+              <td>sweep alternates in base repo</td>
+            </tr>
+            <tr>
+              <th>Quantum-Inspired</th>
+              <td><a href="https://github.com/LC-Linkous/pso_quantum">pso_quantum</a></td>
+              <td><a href="https://github.com/LC-Linkous/cat_swarm_python/tree/cat_swarm_quantum">cat_swarm_quantum</a></td>
+              <td><a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/chicken_swarm_quantum">chicken_swarm_quantum</a></td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td><a href="https://github.com/LC-Linkous/qea_python">qea_python</a></td>
+            </tr>
+            <tr>
+              <th>Surrogate Model</th>
+              <td colspan="6">Most optimizers are available as options in <a href="https://github.com/LC-Linkous/surrogate_model_optimization">surrogate_model_optimization</a>. Interchangeable surrogate model approximators for Bayesian are included in its base repo.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ============================================================
+             OPTION B: LIST FORMAT (updated version of the original list)
+             Delete whichever option you don't want to keep.
+             ============================================================ -->
         <ul>
           <li>
             <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_python">pso_python</a> 
             <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_basic">pso_basic</a>
             <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/pso_quantum">pso_quantum</a>
-            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+            <br><strong>Surrogate Model Version:</strong> via <a href="https://github.com/LC-Linkous/surrogate_model_optimization">surrogate_model_optimization</a>
           </li>
           <li>
             <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python">cat_swarm_python</a>
             <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/sand_cat_python">sand_cat_python</a>
             <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/cat_swarm_python/tree/cat_swarm_quantum">cat_swarm_quantum</a>
-            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+            <br><strong>Surrogate Model Version:</strong> via <a href="https://github.com/LC-Linkous/surrogate_model_optimization">surrogate_model_optimization</a>
           </li>
           <li>
             <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python">chicken_swarm_python</a>
-            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm">2015 improved chicken swarm</a>
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm">2015 improved chicken swarm</a> / <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/2022_improved_chicken_swarm">2022 improved chicken swarm</a>
             <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/chicken_swarm_python/tree/chicken_swarm_quantum">chicken_swarm_quantum</a>
-            <br><strong>Surrogate Model Version:</strong> <a href="https://github.com/LC-Linkous/pso_python/tree/pso_quantum"> surrogate_model(s)</a>
+            <br><strong>Surrogate Model Version:</strong> via <a href="https://github.com/LC-Linkous/surrogate_model_optimization">surrogate_model_optimization</a>
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/multi_glods_python">multi_glods_python</a>
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/GLODS_python">GLODS_python</a> / <a href="https://github.com/LC-Linkous/DIRECT_python">DIRECT_python</a>
+            <br><strong>Quantum-Inspired Optimizer:</strong> N/A
+            <br><strong>Surrogate Model Version:</strong> N/A
+          </li>
+          <li>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/ga_python">ga_python</a>
+            <br><strong>Alternate Version:</strong> <a href="https://github.com/LC-Linkous/de_python">de_python</a> (differential evolution)
+            <br><strong>Quantum-Inspired Optimizer:</strong> <a href="https://github.com/LC-Linkous/qea_python">qea_python</a>
+            <br><strong>Surrogate Model Version:</strong> via <a href="https://github.com/LC-Linkous/surrogate_model_optimization">surrogate_model_optimization</a>
           </li>
           <li>
             <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/sweep_python">sweep_python</a>
@@ -112,16 +205,10 @@ title: LC-Linkous.github.io
             <br><strong>Surrogate Model Version:</strong> N/A
           </li>
           <li>
-            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/bayesian_optimization_python">bayesian optimization_python</a>
+            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/bayesian_optimization_python">bayesian_optimization_python</a>
             <br><strong>Alternate Version:</strong> N/A
             <br><strong>Quantum-Inspired Optimizer:</strong> N/A
             <br><strong>Surrogate Model Version:</strong> interchangeable surrogate model approximators included in base repo
-          </li>
-          <li>
-            <strong>Base Optimizer:</strong> <a href="https://github.com/LC-Linkous/multi_glods_python">multi_glods_python</a>
-            <br><strong>Alternate Version:</strong> N/A
-            <br><strong>Quantum-Inspired Optimizer:</strong> N/A
-            <br><strong>Surrogate Model Version:</strong> N/A
           </li>
         </ul>
       </dl>
@@ -137,6 +224,15 @@ title: LC-Linkous.github.io
         <dt> (Forked) <a href="https://github.com/LC-Linkous/JTAGenum">JTAGenum</a></dt>
         <dd> Forked from cyphunk/JTAGenum. A personal documentation version with some Arduino hardware documentation updates. See README & Wiki for references. </dd>
       </dl>-->
+
+      <!-- Research Antennas Section -->
+      <h2>Research Antennas</h2>
+      <dl>
+        <dt> <a href="https://github.com/LC-Linkous/research_antenna_collection">Research Antenna Collection</a></dt>
+        <dd> Assorted measurements and .dxf files for antenna research samples that have appeared in papers. Includes the 
+          <a href="https://github.com/LC-Linkous/research_antenna_collection#cat-antennas">Cat Antenna collection</a>, which has appeared in 
+          select publications, projects, and conferences. </dd>
+      </dl>
 
       <!-- Conference Projects Section -->
       <h2>Conference Projects with Code</h2>
