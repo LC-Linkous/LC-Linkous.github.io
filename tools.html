@@ -1,0 +1,93 @@
+---
+layout: default
+title: LC-Linkous.github.io
+---
+
+<main id="main" class="site-main">
+  <article id="tools" class="tools page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1 class="entry-title">Tools</h1>
+    </header>
+
+    <div class="entry-content">
+
+      <p>
+        Small browser-based bench tools. Each one is a static page: open it in Chrome or Edge,
+        plug the hardware in over USB, and go. Nothing to install, and every tool has a
+        <em>try without hardware</em> mode so it can be previewed anywhere. Source for each lives on
+        <a href="https://github.com/LC-Linkous">GitHub</a> under the GPL.
+      </p>
+
+      <!-- TODO: replace the placeholder entries below with the five tools. Keep the
+           pattern: <dt> name (linked to the live page) · <a>source</a> </dt> then one
+           <dd> describing what it does and what hardware it talks to. -->
+
+      <h2>Radio &amp; RF</h2>
+      <dl>
+        <dt>
+          <a href="https://lc-linkous.github.io/nanovna-web/">nanoVNA Web</a>
+          &middot; <a href="https://github.com/LC-Linkous/nanovna-web">source</a>
+        </dt>
+        <dd>
+          A browser front end for the NanoVNA-F V2 and F V3: S11/S21 traces, SWR, Smith chart, a
+          live waterfall, markers with an R + jX readout, calibration, recording, and CSV / Touchstone
+          export. Companion to the
+          <a href="https://github.com/LC-Linkous/nanoVNA_python">nanoVNA_python</a> library.
+        </dd>
+
+        <dt>
+          <a href="https://lc-linkous.github.io/fox-bench/">fox-bench</a>
+          &middot; <a href="https://github.com/LC-Linkous/fox-bench">source</a>
+        </dt>
+        <dd>
+          A workbench for small amateur-radio fox transmitters built on a CircuitPython board and a
+          NiceRF SA8x8 module. Configure the fox in a form, preview the Morse ID, song, SSTV picture
+          or QRSS trace, then write the firmware to the board over USB and bench-test it.
+        </dd>
+
+        <!-- Placeholder: tool 3 -->
+        <dt>
+          <a href="#">Tool name</a>
+          &middot; <a href="#">source</a>
+        </dt>
+        <dd>
+          One or two sentences: what it does, what hardware it talks to, and what comes out of it
+          (files, a plot, a configured device).
+        </dd>
+
+        <!-- Placeholder: tool 4 -->
+        <dt>
+          <a href="#">Tool name</a>
+          &middot; <a href="#">source</a>
+        </dt>
+        <dd>
+          One or two sentences: what it does, what hardware it talks to, and what comes out of it.
+        </dd>
+
+        <!-- Placeholder: tool 5 -->
+        <dt>
+          <a href="#">Tool name</a>
+          &middot; <a href="#">source</a>
+        </dt>
+        <dd>
+          One or two sentences: what it does, what hardware it talks to, and what comes out of it.
+        </dd>
+      </dl>
+
+      <h2>How they fit together</h2>
+      <p>
+        The pages share a layout and a device layer: a USB serial link, a model table, and a
+        simulated device that answers with the same bytes as the real one. Where there is a Python
+        library for the same hardware, the page mirrors its command set, so files move between the
+        two (<code>.csv</code>, <code>.s1p</code>, <code>.json</code>). Each tool has an
+        <em>About</em> page describing what it supports, its known limits, and what is next.
+      </p>
+
+      <p>
+        Found a device that doesn't behave? Every page has a <em>Diagnostics</em> or
+        <em>Connect</em> section that collects a sample to attach to a GitHub issue.
+      </p>
+
+    </div>
+  </article>
+</main>
