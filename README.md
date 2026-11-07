@@ -7,7 +7,7 @@ This repo is a semi-migration from a previous project blog, but not intended to 
 View the main page here: https://lc-linkous.github.io/
 
 ## Layout notes
-* `_layouts/default.html` – site chrome (header, nav, sidebar). Pages set `title:` and `nav:` (home, projects, tools, posts, gallery, publications, bookshelf) in front matter; `nav` controls the highlighted menu item.
+* `_layouts/default.html` – site chrome (header, nav, sidebar). Pages set `title:` and `nav:` (home, projects, tools, posts, publications, bookshelf) in front matter; `nav` controls the highlighted menu item.
 * `_layouts/page.html` – wraps markdown pages (`tools.md`, `projects.md`) in the same article structure as the HTML pages. Set `title:`, `nav:` and `permalink:` in front matter; no H1 in the body.
 * `_layouts/post.html` – wraps posts in `_posts/`. Posts are highlighted under Posts automatically.
 * `_layouts/tags.html` – renders `_tags/<tag>.md` as an archive of posts whose `tags:` list contains `tag-name`. Add a new tag by adding a `_tags/<tag>.md` stub with `tag-name: <tag>`.
@@ -25,7 +25,3 @@ General examples for using Jekyll on Github:
 Tagging examples:
 * https://www.untangled.dev/2020/06/02/tag-management-jekyll/
 * https://www.smashingmagazine.com/2016/02/content-modeling-with-jekyll/
-
-
-Image Gallery:
-https://jekyllcodex.org/without-plugin/image-gallery/
