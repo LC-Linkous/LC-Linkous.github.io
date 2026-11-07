@@ -6,7 +6,7 @@ permalink: /projects/
 ---
 
 Research software, optimizers, Python libraries, firmware, course material,
-and hardware. The browser instruments have their own page: [Tools](/tools/).
+hardware, and community projects. The browser instruments have their own page: [Tools](/tools/).
 
 ---
 
@@ -199,6 +199,23 @@ post-contest write-ups covering how the hunt was structured and run.
 The browser tooling for these, [fox-bench](/tools/#fox-bench) for building
 transmitters and [fox-hunt-web](/tools/#fox-hunt-web) for finding them, is on
 the Tools page.
+
+---
+
+## Little Ram Pantries
+
+[littlerampantries.com](https://littlerampantries.com/) ·
+[Papers and coverage](/publications)
+
+A network of sixteen free miniature food pantries across VCU's two campuses,
+launched in 2021 as a decentralized complement to the main Ram Pantry. Each
+pantry is instrumented: a door sensor logs use, an inward-facing camera
+photographs the shelves (never people) so students can check what is stocked
+before walking over, and a status indicator shows whether the unit is online. I
+built the initial prototype and have mentored the College of Engineering
+capstone teams that developed the current hardware. The program's design and
+outcomes are written up in two *JAFSCD* papers, and news coverage is collected
+on the Publications page.
 
 ---
 
