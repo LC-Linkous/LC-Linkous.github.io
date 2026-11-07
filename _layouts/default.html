@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LC-Linkous</title>
+{% if page.layout == 'tags' %}
+  {% assign page_title = page.tag-name | prepend: "#" %}
+{% else %}
+  {% assign page_title = page.title %}
+{% endif %}
+<title>{% if page_title and page_title != site.title %}{{ page_title }} &middot; {% endif %}{{ site.title }}</title>
 
 <meta name="robots" content="max-image-preview:large">
 <meta name="description" content="not-a-blog with tutorials/examples for projects shared on GitHub that have additional hardware or physical components. Academic research and project highlights included">
@@ -36,27 +41,33 @@
 				<div id="site-header-menu" class="site-header-menu">
 				<nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
 					<div class="menu-primary-container">
+					{% comment %}
+					  Active item: pages set `nav:` in front matter; posts and tag
+					  archives fall under Posts.
+					{% endcomment %}
+					{% assign nav_active = page.nav %}
+					{% if page.layout == 'post' or page.layout == 'tags' %}{% assign nav_active = 'posts' %}{% endif %}
 					<ul id="menu-primary" class="primary-menu">
-					<li id="menu-item-main-page-btn" class="menu-item menu-item-home current-menu-item">
-						<a href="/">Main Page</a>
+					<li id="menu-item-main-page-btn" class="menu-item menu-item-home{% if nav_active == 'home' %} current-menu-item{% endif %}">
+						<a href="/"{% if nav_active == 'home' %} aria-current="page"{% endif %}>Main Page</a>
 					</li>
-					<li id="menu-item-project-page-btn" class="menu-item">
-						<a href="/projects">Projects</a>
+					<li id="menu-item-project-page-btn" class="menu-item{% if nav_active == 'projects' %} current-menu-item{% endif %}">
+						<a href="/projects"{% if nav_active == 'projects' %} aria-current="page"{% endif %}>Projects</a>
 					</li>
-					<li id="menu-item-tools-page-btn" class="menu-item">
-						<a href="/tools">Tools</a>
+					<li id="menu-item-tools-page-btn" class="menu-item{% if nav_active == 'tools' %} current-menu-item{% endif %}">
+						<a href="/tools"{% if nav_active == 'tools' %} aria-current="page"{% endif %}>Tools</a>
 					</li>
-					<li id="menu-item-posts-page-btn" class="menu-item">
-						<a href="/posts">Posts</a>
+					<li id="menu-item-posts-page-btn" class="menu-item{% if nav_active == 'posts' %} current-menu-item{% endif %}">
+						<a href="/posts"{% if nav_active == 'posts' %} aria-current="page"{% endif %}>Posts</a>
 					</li>
-					<li id="menu-item-gallery-page-btn" class="menu-item">
-						<a href="/gallery">Gallery</a>
+					<li id="menu-item-gallery-page-btn" class="menu-item{% if nav_active == 'gallery' %} current-menu-item{% endif %}">
+						<a href="/gallery"{% if nav_active == 'gallery' %} aria-current="page"{% endif %}>Gallery</a>
 					</li>
-					<li id="menu-item-publications-page-btn" class="menu-item">
-						<a href="/publications">Publications</a>
+					<li id="menu-item-publications-page-btn" class="menu-item{% if nav_active == 'publications' %} current-menu-item{% endif %}">
+						<a href="/publications"{% if nav_active == 'publications' %} aria-current="page"{% endif %}>Publications</a>
 					</li>
-					<li id="menu-item-bookshelf-page-btn" class="menu-item">
-						<a href="/bookshelf">Bookshelf</a>
+					<li id="menu-item-bookshelf-page-btn" class="menu-item{% if nav_active == 'bookshelf' %} current-menu-item{% endif %}">
+						<a href="/bookshelf"{% if nav_active == 'bookshelf' %} aria-current="page"{% endif %}>Bookshelf</a>
 					</li>
 					<li id="menu-item-github-page-btn" class="menu-item">
 						<a href="https://github.com/LC-Linkous">GitHub</a>

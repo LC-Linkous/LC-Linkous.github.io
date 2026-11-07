@@ -5,26 +5,23 @@ description: >-
   highlights included
 url: "https://lc-linkous.github.io"
 
+# GitHub Pages injects jekyll-theme-primer when no theme is set; declare it so
+# the dependency is visible. Every layout this site uses (default, post, tags)
+# is defined in _layouts/, so nothing from the theme is actually rendered.
+theme: jekyll-theme-primer
+
 markdown: kramdown
-pygments: true
-paginate: 4
 
 plugins:
   - jekyll-feed
 
 collections:
-  posts:
-    output: true
-  gallery:
-    output: true
-  homePage:
-    output: true
-  projects:
-    output: true
-  publications:
-    output: true
-  bookshelf:
-    output: true
   tags:
     output: true
     permalink: tags/:path/
+
+# Jekyll processes everything under the site root. Keep scaffolding out of
+# the published site.
+exclude:
+  - templates/
+  - README.md

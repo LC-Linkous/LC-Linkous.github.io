@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign tag = page.tag-name %}
+<main id="main" class="site-main">
+  <article id="tag-{{ tag }}" class="tag-archive page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1 class="entry-title">#{{ tag }}</h1>
+    </header>
+
+    <div class="entry-content">
+      {% assign tagged = site.posts | where_exp: "post", "post.tags contains tag" %}
+      {% if tagged.size > 0 %}
+        <p>{{ tagged.size }} post{% if tagged.size != 1 %}s{% endif %} tagged <b>#{{ tag }}</b>.</p>
+        <ul class="posts">
+          {% for post in tagged %}
+          <li>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>
+              <b>{{ post.date | date: "%Y-%m-%d" }}</b> <br>
+              {{ post.summary }} <br>
+              {% for t in post.tags %}
+                <a class="post" href="/tags/{{ t }}/">#{{ t }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+          </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No posts are tagged <b>#{{ tag }}</b> yet.</p>
+      {% endif %}
+      <p><a href="/posts">&laquo; All posts</a></p>
+    </div>
+  </article>
+</main>

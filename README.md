@@ -6,6 +6,12 @@ This repo is a semi-migration from a previous project blog, but not intended to 
 
 View the main page here: https://lc-linkous.github.io/
 
+## Layout notes
+* `_layouts/default.html` – site chrome (header, nav, sidebar). Pages set `title:` and `nav:` (home, projects, tools, posts, gallery, publications, bookshelf) in front matter; `nav` controls the highlighted menu item.
+* `_layouts/post.html` – wraps posts in `_posts/`. Posts are highlighted under Posts automatically.
+* `_layouts/tags.html` – renders `_tags/<tag>.md` as an archive of posts whose `tags:` list contains `tag-name`. Add a new tag by adding a `_tags/<tag>.md` stub with `tag-name: <tag>`.
+* `templates/` and `README.md` are excluded from the build (see `exclude:` in `_config.yml`).
+
 
 ## References
 

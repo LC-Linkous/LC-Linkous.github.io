@@ -1,6 +1,7 @@
 ---
 layout: default
-title: LC-Linkous.github.io
+title: lc-linkous.github.io
+nav: home
 ---
 
 <div id="home">
@@ -14,7 +15,7 @@ title: LC-Linkous.github.io
       {{ firstPost.summary }} <br>
       <b>tags:</b>
       {% for tag in firstPost.tags %}
-        <a href="/tags/{{ tag }}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        <a href="/tags/{{ tag }}/">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
       {% endfor %}
     </p>
   </div>
