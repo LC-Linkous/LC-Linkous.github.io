@@ -505,6 +505,7 @@ th, td { padding: .4375em; }
 /* --- Media --- */
 img { border: 0; height: auto; max-width: 100%; vertical-align: middle; }
 figure { margin: 0; }
+.entry-content figure { margin: 0 0 1.75em; }
 embed, iframe, object, video { margin-bottom: 1.75em; max-width: 100%; vertical-align: middle; }
 figcaption {
   color: var(--color-muted);

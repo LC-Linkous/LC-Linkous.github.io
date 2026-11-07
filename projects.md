@@ -42,6 +42,11 @@ A collection of state-machine-based optimizers that integrate with AntennaCAT,
 plus the benchmarking and evaluation tools around them. Some of these are
 serious; some of them are not.
 
+<figure>
+  <img src="/media/imgs/projects/optimizer-himmelblau.webp" alt="3D surface and contour plot of the Himmelblau test function">
+  <figcaption>Himmelblau's function as rendered by the optimizer collection's shared plotting; the same figure heads the pso_python and surrogate_model_optimization READMEs.</figcaption>
+</figure>
+
 |  | PSO | Cat Swarm | Chicken Swarm | MultiGLODS | Genetic | Other |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Base** | [pso_python](https://github.com/LC-Linkous/pso_python) | [cat_swarm](https://github.com/LC-Linkous/cat_swarm_python) | [chicken_swarm](https://github.com/LC-Linkous/chicken_swarm_python) | [multi_glods](https://github.com/LC-Linkous/multi_glods_python) | [ga_python](https://github.com/LC-Linkous/ga_python) | [sweep](https://github.com/LC-Linkous/sweep_python), [bayesian](https://github.com/LC-Linkous/bayesian_optimization_python) |
@@ -62,6 +67,11 @@ command-line calculator, synthesizer, and evaluator for linear antenna arrays,
 built to be called as the evaluation step inside an optimizer loop and
 compatible with AntennaCAT.
 
+<figure>
+  <img src="/media/imgs/projects/arraycalculator-hamming.webp" alt="Polar and rectangular array patterns with element weights for a 16-element Hamming-weighted steered array">
+  <figcaption>ArrayCalculator: a 16-element Hamming-weighted array steered off boresight, with the element weights below.</figcaption>
+</figure>
+
 ---
 
 ## Python device libraries
@@ -79,6 +89,11 @@ any of the device manufacturers.
 
 `tsapython` is archived with a DOI and is citable:
 [doi:10.5281/zenodo.20546764](https://doi.org/10.5281/zenodo.20546764).
+
+<figure>
+  <img src="/media/imgs/projects/nanovna-python-waterfall.webp" alt="Four live plots from nanoVNA_python: S11 magnitude, S11 phase, a magnitude-history waterfall, and a complex-plane trace">
+  <figcaption>A live S11 measurement scripted with nanoVNA_python: magnitude, phase, waterfall, and complex plane, the same views the browser tool shows.</figcaption>
+</figure>
 
 **[sdr_dsp_python](https://github.com/LC-Linkous/sdr_dsp_python)** is a DSP
 library in progress, developed alongside the device libraries for processing
@@ -152,6 +167,11 @@ packets over a mock serial transport, mirroring a bedside monitor's pipeline, so
 students can practice parsing, filtering, and feature extraction on live data
 with no hardware.
 
+<figure>
+  <img src="/media/imgs/projects/cv-tracking.webp" alt="Tracked feature points overlaid on a cat's face, with a top-down scatter of the tracked points beside it">
+  <figcaption>From the computer vision samples: feature tracking on a live feed, with the top-down view of the tracked points.</figcaption>
+</figure>
+
 **Lab instruments and wireless demos** — the browser-based LED I–V Lab and six
 ESP-NOW demos are on [Tools](/tools/#teaching-instruments).
 
@@ -171,6 +191,11 @@ first-time hardware users.
 **[Fox hunt write-ups](https://github.com/HamRadioVillage/fox-hunt-writeups/tree/main/dc34)** —
 post-contest write-ups covering how the hunt was structured and run.
 
+<figure style="max-width:360px">
+  <img src="/media/imgs/projects/dc34-fox-board.webp" alt="The DC34 fox transmitter board with the Ham Radio Village Fox Hunt shield badge">
+  <figcaption>The DC34 fox board with its Ham Radio Village Fox Hunt shield. Image from the HamRadioVillage/dc34fox repository.</figcaption>
+</figure>
+
 The browser tooling for these, [fox-bench](/tools/#fox-bench) for building
 transmitters and [fox-hunt-web](/tools/#fox-hunt-web) for finding them, is on
 the Tools page.
@@ -179,6 +204,11 @@ the Tools page.
 
 ## Research antennas
 
+
+<figure>
+  <img src="/media/imgs/projects/cat-antennas.webp" alt="Fabricated cat-shaped WiFi antennas on copper-clad substrate, labeled by band, with a cat inspecting the samples">
+  <figcaption>Cat-shaped WiFi antennas for 5 and 6 GHz and for 2.4 and 5.8 GHz, with Sybil, the inspiration for the design, inspecting the samples.</figcaption>
+</figure>
 **[Research Antenna Collection](https://github.com/LC-Linkous/research_antenna_collection)** —
 measurements and `.dxf` files for antenna samples that have appeared in papers,
 including the
@@ -190,6 +220,11 @@ which has turned up in publications, projects, and conferences. See also the
 
 ## Code from papers
 
+
+<figure>
+  <img src="/media/imgs/projects/rl-reconfigurable-antennas.webp" alt="The reinforcement learning experiment GUI with a 3D plot of the receiver nodes and the experiment controls">
+  <figcaption>The experiment GUI from the 2025 reinforcement-learning reconfigurable antenna work.</figcaption>
+</figure>
 **2025** —
 [Reinforcement Learning Controlled Mechanically Reconfigurable Antennas](https://github.com/LC-Linkous/2025_URSI_RL_Reconfigurable_Antennas),
 USNC-URSI NRSM 2025, Boulder, paper #1237. Code and demo from the paper; the
