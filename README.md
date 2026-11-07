@@ -16,7 +16,7 @@ View the main page here: https://lc-linkous.github.io/
 ## Data files
 * `_data/publications.yml`, `_data/news.yml` – source for the Publications page and the home page's "Latest paper" / "Latest news" cards. Newest first within each type; `date` (YYYY-MM-01 for month precision) decides what is "latest".
 * `_data/featured.yml` – the hand-picked "Featured project" and "Featured tool" cards on the home page.
-* `_data/stats.yml` – GitHub and PyPI numbers for the home page, written nightly by the stats workflow; do not edit by hand.
+* `_data/stats.yml` – GitHub and PyPI numbers for the home page. Written nightly by `.github/workflows/stats.yml` running `scripts/update_stats.py` (standard library only; `GITHUB_TOKEN` is the job token). Commits only when a number changes, then requests a Pages build. Run it on demand from the Actions tab ("Run workflow"). Do not edit by hand. Download counts exclude PyPI mirrors; stars and forks are summed over owned, non-fork repositories. The repos listed per-repo are those named in `featured.yml` plus `EXTRA_REPOS` in the script.
 
 ## Adding things
 * **Page:** add `name.md` at the root with front matter `layout: page`, `title:`, `nav:` and `permalink: /name/`; add a nav entry in `_layouts/default.html` if it should appear in the menu.

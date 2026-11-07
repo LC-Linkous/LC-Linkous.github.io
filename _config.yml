@@ -24,3 +24,4 @@ collections:
 # Jekyll processes everything under the site root.
 exclude:
   - README.md
+  - scripts/
