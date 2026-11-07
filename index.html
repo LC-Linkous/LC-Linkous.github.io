@@ -13,7 +13,9 @@ nav: home
 {% assign feat = site.data.featured %}
 {% assign proj_stats = stats.github.repos[feat.project.repo] %}
 {% assign tool_stats = stats.github.repos[feat.tool.repo] %}
-{% assign papers = site.data.publications | where_exp: "p", "p.type == 'journal' or p.type == 'conference'" | sort: "date" | reverse %}
+{% assign journals = site.data.publications | where: "type", "journal" %}
+{% assign confs = site.data.publications | where: "type", "conference" %}
+{% assign papers = journals | concat: confs | sort: "date" | reverse %}
 {% assign paper = papers | first %}
 {% assign news = site.data.news | sort: "date" | reverse %}
 {% assign story = news | first %}
