@@ -1,11 +1,12 @@
 # Written by .github/workflows/stats.yml (nightly) from the GitHub and PyPI
 # APIs. Do not edit by hand; edits are overwritten on the next run. Seeded
 # once by hand on 2026-11-07 so the home page renders before the first run.
+# The site repository itself is excluded from most_recent_push.
 updated: '2026-11-07'
 github:
   user: LC-Linkous
-  public_repos: 15
-  total_stars: 45
+  public_repos: 47
+  total_stars: null   # computed by the workflow; tile hidden while null
   most_recent_push:
     repo: LC-Linkous/fox-bench
     pushed_at: '2026-11-07'

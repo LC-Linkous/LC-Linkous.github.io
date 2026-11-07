@@ -1,8 +1,8 @@
 # Publications, newest first within each type. Rendered by publications.html
 # and used by the home page. `citation` is the formatted line shown on the
-# page, verbatim HTML. `date` drives ordering and "latest"; use YYYY-MM-01 when
-# only the month is known and YYYY-01-01 for year only (date_precision says
-# which, so the home page can print just the year). Types: journal,
+# page, verbatim HTML. `date` drives ordering and "latest"; use the full date when
+# known (date_precision: day), YYYY-MM-01 for month only, YYYY-01-01 for year
+# only. Day precision breaks ties for "latest" on the home page. Types: journal,
 # conference, poster, dissertation.
 - type: dissertation
   title: Machine Learning Assisted Optimization for Calculation and Automated Tuning of Antennas
@@ -13,23 +13,23 @@
     L. Linkous, <em>“Machine Learning Assisted Optimization for Calculation and Automated Tuning of Antennas,” VCU Scholars Compass</em>, 2024. <a href="https://scholarscompass.vcu.edu/etd/7841/" target="_blank">https://scholarscompass.vcu.edu/etd/7841/</a>
 - type: journal
   title: Framework for Security Assessment of Digital Radio Protocols
-  date: '2026-07-01'
-  date_precision: month
+  date: '2026-07-29'
+  date_precision: day
   url: https://doi.org/10.1016/j.adhoc.2026.104350
   citation: |-
     E. Karincic, L. Linkous, and E. Topsakal, <em>"Framework for Security Assessment of Digital Radio Protocols,"</em> in <em>Ad Hoc Networks</em>, vol. 193, p. 104350, 2026, <a href="https://doi.org/10.1016/j.adhoc.2026.104350" target="_blank">doi:10.1016/j.adhoc.2026.104350</a>.
 - type: journal
   title: |-
     Systematic Firmware Extraction Techniques for Forensic Analysis of Industrial Embedded Devices
-  date: '2026-06-01'
-  date_precision: month
+  date: '2026-06-23'
+  date_precision: day
   url: https://doi.org/10.1016/j.fsir.2026.100492
   citation: |-
     E. Karincic, L. Linkous, A. Will, C. Elks, M. Manic, and E. Topsakal, <em>"Systematic Firmware Extraction Techniques for Forensic Analysis of Industrial Embedded Devices,"</em> in <em>Forensic Science International: Reports</em>, vol. 14, p. 100492, 2026, <a href="https://doi.org/10.1016/j.fsir.2026.100492" target="_blank">doi:10.1016/j.fsir.2026.100492</a>.
 - type: journal
   title: An Implantable Antenna Design Optimized Using PSO Algorithm
   date: '2026-02-01'
-  date_precision: month
+  date_precision: day
   url: https://doi.org/10.3390/ai7020047
   citation: |-
     M. P. Nguyen, L. Linkous, M. J. Suche, and R. B. Green, <em>"An Implantable Antenna Design Optimized Using PSO Algorithm,"</em> in <em>AI</em>, vol. 7, no. 2, Art. no. 47, 2026, <a href="https://doi.org/10.3390/ai7020047" target="_blank">doi:10.3390/ai7020047</a>.
@@ -120,8 +120,8 @@
     E. Karincic, L. Linkous, and E. Topsakal, <em>"Experiential Radio Frequency Engineering Education with Machine Learning Focused Signal Processing Labs,"</em> 2026 ASEE Annual Conference & Exposition, Charlotte, NC, USA, 2026, <a href="https://doi.org/10.18260/1-2--59707" target="_blank">doi:10.18260/1-2--59707</a>.
 - type: conference
   title: Interactive Educational Platform for Digital Modulation Recognition and Signal Analysis
-  date: '2026-01-01'
-  date_precision: month
+  date: '2026-01-06'
+  date_precision: day
   url: https://doi.org/10.23919/NRSM68586.2026.11550999
   citation: |-
     E. Karincic, L. Linkous, and E. Topsakal, <em>"Interactive Educational Platform for Digital Modulation Recognition and Signal Analysis,"</em> 2026 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2026, pp. 40-41, <a href="https://doi.org/10.23919/NRSM68586.2026.11550999" target="_blank">doi:10.23919/NRSM68586.2026.11550999</a>.
@@ -135,37 +135,37 @@
 - type: conference
   title: |-
     A Viability Study of Optically Transparent Frequency Selective Surfaces for Electromagnetic Pulse Shielding
-  date: '2026-01-01'
-  date_precision: month
+  date: '2026-01-06'
+  date_precision: day
   url: https://doi.org/10.23919/NRSM68586.2026.11550870
   citation: |-
     R. E. Calabrese, D. Walters, B. C. Wilkinson, L. Linkous, and R. B. Green, <em>"A Viability Study of Optically Transparent Frequency Selective Surfaces for Electromagnetic Pulse Shielding,"</em> 2026 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2026, p. 293, <a href="https://doi.org/10.23919/NRSM68586.2026.11550870" target="_blank">doi:10.23919/NRSM68586.2026.11550870</a>.
 - type: conference
   title: |-
     Optimization of Plasmonic Bowtie Nanoantenna Design and Fabrication with Swarm Algorithm Proximity Effect Correction
-  date: '2026-01-01'
-  date_precision: month
+  date: '2026-03-04'
+  date_precision: day
   url: https://doi.org/10.1117/12.3081068
   citation: |-
     J. N. Blum, D. S. Pate, L. Linkous, V. Avrutin, and Ü. Özgür, <em>"Optimization of Plasmonic Bowtie Nanoantenna Design and Fabrication with Swarm Algorithm Proximity Effect Correction,"</em> Proc. SPIE 13899, Advanced Fabrication Technologies for Micro/Nano Optics and Photonics XIX, Art. no. 1389906, San Francisco, CA, USA, 2026, <a href="https://doi.org/10.1117/12.3081068" target="_blank">doi:10.1117/12.3081068</a>.
 - type: conference
   title: Reinforcement Learning Controlled Mechanically Reconfigurable Antennas
-  date: '2025-01-01'
-  date_precision: month
+  date: '2025-01-07'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM66067.2025.10907084
   citation: |-
     L. Linkous, E. Karincic, M. Suche, and E. Topsakal, <em>“Reinforcement Learning Controlled Mechanically Reconfigurable Antennas,”</em> 2025 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2025, pp. 61-62, <a href="https://doi.org/10.23919/USNC-URSINRSM66067.2025.10907084" target="_blank">doi:10.23919/USNC-URSINRSM66067.2025.10907084</a>.
 - type: conference
   title: Machine Learning Assisted Hyperparameter Tuning for Optimization
-  date: '2024-07-01'
-  date_precision: month
+  date: '2024-07-14'
+  date_precision: day
   url: https://doi.org/10.23919/INC-USNC-URSI61303.2024.10632482
   citation: |-
     L. Linkous, J. Lundquist, M. Suche, and E. Topsakal, <em>"Machine Learning Assisted Hyperparameter Tuning for Optimization,"</em> 2024 IEEE International Symposium on Antennas and Propagation and ITNC-USNC-URSI Radio Science Meeting, Florence, Italy, 2024, pp. 107–108, <a href="https://doi.org/10.23919/INC-USNC-URSI61303.2024.10632482" target="_blank">doi:10.23919/INC-USNC-URSI61303.2024.10632482</a>.
 - type: conference
   title: Machine Learning Assisted Optimization Methods for Automated Antenna Design
-  date: '2024-01-01'
-  date_precision: month
+  date: '2024-01-09'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464597
   citation: |-
     L. Linkous and E. Topsakal, <em>"Machine Learning Assisted Optimization Methods for Automated Antenna Design,"</em> 2024 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2024, pp. 377-378, <a href="https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464597" target="_blank">doi:10.23919/USNC-URSINRSM60317.2024.10464597</a>.
@@ -178,22 +178,22 @@
     E. Karincic, L. Linkous, and E. Topsakal, <em>"From Classroom to Career with Practical Network Training,"</em> 2024 ASEE Annual Conference & Exposition, Portland, OR, USA, June 2024. <a href="https://peer.asee.org/47479" target="_blank">https://peer.asee.org/47479</a>
 - type: conference
   title: Textile RFIDs for Healthcare Applications
-  date: '2024-01-01'
-  date_precision: month
+  date: '2024-01-09'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464636
   citation: |-
     M. Suche, L. Linkous, and E. Topsakal, <em>"Textile RFIDs for Healthcare Applications,"</em> 2024 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2024, pp. 143-144, <a href="https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464636" target="_blank">doi:10.23919/USNC-URSINRSM60317.2024.10464636</a>.
 - type: conference
   title: Reconfigurable Diode-Based and Liquid Metal Antenna for 5 GHz Wi-Fi
-  date: '2024-01-01'
-  date_precision: month
+  date: '2024-01-09'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464775
   citation: |-
     J. Lundquist, L. Linkous, and E. Topsakal, <em>"Reconfigurable Diode-Based and Liquid Metal Antenna for 5 GHz Wi-Fi,"</em> 2024 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2024, pp. 287-288, <a href="https://doi.org/10.23919/USNC-URSINRSM60317.2024.10464775" target="_blank">doi:10.23919/USNC-URSINRSM60317.2024.10464775</a>.
 - type: conference
   title: Automated Antenna Calculation, Design and Tuning Tool for HFSS
-  date: '2023-01-01'
-  date_precision: month
+  date: '2023-01-10'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM57470.2023.10043119
   citation: |-
     L. Linkous, E. Karincic, J. Lundquist, and E. Topsakal, <em>"Automated Antenna Calculation, Design and Tuning Tool for HFSS,"</em> 2023 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2023, pp. 229-230, <a href="https://doi.org/10.23919/USNC-URSINRSM57470.2023.10043119" target="_blank">doi:10.23919/USNC-URSINRSM57470.2023.10043119</a>.
@@ -206,8 +206,8 @@
     E. Karincic, E. Topsakal, and L. Linkous, <em>"Patch Antenna Calculations and Fabrication Made Simple for Cyber Security Research,"</em> in 2023 ASEE Annual Conference & Exposition, Baltimore, MD, USA, June 2023. <a href="https://peer.asee.org/43974" target="_blank">https://peer.asee.org/43974</a>
 - type: conference
   title: 'AntennaCAT: Automated Antenna Design and Tuning Tool'
-  date: '2023-07-01'
-  date_precision: month
+  date: '2023-07-23'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSI54200.2023.10289238
   citation: |-
     L. Linkous, J. Lundquist, and E. Topsakal, <em>"AntennaCAT: Automated Antenna Design and Tuning Tool,"</em> 2023 IEEE USNC-URSI Radio Science Meeting (Joint with AP-S Symposium), Portland, OR, USA, 2023, pp. 89-90, <a href="https://doi.org/10.23919/USNC-URSI54200.2023.10289238" target="_blank">doi:10.23919/USNC-URSI54200.2023.10289238</a>.
@@ -219,8 +219,8 @@
     E. Karincic, L. Linkous, and E. Topsakal , <em>"Generalized Machine-Learning Particle Swarm Optimization Antennas for CBRS," 2023 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM)</em>, Boulder, CO, USA, 2023 https://www.usnc-ursi-archive.org/nrsm/2023/papers/1065.pdf.
 - type: conference
   title: Active Dual Band Frequency Selective Surface for 2.4 GHz Wi-Fi and Wi-Fi 6E
-  date: '2023-09-01'
-  date_precision: month
+  date: '2023-09-17'
+  date_precision: day
   url: https://doi.org/10.1109/EMCTurkiye59424.2023.10287499
   citation: |-
     J. Lundquist, L. Linkous, and E. Topsakal, <em>"Active Dual Band Frequency Selective Surface for 2.4 GHz Wi-Fi and Wi-Fi 6E,"</em> 2023 7th International Electromagnetic Compatibility Conference (EMC Turkiye), İstanbul, Turkey, 2023, pp. 1-4, <a href="https://doi.org/10.1109/EMCTurkiye59424.2023.10287499" target="_blank">doi:10.1109/EMCTurkiye59424.2023.10287499</a>.
@@ -241,8 +241,8 @@
 - type: conference
   title: |-
     Mechanically Configurable, Capacitively Coupled, Disk Loaded Monopole Driven Corner Reflector
-  date: '2022-01-01'
-  date_precision: month
+  date: '2022-01-04'
+  date_precision: day
   url: https://doi.org/10.23919/USNC-URSINRSM57467.2022.9881449
   citation: |-
     J. Lundquist, L. Linkous, and E. Topsakal, <em>"Mechanically Configurable, Capacitively Coupled, Disk Loaded Monopole Driven Corner Reflector,"</em> 2022 United States National Committee of URSI National Radio Science Meeting (USNC-URSI NRSM), Boulder, CO, USA, 2022, pp. 12-13, <a href="https://doi.org/10.23919/USNC-URSINRSM57467.2022.9881449" target="_blank">doi:10.23919/USNC-URSINRSM57467.2022.9881449</a>.
@@ -255,8 +255,8 @@
     N. Zohrabi, L. Linkous, et al., <em>"Towards Sustainable Food Security: An Interdisciplinary Approach,"</em> 2021 IEEE SmartWorld, Ubiquitous Intelligence & Computing, Advanced & Trusted Computing, Scalable Computing & Communications, Internet of People and Smart City Innovation (SmartWorld/SCALCOM/UIC/ATC/IOP/SCI), Atlanta, GA, USA, 2021, pp. 463-470, <a href="https://doi.org/10.1109/SWC50871.2021.00069" target="_blank">doi:10.1109/SWC50871.2021.00069</a>.
 - type: conference
   title: 'OpenCity: An Open Architecture Testbed for Smart Cities'
-  date: '2021-09-01'
-  date_precision: month
+  date: '2021-09-07'
+  date_precision: day
   url: https://doi.org/10.1109/ISC253183.2021.9562813
   citation: |-
     N. Zohrabi, P. Martin, M. Kuzlu, L. Linkous, et al., <em>"OpenCity: An Open Architecture Testbed for Smart Cities,"</em> 2021 IEEE International Smart Cities Conference (ISC2), Manchester, United Kingdom, 2021, pp. 1-7, <a href="https://doi.org/10.1109/ISC253183.2021.9562813" target="_blank">doi:10.1109/ISC253183.2021.9562813</a>.
@@ -269,8 +269,8 @@
     L. Linkous, N. Zohrabi, and S. Abdelwahed, <em>"Health Monitoring in Smart Homes Utilizing Internet of Things,"</em> 2019 IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE), Arlington, VA, USA, 2019, pp. 29-34, <a href="https://doi.org/10.1109/CHASE48038.2019.00020" target="_blank">doi:10.1109/CHASE48038.2019.00020</a>.
 - type: conference
   title: A testbed for a smart building
-  date: '2019-04-01'
-  date_precision: month
+  date: '2019-04-15'
+  date_precision: day
   url: https://doi.org/10.1145/3313237.3313296
   citation: |-
     R. Eini, L. Linkous, N. Zohrabi, and S. Abdelwahed, <em>“A testbed for a smart building,”</em> Proceedings of the Fourth Workshop on International Science of Smart City Operations and Platforms Engineering - SCOPE ’19, 2019, <a href="https://doi.org/10.1145/3313237.3313296" target="_blank">doi:10.1145/3313237.3313296</a>.

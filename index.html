@@ -77,7 +77,7 @@ nav: home
       {% if stats.github %}
       <ul class="stats">
         <li><b>{{ stats.github.public_repos }}</b><span>public repositories</span></li>
-        <li><b>{{ stats.github.total_stars }}</b><span>GitHub stars</span></li>
+        {% if stats.github.total_stars %}<li><b>{{ stats.github.total_stars }}</b><span>GitHub stars</span></li>{% endif %}
         {% if stats.pypi.tsapython %}<li><b>{{ stats.pypi.tsapython.last_month }}</b><span>tsapython downloads, last 30 days</span></li>{% endif %}
         <li><b>{{ stats.github.most_recent_push.repo | split: "/" | last }}</b><span>most recently updated, {{ stats.github.most_recent_push.pushed_at | date: "%b %-d" }}</span></li>
       </ul>
