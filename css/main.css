@@ -182,6 +182,8 @@ th, td { padding: .4375em; }
 img { border: 0; height: auto; max-width: 100%; vertical-align: middle; }
 figure { margin: 0; }
 .entry-content figure { margin: 0 0 1.75em; }
+/* Posts wrap their body in .justified-content (was an inline <style> per post). */
+.entry-content .justified-content { text-align: justify; text-justify: inter-word; }
 embed, iframe, object, video { margin-bottom: 1.75em; max-width: 100%; vertical-align: middle; }
 figcaption {
   color: var(--color-muted);

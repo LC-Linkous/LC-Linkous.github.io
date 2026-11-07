@@ -15,7 +15,7 @@ nav: home
       {{ firstPost.summary }} <br>
       <b>tags:</b>
       {% for tag in firstPost.tags %}
-        <a href="/tags/{{ tag }}/">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% include tag-link.html tag=tag %}{% unless forloop.last %}, {% endunless %}
       {% endfor %}
     </p>
   </div>

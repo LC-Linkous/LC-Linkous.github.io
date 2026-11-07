@@ -1,0 +1,5 @@
+{% comment %}
+  Usage: {% include tag-link.html tag=tag %}
+  Links to /tags/<tag>/ only if _tags/<tag>.md exists; otherwise prints the
+  tag as plain text so a missing stub never produces a 404.
+{% endcomment %}{% assign tag_coll = site.collections | where: "label", "tags" | first %}{% assign stub = tag_coll.docs | where: "tag-name", include.tag | first %}{% if stub %}<a class="post" href="{{ stub.url }}">#{{ include.tag }}</a>{% else %}<span class="post tag-missing">#{{ include.tag }}</span>{% endif %}

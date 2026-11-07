@@ -11,7 +11,12 @@ View the main page here: https://lc-linkous.github.io/
 * `_layouts/page.html` – wraps markdown pages (`tools.md`, `projects.md`, `about.md`) in the same article structure as the HTML pages. Set `title:`, `nav:` and `permalink:` in front matter; no H1 in the body.
 * `_layouts/post.html` – wraps posts in `_posts/`. Posts are highlighted under Posts automatically.
 * `_layouts/tags.html` – renders `_tags/<tag>.md` as an archive of posts whose `tags:` list contains `tag-name`. Add a new tag by adding a `_tags/<tag>.md` stub with `tag-name: <tag>`.
-* `templates/` and `README.md` are excluded from the build (see `exclude:` in `_config.yml`).
+* `README.md` is excluded from the build (see `exclude:` in `_config.yml`).
+
+## Adding things
+* **Page:** add `name.md` at the root with front matter `layout: page`, `title:`, `nav:` and `permalink: /name/`; add a nav entry in `_layouts/default.html` if it should appear in the menu.
+* **Post:** add `_posts/<group>/YYYY-MM-DD-slug.md` with `layout: post`, `title:`, `summary:` and `tags: [a, b]`. Posts sort by the date in the filename.
+* **Tag:** add `_tags/<tag>.md` containing `layout: tags` and `tag-name: <tag>`. A tag used on a post without a stub is shown as plain text, not a link, until the stub exists.
 
 
 ## References

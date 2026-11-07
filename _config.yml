@@ -20,8 +20,6 @@ collections:
     output: true
     permalink: tags/:path/
 
-# Jekyll processes everything under the site root. Keep scaffolding out of
-# the published site.
+# Jekyll processes everything under the site root.
 exclude:
-  - templates/
   - README.md
