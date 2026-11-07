@@ -1,0 +1,26 @@
+# Written by .github/workflows/stats.yml (nightly) from the GitHub and PyPI
+# APIs. Do not edit by hand; edits are overwritten on the next run. Seeded
+# once by hand on 2026-11-07 so the home page renders before the first run.
+updated: '2026-11-07'
+github:
+  user: LC-Linkous
+  public_repos: 15
+  total_stars: 45
+  most_recent_push:
+    repo: LC-Linkous/fox-bench
+    pushed_at: '2026-11-07'
+  repos:
+    LC-Linkous/AntennaCalculationAutotuningTool:
+      stars: 24
+      forks: 4
+      pushed_at: '2026-06-06'
+      latest_release: null
+    LC-Linkous/nanovna-web:
+      stars: 0
+      forks: 1
+      pushed_at: '2026-11-02'
+      latest_release: null
+pypi:
+  tsapython:
+    version: 4.0.0
+    last_month: 283

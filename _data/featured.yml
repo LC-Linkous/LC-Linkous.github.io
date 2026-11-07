@@ -1,0 +1,36 @@
+# Hand-picked cards for the home page. Edit here to change what is featured.
+# `repo` is owner/name on GitHub; the stats row and card metadata look it up
+# in _data/stats.yml (written nightly by the stats workflow).
+project:
+  name: AntennaCAT
+  repo: LC-Linkous/AntennaCalculationAutotuningTool
+  url: /projects/#antennacat
+  image: /media/imgs/projects/cat-antennas.webp
+  image_alt: Fabricated cat-shaped WiFi antennas designed with AntennaCAT
+  blurb: >-
+    Antenna Calculation and Autotuning Tool: machine learning applied to
+    automating, evaluating, and optimizing antenna design against EM
+    simulation. The 2025 release is current; a numpy 2.x rework is in progress.
+  links:
+    - text: Source
+      url: https://github.com/LC-Linkous/AntennaCalculationAutotuningTool
+    - text: Wiki
+      url: https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/wiki
+    - text: Projects »
+      url: /projects/#antennacat
+tool:
+  name: nanoVNA Web
+  repo: LC-Linkous/nanovna-web
+  url: https://lc-linkous.github.io/nanovna-web/
+  image: /media/imgs/tools/nanovna-web.webp
+  image_alt: nanoVNA Web showing an S11 sweep with markers
+  blurb: >-
+    Browser front end for the NanoVNA-F V2/V3: S-parameters, Smith chart,
+    SOLT calibration, Touchstone export. Try it without hardware.
+  links:
+    - text: Open
+      url: https://lc-linkous.github.io/nanovna-web/
+    - text: Changelog
+      url: https://github.com/LC-Linkous/nanovna-web/blob/main/CHANGELOG.md
+    - text: All tools »
+      url: /tools/

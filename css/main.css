@@ -351,6 +351,25 @@ a:hover, a:active { outline: 0; }
 .profile-links figcaption { font-style: normal; }
 
 /* --- Footer --- */
+/* --- Home page dashboard --- */
+.home-intro { font-size: 1.05em; }
+.dash { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25em; margin: 0 0 2em; }
+.card { border: 1px solid var(--color-border); padding: 1em; }
+.card h2 { font-size: .8em; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted); margin: 0 0 .5em; }
+.card h3 { margin: .5em 0 .25em; font-size: 1.1em; }
+.card img { display: block; width: 100%; height: auto; }
+.card p { font-size: .9em; margin: 0 0 .5em; }
+.card .meta, .home .meta { font-size: .8em; color: var(--color-muted); font-style: italic; }
+.stats { list-style: none; margin: 0 0 2em; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .75em; }
+.stats li { border-top: 3px solid var(--color-bg); padding: .6em .2em 0; }
+.stats b { display: block; font-family: var(--font-heading); font-size: 1.5em; line-height: 1.1; overflow-wrap: anywhere; }
+.stats span { font-size: .75em; color: var(--color-muted); }
+.home-posts { list-style: none; padding: 0; margin: 0; }
+.home-posts li { margin-bottom: 1.25em; }
+.home-posts h3 { margin: 0 0 .25em; font-size: 1.05em; }
+.home-posts p { margin: 0; }
+@media (max-width: 700px) { .dash { grid-template-columns: 1fr; } .stats { grid-template-columns: 1fr 1fr; } }
+
 .site-footer { padding: 0 7.6923% 1.75em; }
 .site-footer { border-top: 1px solid var(--color-border, #d1d1d1); margin-top: 3.5em; padding-top: 1.75em; }
 .footer-menu { list-style: none; margin: 0 0 1em; padding: 0; font-family: var(--font-heading); font-size: .8125rem; }
