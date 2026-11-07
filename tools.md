@@ -31,6 +31,8 @@ are in each repository.
 [Source](https://github.com/LC-Linkous/nanovna-web) ·
 [Changelog](https://github.com/LC-Linkous/nanovna-web/blob/main/CHANGELOG.md)
 
+![nanoVNA Web: sweep controls in the sidebar, an S11 trace with markers, and the device console below](/media/imgs/tools/nanovna-web.webp)
+
 A front end for the NanoVNA-F V2 and F V3. |S11| and |S21| in dB, SWR,
 phase, a Smith chart, and a rolling waterfall, with markers reading frequency,
 SWR, and R + jX. Step-through SOLT calibration and electrical delay run on the
@@ -48,6 +50,8 @@ Companion to [nanoVNA_python](https://github.com/LC-Linkous/nanoVNA_python).
 [Open](https://lc-linkous.github.io/tinysa-web/) ·
 [Source](https://github.com/LC-Linkous/tinysa-web) ·
 [Changelog](https://github.com/LC-Linkous/tinysa-web/blob/main/CHANGELOG.md)
+
+![tinySA Web: live spectrum with peak markers, waterfall, and peak history windows](/media/imgs/tools/tinysa-web.webp)
 
 A front end for the tinySA and tinySA Ultra. Live spectrum in dBm, waterfall,
 and peak history across one, two, or four windows, with max hold, min hold,
@@ -69,6 +73,8 @@ Companion to [tinySA_python](https://github.com/LC-Linkous/tinySA_python).
 [Source](https://github.com/LC-Linkous/hackrf-web) ·
 [Protocol](https://lc-linkous.github.io/hackrf-web/protocol/) ·
 [Changelog](https://github.com/LC-Linkous/hackrf-web/blob/main/CHANGELOG.md)
+
+![hackrf-web: swept spectrum of the FM band with markers, waterfall, IQ time-domain and constellation views](/media/imgs/tools/hackrf-web.webp)
 
 A bench page for the HackRF One. Swept spectrum and waterfall across any span to
 6 GHz, IQ at one center frequency with the FFT computed off the browser, IQ
@@ -126,6 +132,8 @@ and the kitsune targets have not been run on real boards.
 [Source](https://github.com/LC-Linkous/fox-hunt-web) ·
 [Changelog](https://github.com/LC-Linkous/fox-hunt-web/blob/main/CHANGELOG.md)
 
+![fox-hunt-web: signal strength against time, per-channel scan strip, audio passband, and the fox console](/media/imgs/tools/fox-hunt-web.webp)
+
 A receiver and direction-finding instrument for the DC34 fox, a Seeed XIAO
 ESP32-C3 driving a NiceRF SA868. Tune 2 m or 70 cm, watch signal strength live,
 scan a channel list for the one with a fox on it, decode a fox's Morse ID and
@@ -172,6 +180,8 @@ and wireless courses. Same rules as the tools above: Chrome or Edge, a
 
 [Open](https://interactive-hardware-interfacing.github.io/led-iv-lab/) ·
 [Source](https://github.com/interactive-hardware-interfacing/led-iv-lab)
+
+![LED I–V Lab: instrument panel with an LED selected and an I–V chart with one curve per LED color](/media/imgs/tools/led-iv-lab.webp)
 
 A browser instrument for an electronics lab on diode I–V curves. Students pick
 one of four LEDs, sweep the drive voltage, and watch forward voltage and
