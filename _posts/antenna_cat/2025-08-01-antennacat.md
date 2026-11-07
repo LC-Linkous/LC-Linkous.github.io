@@ -7,13 +7,6 @@ category: antennacat
 tags: [antennacat, open_source, research, software]
 ---
 
-<style>
-.justified-content {
-    text-align: justify;
-    text-justify: inter-word;
-}
-</style>
-
 <div class="justified-content">
 
 <p>

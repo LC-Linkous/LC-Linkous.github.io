@@ -7,13 +7,6 @@ category: antennas
 tags: [antennacat, antennas, examples]
 ---
 
-<style>
-.justified-content {
-    text-align: justify;
-    text-justify: inter-word;
-}
-</style>
-
 <div class="justified-content">
 
 
@@ -22,7 +15,7 @@ This material was first featured in the 'Cat Antennas' section of my <a href="ht
 </p>
 
 <figure>
-<img src="/media/imgs/antennacat/CatAntenna_2.png" alt="Experimental samples of WiFi antennas with copper conductors shaped like cats." style="width:500px">
+<img src="/media/imgs/projects/cat-antennas.webp" alt="Experimental samples of WiFi antennas with copper conductors shaped like cats." style="width:500px">
 <figcaption>Fig.1 - Experimental samples of WiFi antennas with copper conductors shaped like cats. On the left side are three combinations of the dual-band design labeled with their frequencies. On the right side, Sybil (the inspiration for the design) delicately knocks over carefully placed samples. </figcaption>
 </figure> 
 

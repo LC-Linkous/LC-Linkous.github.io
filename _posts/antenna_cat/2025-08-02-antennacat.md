@@ -7,13 +7,6 @@ category: antennacat
 tags: [antennacat, open_source]
 ---
 
-<style>
-.justified-content {
-    text-align: justify;
-    text-justify: inter-word;
-}
-</style>
-
 <div class="justified-content">
 
 <img src="/media/imgs/antennacat/transparent-antennaCAT-logo.png" alt="AntennaCAT logo" height="200">
