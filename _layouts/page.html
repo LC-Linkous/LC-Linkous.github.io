@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% comment %}
+  Layout for markdown pages. Wraps rendered markdown in the same
+  <main>/<article>/.entry-header/.entry-content structure the HTML pages use,
+  so the TwentySixteen-derived CSS applies. Set `title:` and `nav:` in the
+  page's front matter; do not put an H1 in the body.
+{% endcomment %}
+<main id="main" class="site-main">
+  <article id="{{ page.title | slugify }}" class="{{ page.title | slugify }} page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1 class="entry-title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="entry-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </header>
+    <div class="entry-content">
+      {{ content }}
+    </div>
+  </article>
+</main>

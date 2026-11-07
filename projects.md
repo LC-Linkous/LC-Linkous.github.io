@@ -1,0 +1,215 @@
+---
+layout: page
+title: Projects
+nav: projects
+permalink: /projects/
+---
+
+Research software, optimizers, Python libraries, firmware, course material,
+and hardware. The browser instruments have their own page: [Tools](/tools/).
+
+---
+
+## AntennaCAT
+
+### Antenna Calculation and Autotuning Tool
+
+[Source](https://github.com/LC-Linkous/AntennaCalculationAutotuningTool) ·
+[Wiki](https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/wiki) ·
+[Release schedule](https://github.com/LC-Linkous/AntennaCalculationAutotuningTool/blob/main/README.md#release-schedule)
+
+AntennaCAT applies machine learning to automate, evaluate, and optimize the
+antenna design process against EM simulation software. A combined antenna
+designer and internal calculator accelerates CAD construction and simulation of
+several common topologies while eliminating model disparity, so data collection
+can run automatically rather than being rebuilt by hand for each design.
+
+Published in *IEEE Antennas and Propagation Magazine* (2025) and presented at
+USNC-URSI NRSM and IEEE AP-S; see [Publications](/publications). Less formal
+notes on design and planning are under the [#antennacat](/tags/antennacat/)
+tag.
+
+**Status:** the 2025 release is the current full release. The optimizers are
+being reworked for numpy 2.x, which is the current priority; the wiki carries
+feature documentation and how-to guides, and the release schedule in the README
+has the near-term plan.
+
+---
+
+## Optimization
+
+A collection of state-machine-based optimizers that integrate with AntennaCAT,
+plus the benchmarking and evaluation tools around them. Some of these are
+serious; some of them are not.
+
+|  | PSO | Cat Swarm | Chicken Swarm | MultiGLODS | Genetic | Other |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Base** | [pso_python](https://github.com/LC-Linkous/pso_python) | [cat_swarm](https://github.com/LC-Linkous/cat_swarm_python) | [chicken_swarm](https://github.com/LC-Linkous/chicken_swarm_python) | [multi_glods](https://github.com/LC-Linkous/multi_glods_python) | [ga_python](https://github.com/LC-Linkous/ga_python) | [sweep](https://github.com/LC-Linkous/sweep_python), [bayesian](https://github.com/LC-Linkous/bayesian_optimization_python) |
+| **Alternate** | [pso_basic](https://github.com/LC-Linkous/pso_python/tree/pso_basic) | [sand_cat](https://github.com/LC-Linkous/cat_swarm_python/tree/sand_cat_python) | [2015](https://github.com/LC-Linkous/chicken_swarm_python/tree/improved_chicken_swarm) / [2022 improved](https://github.com/LC-Linkous/chicken_swarm_python/tree/2022_improved_chicken_swarm) | [GLODS](https://github.com/LC-Linkous/GLODS_python) / [DIRECT](https://github.com/LC-Linkous/DIRECT_python) | [de_python](https://github.com/LC-Linkous/de_python) | sweep alternates in base repo |
+| **Quantum-inspired** | [pso_quantum](https://github.com/LC-Linkous/pso_quantum) | [cat_swarm_quantum](https://github.com/LC-Linkous/cat_swarm_python/tree/cat_swarm_quantum) | [chicken_swarm_quantum](https://github.com/LC-Linkous/chicken_swarm_python/tree/chicken_swarm_quantum) | — | — | [qea_python](https://github.com/LC-Linkous/qea_python) |
+
+**[Surrogate Model Optimization](https://github.com/LC-Linkous/surrogate_model_optimization)**
+unifies most of the collection into one surrogate-assisted framework with
+interchangeable approximators.
+
+**[Objective Function Library and Test Suite](https://github.com/LC-Linkous/objective_function_suite)**
+is the benchmarking side: 60+ objective functions from the literature with
+documented solution, decision, and objective spaces, including Pareto fronts.
+Citations are in the README.
+
+**[ArrayCalculator](https://github.com/LC-Linkous/ArrayCalculator)** is a
+command-line calculator, synthesizer, and evaluator for linear antenna arrays,
+built to be called as the evaluation step inside an optimizer loop and
+compatible with AntennaCAT.
+
+---
+
+## Python device libraries
+
+Non-GUI Python APIs for RF test hardware. Each has a browser counterpart on the
+[Tools](/tools/) page that speaks the same device protocol, so files (`.csv`,
+`.s1p` / `.s2p`, `.json`) move between the two. Unofficial, and not endorsed by
+any of the device manufacturers.
+
+| Device | Repository | PyPI | Browser tool |
+| --- | --- | --- | --- |
+| tinySA, tinySA Ultra | [tinySA_python](https://github.com/LC-Linkous/tinySA_python) | [`tsapython`](https://pypi.org/project/tsapython/) | [tinySA Web](/tools/#tinysa-web) |
+| NanoVNA-F V2 / V3 | [nanoVNA_python](https://github.com/LC-Linkous/nanoVNA_python) | [`nvnapython`](https://pypi.org/project/nvnapython/) | [nanoVNA Web](/tools/#nanovna-web) |
+| HackRF One | [hackRF_python](https://github.com/LC-Linkous/hackRF_python) | [`hackrfpy`](https://pypi.org/project/hackrfpy/) | [hackrf-web](/tools/#hackrf-web) |
+
+`tsapython` is archived with a DOI and is citable:
+[doi:10.5281/zenodo.20546764](https://doi.org/10.5281/zenodo.20546764).
+
+**[sdr_dsp_python](https://github.com/LC-Linkous/sdr_dsp_python)** is a DSP
+library in progress, developed alongside the device libraries for processing
+collected data.
+
+---
+
+## Embedded and firmware
+
+Firmware and board support that grew out of the fox-hunt work and the teaching
+demos, mostly on Seeed XIAO ESP32 boards.
+
+**[foxlib and foxlib-c](https://github.com/LC-Linkous/fox-bench)** are the two
+firmware libraries behind [fox-bench](/tools/#fox-bench): `foxlib` in
+CircuitPython for boards driving a NiceRF SA868, and `foxlib-c` in C, shipped as
+a UF2. Both are written against the same `PROTOCOL.md` contract as the page and
+its simulated board, so a fox configured in the browser behaves the same
+whichever firmware it runs. Supported
+targets are the DC34 fox (XIAO ESP32-C3 + SA868), the AI6YM PicoFox, network
+foxes on XIAO C3/C6/C5/S3, Waveshare ESP32-S3-Nano, FireBeetle 2 ESP32-C5, and
+Arduino Nano 33 BLE, and rfhs kitsune boards; the network and kitsune targets
+are experimental. A headless batch flasher writes a fleet of boards from one
+CSV.
+
+**[fox-hunt-web firmware](https://github.com/LC-Linkous/fox-hunt-web)** is the
+receive-side CircuitPython for the same XIAO + SA868 board, with transmit
+disabled by default and keying guarded by a stored callsign, a per-session arm,
+and a hardware deadline on every key-down.
+
+**[interactive-hardware-interfacing](https://github.com/interactive-hardware-interfacing)**
+demo firmware: CircuitPython for six ESP-NOW demos on the XIAO ESP32-C3, plus
+Arduino and CircuitPython builds for the LED I–V lab on an Adafruit ItsyBitsy
+M4, each written against a documented serial protocol and flashed from the
+browser. The demos themselves are on [Tools](/tools/#teaching-instruments).
+
+---
+
+## Teaching material
+
+The public half of units built for undergraduate electives. The full versions
+include slides, additional examples, and group assignments. Teaching approach
+and outcomes from this material are written up in ASEE papers; see
+[Publications](/publications).
+
+**[Cryptography and encryption](https://github.com/LC-Linkous/cryptography_examples)** —
+basic encryption methods, their decryption, and an overview of cryptography,
+with demos and references for further reading.
+
+**[Reverse engineering](https://github.com/LC-Linkous/reverse_engineering_notes)** —
+methodology and tool selection for getting started, with extensive references.
+Educational use only; examples focus on tool usage.
+
+**[Machine learning for antenna data](https://github.com/LC-Linkous/2024-URSI-NRSM-1265)** —
+a five-part series on analyzing data from antenna design simulation, with a
+~30k-point multi-dimensional sample included.
+
+**[Computer vision](https://github.com/LC-Linkous/computer_vision_notes)** —
+processing live video for point tracking and depth estimation with a dual-lens
+USB camera.
+
+**[Kalman filtering](https://github.com/LC-Linkous/kalman_filter)** — an
+interactive demo in which balls bounce under gravity while a noisy sensor
+reports position only; one Kalman filter per ball estimates position and
+velocity, with live NEES/NIS consistency metrics that show the moment the
+filter's model is wrong. A wxPython GUI for experimenting and a headless Monte
+Carlo script for a formal consistency study.
+
+**[Simulated medical device data](https://github.com/LC-Linkous/data_interfacing_demo)** —
+three clinical waveforms (ECG, SpO₂, invasive blood pressure) streamed as binary
+packets over a mock serial transport, mirroring a bedside monitor's pipeline, so
+students can practice parsing, filtering, and feature extraction on live data
+with no hardware.
+
+**Lab instruments and wireless demos** — the browser-based LED I–V Lab and six
+ESP-NOW demos are on [Tools](/tools/#teaching-instruments).
+
+---
+
+## Amateur radio hardware
+
+**[DC34 fox transmitter](https://github.com/HamRadioVillage/dc34fox)** —
+updated the design and fabricated the transmitter hardware used in the Ham
+Radio Village Fox Hunt at DEF CON 34, and served as contest lead for the event.
+The fox is a small beacon built around a Seeed XIAO ESP32-C3 and a NiceRF
+SA868, running single-file CircuitPython firmware that transmits a Morse ID and
+a short song on a loop for direction-finding practice. The repository includes
+flashing, configuration, and legal-operation documentation written for
+first-time hardware users.
+
+**[Fox hunt write-ups](https://github.com/HamRadioVillage/fox-hunt-writeups/tree/main/dc34)** —
+post-contest write-ups covering how the hunt was structured and run.
+
+The browser tooling for these, [fox-bench](/tools/#fox-bench) for building
+transmitters and [fox-hunt-web](/tools/#fox-hunt-web) for finding them, is on
+the Tools page.
+
+---
+
+## Research antennas
+
+**[Research Antenna Collection](https://github.com/LC-Linkous/research_antenna_collection)** —
+measurements and `.dxf` files for antenna samples that have appeared in papers,
+including the
+[cat antenna collection](https://github.com/LC-Linkous/research_antenna_collection#cat-antennas),
+which has turned up in publications, projects, and conferences. See also the
+[Cat Antennas](/tags/antennas/) posts.
+
+---
+
+## Code from papers
+
+**2025** —
+[Reinforcement Learning Controlled Mechanically Reconfigurable Antennas](https://github.com/LC-Linkous/2025_URSI_RL_Reconfigurable_Antennas),
+USNC-URSI NRSM 2025, Boulder, paper #1237. Code and demo from the paper; the
+equipment used has since had official hardware and firmware updates, so a
+rework against the current versions is pending.
+
+**2024** —
+[Machine Learning Assisted Hyperparameter Tuning for Optimization](https://github.com/LC-Linkous/2024-APS-URSI-3323),
+IEEE AP-S 2024, Florence. Data and select machine learning examples.
+
+**2024** —
+[Machine Learning Assisted Optimization Methods for Automated Antenna Design](https://github.com/LC-Linkous/2024-URSI-NRSM-1265),
+USNC-URSI NRSM 2024, Boulder. Data and examples; also the basis of the
+machine-learning tutorial series under Teaching material.
+
+---
+
+## Collaborations
+
+**[AntennaCalculator](https://github.com/Dollarhyde/AntennaCalculator)** —
+Dollarhyde's CLI tool for basic antenna design. The
+[fork](https://github.com/LC-Linkous/AntennaCalculator) adds a GUI alongside
+the CLI.
