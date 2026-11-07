@@ -192,23 +192,24 @@ release, and a CircuitPython build speaking the same protocol as a swap-in
 option. Every LED switch is driven off and the DAC set to zero on power-up, on
 disconnect, and at the end of every sweep.
 
-### Wireless demos
+### Intro EMF Lab
 
-Six short demos on Seeed XIAO ESP32-C3 boards using ESP-NOW, each isolating a
-single idea. The page flashes the CircuitPython firmware to the boards and then
-shows what is happening over the air.
+[Open](https://interactive-hardware-interfacing.github.io/intro-EMF-lab/) ·
+[Source](https://github.com/interactive-hardware-interfacing/intro-emf-lab)
 
-| Demo | What it shows | Boards |
-| --- | --- | --- |
-| [morse-key-demo](https://interactive-hardware-interfacing.github.io/morse-key-demo/) | Signaling and encoding; a keyboard mode needs no hardware at all | 1–2 |
-| [packet-inspector-demo](https://interactive-hardware-interfacing.github.io/packet-inspector-demo/) | What is inside a packet: a 32-byte frame, CRC, loss | 2 |
-| [wireless-address-demo](https://interactive-hardware-interfacing.github.io/wireless-address-demo/) | Unicast vs. broadcast, with acknowledgements | 4 |
-| [telemetry-demo](https://interactive-hardware-interfacing.github.io/telemetry-demo/) | Sensor data over the air (HC-SR04 range finder) | 2 |
-| [rssi-demo](https://interactive-hardware-interfacing.github.io/rssi-demo/) | Signal strength against distance and transmit power | 2 |
-| [espsdr-demo](https://interactive-hardware-interfacing.github.io/espsdr-demo/) | The 2.4 GHz band as an SDR: spectrum, waterfall, I/Q, using ESPARGOS ESP-SDR firmware on the receiver | 1–2 |
+Browser-based field simulators for an introductory electromagnetism course,
+in one static page with a tab per topic: point and line charges in 2D and 3D,
+Gauss's law, capacitors, conduction, dielectric interfaces, magnetic fields,
+inductors, transmission lines, FDTD, and a sandbox, each with its governing
+equations shown beside the plot. The relaxation solver runs in a web worker so
+the page stays responsive, the full state of every tab is encoded in the URL so
+a configuration can be handed to students as a link, and a set of closed-form
+benchmarks runs before each deploy. No hardware; this one works in any modern
+browser.
 
-Source for each is at
-[github.com/interactive-hardware-interfacing](https://github.com/interactive-hardware-interfacing).
+The six **ESP-NOW wireless demos** from the same collection are listed under
+[Demos and interactive labs](/projects/#demos-and-interactive-labs) on the
+Projects page.
 
 ---
 

@@ -6,7 +6,7 @@ permalink: /projects/
 ---
 
 Research software, optimizers, Python libraries, firmware, course material,
-hardware, and community projects. The browser instruments have their own page: [Tools](/tools/).
+hardware, teaching demos, and community projects. The browser instruments have their own page: [Tools](/tools/).
 
 ---
 
@@ -127,7 +127,7 @@ and a hardware deadline on every key-down.
 demo firmware: CircuitPython for six ESP-NOW demos on the XIAO ESP32-C3, plus
 Arduino and CircuitPython builds for the LED I–V lab on an Adafruit ItsyBitsy
 M4, each written against a documented serial protocol and flashed from the
-browser. The demos themselves are on [Tools](/tools/#teaching-instruments).
+browser. The demos themselves are under [Demos and interactive labs](#demos-and-interactive-labs).
 
 ---
 
@@ -172,8 +172,54 @@ with no hardware.
   <figcaption>From the computer vision samples: feature tracking on a live feed, with the top-down view of the tracked points.</figcaption>
 </figure>
 
-**Lab instruments and wireless demos** — the browser-based LED I–V Lab and six
-ESP-NOW demos are on [Tools](/tools/#teaching-instruments).
+---
+
+## Demos and interactive labs
+
+[interactive-hardware-interfacing](https://interactive-hardware-interfacing.github.io/) ·
+[Source](https://github.com/interactive-hardware-interfacing)
+
+A collection of browser-based teaching material for undergraduate electronics
+and wireless courses, kept in its own GitHub organization so each piece can be
+pulled into a course on its own. Everything runs as a static page in Chrome or
+Edge, carries a `PROTOCOL.md` that the page, the simulated hardware, and the
+firmware are written against, and has a demo mode so it can be used without
+the hardware on the desk.
+
+**Interactive labs**
+
+- **[LED I–V Lab](https://interactive-hardware-interfacing.github.io/led-iv-lab/)**
+  ([source](https://github.com/interactive-hardware-interfacing/led-iv-lab)) —
+  a browser instrument for a diode I–V lab: pick one of four LEDs, sweep the
+  drive voltage, and plot forward voltage and current live from an Adafruit
+  ItsyBitsy M4. Arduino firmware built to `.uf2` by CI, with a CircuitPython
+  build as a swap-in; exports CSV for the lab report.
+- **[Intro EMF Lab](https://interactive-hardware-interfacing.github.io/intro-EMF-lab/)**
+  ([source](https://github.com/interactive-hardware-interfacing/intro-emf-lab)) —
+  browser field simulators for an introductory electromagnetism course: point
+  and line charges in 2D and 3D, Gauss's law, capacitors, conduction, dielectric
+  interfaces, magnetic fields, inductors, transmission lines, an FDTD tab, and
+  a free sandbox, each with its equations alongside. A relaxation solver runs
+  off the main thread, every tab's state lives in the URL so a configuration
+  can be shared as a link, and closed-form benchmarks gate each deploy. No
+  hardware involved; this one is all simulation.
+
+**Wireless demos** — six short demos on Seeed XIAO ESP32-C3 boards using
+ESP-NOW, each isolating one idea. The page flashes the CircuitPython firmware
+and then shows what is happening over the air.
+
+| Demo | What it shows | Boards |
+| --- | --- | --- |
+| [morse-key-demo](https://interactive-hardware-interfacing.github.io/morse-key-demo/) | Signaling and encoding; a keyboard mode needs no hardware at all | 1–2 |
+| [packet-inspector-demo](https://interactive-hardware-interfacing.github.io/packet-inspector-demo/) | What is inside a packet: a 32-byte frame, CRC, loss | 2 |
+| [wireless-address-demo](https://interactive-hardware-interfacing.github.io/wireless-address-demo/) | Unicast vs. broadcast, with acknowledgements | 4 |
+| [telemetry-demo](https://interactive-hardware-interfacing.github.io/telemetry-demo/) | Sensor data over the air (HC-SR04 range finder) | 2 |
+| [rssi-demo](https://interactive-hardware-interfacing.github.io/rssi-demo/) | Signal strength against distance and transmit power | 2 |
+| [espsdr-demo](https://interactive-hardware-interfacing.github.io/espsdr-demo/) | The 2.4 GHz band as an SDR: spectrum, waterfall, I/Q, using ESPARGOS ESP-SDR firmware on the receiver | 1–2 |
+
+The firmware side of these is under [Embedded and firmware](#embedded-and-firmware);
+the two labs also appear with the other browser instruments on
+[Tools](/tools/#teaching-instruments).
 
 ---
 
