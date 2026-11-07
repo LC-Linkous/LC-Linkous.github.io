@@ -352,6 +352,12 @@ a:hover, a:active { outline: 0; }
 
 /* --- Footer --- */
 .site-footer { padding: 0 7.6923% 1.75em; }
+.site-footer { border-top: 1px solid var(--color-border, #d1d1d1); margin-top: 3.5em; padding-top: 1.75em; }
+.footer-menu { list-style: none; margin: 0 0 1em; padding: 0; font-family: var(--font-heading); font-size: .8125rem; }
+.footer-menu li { display: inline-block; margin: 0 1.25em .5em 0; }
+.footer-menu a { text-decoration: none; }
+.site-info { color: var(--color-muted); font-size: .8125rem; line-height: 1.62; margin: 0 0 .5em; }
+.site-meta { font-style: italic; }
 
 /* --- Tablet and up: framed card look --- */
 @media screen and (min-width: 44.375em) {

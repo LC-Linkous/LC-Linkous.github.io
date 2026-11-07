@@ -4,6 +4,7 @@ description: >-
   additional hardware or physical components. Academic research and project
   highlights included
 url: "https://lc-linkous.github.io"
+author: Lauren Linkous
 
 # GitHub Pages injects jekyll-theme-primer when no theme is set; declare it so
 # the dependency is visible. Every layout this site uses (default, post, tags)

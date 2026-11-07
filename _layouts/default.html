@@ -127,7 +127,33 @@
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer">
-			<nav class="main-navigation" aria-label="Footer Primary Menu"></nav>
+			<nav class="footer-navigation" aria-label="Footer menu">
+				<ul class="footer-menu">
+					<li><a href="/">Main Page</a></li>
+					<li><a href="/projects/">Projects</a></li>
+					<li><a href="/tools/">Tools</a></li>
+					<li><a href="/posts">Posts</a></li>
+					<li><a href="/publications">Publications</a></li>
+					<li><a href="/bookshelf">Bookshelf</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+			<p class="site-info">
+				&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.
+				Code is under each repository&rsquo;s own license.
+			</p>
+			<p class="site-info">
+				<a href="https://github.com/LC-Linkous">GitHub</a> &middot;
+				<a href="https://scholar.google.com/citations?user=UHCDo0MAAAAJ">Google Scholar</a> &middot;
+				<a href="https://orcid.org/0000-0001-9945-5125">ORCID</a> &middot;
+				<a href="https://www.linkedin.com/in/lauren-linkous">LinkedIn</a> &middot;
+				<a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+			</p>
+			<p class="site-info site-meta">
+				Built with Jekyll; no scripts, no tracking.
+				<a href="https://github.com/LC-Linkous/LC-Linkous.github.io">Site source</a>.
+				Last built {{ site.time | date: "%B %-d, %Y" }}.
+			</p>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
