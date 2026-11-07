@@ -1,9 +1,7 @@
 ---
 layout: post
-title:  "Cat Antennas"
+title: "Cat Antennas"
 summary: "We have AntennaCAT, but also cat antennas made by AntennaCAT"
-datePosted: "2025-08-10"
-category: antennas
 tags: [antennacat, antennas, examples]
 ---
 

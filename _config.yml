@@ -15,8 +15,21 @@ markdown: kramdown
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
+
+# Post URLs depend only on the filename slug (the part after the date), not
+# on the folder a post is filed in. Folders under _posts/ are for your own
+# organization. Keep slugs unique and URL-worthy; `slug:` in front matter
+# overrides the filename.
+defaults:
+  - scope:
+      type: posts
+    values:
+      permalink: /posts/:slug/
 
 collections:
+  redirects:
+    output: true
   tags:
     output: true
     permalink: tags/:path/

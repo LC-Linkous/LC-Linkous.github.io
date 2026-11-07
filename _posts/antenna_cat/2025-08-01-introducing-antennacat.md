@@ -1,9 +1,7 @@
 ---
 layout: post
-title:  "Introducing AntennaCAT"
+title: "Introducing AntennaCAT"
 summary: "AntennaCAT is now live! The 2025 release is the official full release of the AntennaCAT software suite."
-datePosted: "2025-08-01"
-category: antennacat
 tags: [antennacat, open_source, research, software]
 ---
 

@@ -20,7 +20,8 @@ View the main page here: https://lc-linkous.github.io/
 
 ## Adding things
 * **Page:** add `name.md` at the root with front matter `layout: page`, `title:`, `nav:` and `permalink: /name/`; add a nav entry in `_layouts/default.html` if it should appear in the menu.
-* **Post:** add `_posts/<group>/YYYY-MM-DD-slug.md` with `layout: post`, `title:`, `summary:` and `tags: [a, b]`. Posts sort by the date in the filename.
+* **Post:** add `_posts/<any folder>/YYYY-MM-DD-slug.md` with `layout: post`, `title:`, `summary:` and `tags: [a, b]`. The URL is `/posts/<slug>/`, taken from the filename after the date, so slugs must be unique and readable (`2025-08-14-tinysa-python-api.md`, not `2025-08-14-post.md`). Folders are for organizing files and do not affect the URL. Posts sort by the filename date, which is also the date shown on the post. No `category:` or `datePosted:` fields are needed.
+* **Redirect:** add a file under `_redirects/` with `permalink:` (the old URL) and `redirect_to:` (the new one); see `_redirects/projects-antennacat.md`.
 * **Tag:** add `_tags/<tag>.md` containing `layout: tags` and `tag-name: <tag>`. A tag used on a post without a stub is shown as plain text, not a link, until the stub exists.
 
 

@@ -1,9 +1,7 @@
 ---
 layout: post
-title:  "What is an AntennaCAT?"
+title: "What is an AntennaCAT?"
 summary: "A quick overview and summary of the AntennaCAT software suite that started development back in 2023, and where we see it going"
-datePosted: "2025-08-02"
-category: antennacat
 tags: [antennacat, open_source]
 ---
 
