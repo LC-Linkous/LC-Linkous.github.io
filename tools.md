@@ -31,7 +31,9 @@ are in each repository.
 [Source](https://github.com/LC-Linkous/nanovna-web) ·
 [Changelog](https://github.com/LC-Linkous/nanovna-web/blob/main/CHANGELOG.md)
 
-![nanoVNA Web: sweep controls in the sidebar, an S11 trace with markers, and the device console below](/media/imgs/tools/nanovna-web.webp)
+<figure class="half">
+  <img src="/media/imgs/tools/nanovna-web.webp" alt="nanoVNA Web: sweep controls in the sidebar, an S11 trace with markers, and the device console below">
+</figure>
 
 A front end for the NanoVNA-F V2 and F V3. |S11| and |S21| in dB, SWR,
 phase, a Smith chart, and a rolling waterfall, with markers reading frequency,
@@ -51,7 +53,9 @@ Companion to [nanoVNA_python](https://github.com/LC-Linkous/nanoVNA_python).
 [Source](https://github.com/LC-Linkous/tinysa-web) ·
 [Changelog](https://github.com/LC-Linkous/tinysa-web/blob/main/CHANGELOG.md)
 
-![tinySA Web: live spectrum with peak markers, waterfall, and peak history windows](/media/imgs/tools/tinysa-web.webp)
+<figure class="half">
+  <img src="/media/imgs/tools/tinysa-web.webp" alt="tinySA Web: live spectrum with peak markers, waterfall, and peak history windows">
+</figure>
 
 A front end for the tinySA and tinySA Ultra. Live spectrum in dBm, waterfall,
 and peak history across one, two, or four windows, with max hold, min hold,
@@ -74,7 +78,9 @@ Companion to [tinySA_python](https://github.com/LC-Linkous/tinySA_python).
 [Protocol](https://lc-linkous.github.io/hackrf-web/protocol/) ·
 [Changelog](https://github.com/LC-Linkous/hackrf-web/blob/main/CHANGELOG.md)
 
-![hackrf-web: swept spectrum of the FM band with markers, waterfall, IQ time-domain and constellation views](/media/imgs/tools/hackrf-web.webp)
+<figure class="half">
+  <img src="/media/imgs/tools/hackrf-web.webp" alt="hackrf-web: swept spectrum of the FM band with markers, waterfall, IQ time-domain and constellation views">
+</figure>
 
 A bench page for the HackRF One. Swept spectrum and waterfall across any span to
 6 GHz, IQ at one center frequency with the FFT computed off the browser, IQ
@@ -116,15 +122,14 @@ picture, QRSS trace), then write the firmware and settings over USB, bench-test
 it, and keep a log of the fleet. A headless batch flasher takes the same CSV as
 the Fleet tab for building more than one at a time.
 
-It supports four device families: CircuitPython boards driving a NiceRF SA868
-(the DC34 fox), the AI6YM PicoFox, network foxes on several ESP32 and Arduino
-boards, and rfhs kitsune boards. The firmware behind it, `foxlib`
-(CircuitPython) and `foxlib-c` (C, shipped as UF2), is described on
-[Projects](/projects/#embedded-and-firmware).
+It supports CircuitPython boards driving a NiceRF SA868 (the DC34 fox), the
+AI6YM PicoFox, and network foxes on several ESP32 and Arduino boards. The
+firmware behind it, `foxlib` (CircuitPython) and `foxlib-c` (C, shipped as
+UF2), is described on [Projects](/projects/#embedded-and-firmware).
 
 *On the air:* all FM templates on a XIAO ESP32-C3 + SA868 on 2 m and 70 cm;
 PicoFox; `foxlib-c` on a rev 3 board. *Experimental:* the network-fox templates
-and the kitsune targets have not been run on real boards.
+have not been run on real boards.
 
 ### fox-hunt-web
 
@@ -132,31 +137,28 @@ and the kitsune targets have not been run on real boards.
 [Source](https://github.com/LC-Linkous/fox-hunt-web) ·
 [Changelog](https://github.com/LC-Linkous/fox-hunt-web/blob/main/CHANGELOG.md)
 
-![fox-hunt-web: signal strength against time, per-channel scan strip, audio passband, and the fox console](/media/imgs/tools/fox-hunt-web.webp)
+<figure class="half">
+  <img src="/media/imgs/tools/fox-hunt-web.webp" alt="fox-hunt-web: signal strength against time, per-channel scan strip, audio passband, and the fox console">
+</figure>
 
 A receiver and direction-finding instrument for the DC34 fox, a Seeed XIAO
 ESP32-C3 driving a NiceRF SA868. Tune 2 m or 70 cm, watch signal strength live,
 scan a channel list for the one with a fox on it, decode a fox's Morse ID and
 SSTV pictures from the audio, and log it all to CSV.
 
-- **Autoseek** steps a channel list like a radio's SEEK, stopping where the
-  signal rises above that channel's own learned noise floor.
-- **Cycle timing** watches threshold crossings to work out how long the fox
-  keys and how often, then counts down to the next burst.
-- **Bearings.** Hold *Capture*, turn through a circle with a directional
-  antenna, release: signal against heading is binned onto a polar chart and the
-  lobe center is the bearing. Two captures from different places give a fix.
-- **Hunt mode** collapses everything into one phone-width column for walking
-  around with a yagi.
-- **The audio decoders run on any receiver.** CW, carrier-keyed Morse, and SSTV
-  (Martin, Scottie, Robot36) are decoded from a USB sound card with the Web
-  Audio API, so a handheld tuned to the fox gets you the ID and the pictures
-  with nothing soldered.
-- **The page installs the firmware** through CircuitPython's REPL, staged to a
-  temporary name and renamed so a failed transfer leaves the working firmware
-  alone.
-- **It works offline.** A service worker caches the page and firmware after one
-  visit.
+Beyond the signal meter, it does the things a hunter actually wants: an
+autoseek that steps a channel list and stops where a signal rises above that
+channel's own learned noise floor; cycle timing that watches threshold crossings
+to work out how long the fox keys and how often, then counts down to the next
+burst; and a bearing capture, where you hold a button, turn through a circle
+with a directional antenna, and get a lobe center on a polar chart, with two
+captures from different places giving a fix. A hunt mode collapses everything
+into one phone-width column for walking with a yagi, the page installs the
+fox firmware over CircuitPython's REPL, and a service worker keeps it working
+offline after one visit. The audio decoders (CW, carrier-keyed Morse, and
+SSTV in Martin, Scottie, and Robot36) run on any receiver through a USB sound
+card, so a handheld tuned to the fox gets you the ID and the pictures with
+nothing soldered.
 
 Transmit ships off: the firmware is receive-only by default, and enabling it
 puts keying behind a stored callsign, a per-session arm, and a hardware deadline
@@ -181,7 +183,9 @@ and wireless courses. Same rules as the tools above: Chrome or Edge, a
 [Open](https://interactive-hardware-interfacing.github.io/led-iv-lab/) ·
 [Source](https://github.com/interactive-hardware-interfacing/led-iv-lab)
 
-![LED I–V Lab: instrument panel with an LED selected and an I–V chart with one curve per LED color](/media/imgs/tools/led-iv-lab.webp)
+<figure class="half">
+  <img src="/media/imgs/tools/led-iv-lab.webp" alt="LED I–V Lab: instrument panel with an LED selected and an I–V chart with one curve per LED color">
+</figure>
 
 A browser instrument for an electronics lab on diode I–V curves. Students pick
 one of four LEDs, sweep the drive voltage, and watch forward voltage and

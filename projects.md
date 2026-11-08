@@ -111,12 +111,11 @@ firmware libraries behind [fox-bench](/tools/#fox-bench): `foxlib` in
 CircuitPython for boards driving a NiceRF SA868, and `foxlib-c` in C, shipped as
 a UF2. Both are written against the same `PROTOCOL.md` contract as the page and
 its simulated board, so a fox configured in the browser behaves the same
-whichever firmware it runs. Supported
-targets are the DC34 fox (XIAO ESP32-C3 + SA868), the AI6YM PicoFox, network
-foxes on XIAO C3/C6/C5/S3, Waveshare ESP32-S3-Nano, FireBeetle 2 ESP32-C5, and
-Arduino Nano 33 BLE, and rfhs kitsune boards; the network and kitsune targets
-are experimental. A headless batch flasher writes a fleet of boards from one
-CSV.
+whichever firmware it runs. Supported targets are the DC34 fox (XIAO ESP32-C3 +
+SA868), the AI6YM PicoFox, and network foxes on XIAO C3/C6/C5/S3, Waveshare
+ESP32-S3-Nano, FireBeetle 2 ESP32-C5, and Arduino Nano 33 BLE; the network
+targets are experimental. A headless batch flasher writes a fleet of boards from
+one CSV.
 
 **[fox-hunt-web firmware](https://github.com/LC-Linkous/fox-hunt-web)** is the
 receive-side CircuitPython for the same XIAO + SA868 board, with transmit
