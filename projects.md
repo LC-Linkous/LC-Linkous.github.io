@@ -42,7 +42,7 @@ A collection of state-machine-based optimizers that integrate with AntennaCAT,
 plus the benchmarking and evaluation tools around them. Some of these are
 serious; some of them are not.
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/optimizer-himmelblau.webp" alt="3D surface and contour plot of the Himmelblau test function">
   <figcaption>Himmelblau's function as rendered by the optimizer collection's shared plotting; the same figure heads the pso_python and surrogate_model_optimization READMEs.</figcaption>
 </figure>
@@ -67,7 +67,7 @@ command-line calculator, synthesizer, and evaluator for linear antenna arrays,
 built to be called as the evaluation step inside an optimizer loop and
 compatible with AntennaCAT.
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/arraycalculator-hamming.webp" alt="Polar and rectangular array patterns with element weights for a 16-element Hamming-weighted steered array">
   <figcaption>ArrayCalculator: a 16-element Hamming-weighted array steered off boresight, with the element weights below.</figcaption>
 </figure>
@@ -90,7 +90,7 @@ any of the device manufacturers.
 `tsapython` is archived with a DOI and is citable:
 [doi:10.5281/zenodo.20546764](https://doi.org/10.5281/zenodo.20546764).
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/nanovna-python-waterfall.webp" alt="Four live plots from nanoVNA_python: S11 magnitude, S11 phase, a magnitude-history waterfall, and a complex-plane trace">
   <figcaption>A live S11 measurement scripted with nanoVNA_python: magnitude, phase, waterfall, and complex plane, the same views the browser tool shows.</figcaption>
 </figure>
@@ -167,7 +167,7 @@ packets over a mock serial transport, mirroring a bedside monitor's pipeline, so
 students can practice parsing, filtering, and feature extraction on live data
 with no hardware.
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/cv-tracking.webp" alt="Tracked feature points overlaid on a cat's face, with a top-down scatter of the tracked points beside it">
   <figcaption>From the computer vision samples: feature tracking on a live feed, with the top-down view of the tracked points.</figcaption>
 </figure>
@@ -194,7 +194,7 @@ the hardware on the desk.
   drive voltage, and plot forward voltage and current live from an Adafruit
   ItsyBitsy M4. Arduino firmware built to `.uf2` by CI, with a CircuitPython
   build as a swap-in; exports CSV for the lab report.
-- **[Intro EMF Lab](https://interactive-hardware-interfacing.github.io/intro-EMF-lab/)**
+- **[Intro EMF Lab](https://interactive-hardware-interfacing.github.io/intro-emf-lab/)**
   ([source](https://github.com/interactive-hardware-interfacing/intro-emf-lab)) —
   browser field simulators for an introductory electromagnetism course: point
   and line charges in 2D and 3D, Gauss's law, capacitors, conduction, dielectric
@@ -237,7 +237,7 @@ first-time hardware users.
 **[Fox hunt write-ups](https://github.com/HamRadioVillage/fox-hunt-writeups/tree/main/dc34)** —
 post-contest write-ups covering how the hunt was structured and run.
 
-<figure style="max-width:360px">
+<figure class="half">
   <img src="/media/imgs/projects/dc34-fox-board.webp" alt="The DC34 fox transmitter board with the Ham Radio Village Fox Hunt shield badge">
   <figcaption>The DC34 fox board with its Ham Radio Village Fox Hunt shield. Image from the HamRadioVillage/dc34fox repository.</figcaption>
 </figure>
@@ -268,7 +268,7 @@ on the Publications page.
 ## Research antennas
 
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/cat-antennas.webp" alt="Fabricated cat-shaped WiFi antennas on copper-clad substrate, labeled by band, with a cat inspecting the samples">
   <figcaption>Cat-shaped WiFi antennas for 5 and 6 GHz and for 2.4 and 5.8 GHz, with Sybil, the inspiration for the design, inspecting the samples.</figcaption>
 </figure>
@@ -284,7 +284,7 @@ which has turned up in publications, projects, and conferences. See also the
 ## Code from papers
 
 
-<figure>
+<figure class="half">
   <img src="/media/imgs/projects/rl-reconfigurable-antennas.webp" alt="The reinforcement learning experiment GUI with a 3D plot of the receiver nodes and the experiment controls">
   <figcaption>The experiment GUI from the 2025 reinforcement-learning reconfigurable antenna work.</figcaption>
 </figure>

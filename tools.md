@@ -194,7 +194,7 @@ disconnect, and at the end of every sweep.
 
 ### Intro EMF Lab
 
-[Open](https://interactive-hardware-interfacing.github.io/intro-EMF-lab/) ·
+[Open](https://interactive-hardware-interfacing.github.io/intro-emf-lab/) ·
 [Source](https://github.com/interactive-hardware-interfacing/intro-emf-lab)
 
 Browser-based field simulators for an introductory electromagnetism course,
