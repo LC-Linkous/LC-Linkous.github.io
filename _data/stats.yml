@@ -2,7 +2,7 @@
 # (nightly). Do not edit by hand; edits are overwritten on the next run.
 # Download counts exclude PyPI mirrors. Stars and forks are summed over
 # repositories the user owns that are not themselves forks.
-updated: '2026-11-19'
+updated: '2026-11-20'
 github:
   user: 'LC-Linkous'
   public_repos: 49
@@ -11,7 +11,7 @@ github:
   active_90d: 18
   most_recent_push:
     repo: 'LC-Linkous/fox-bench'
-    pushed_at: '2026-11-19'
+    pushed_at: '2026-11-20'
   repos:
     LC-Linkous/AntennaCalculationAutotuningTool:
       stars: 24
@@ -46,19 +46,19 @@ github:
     LC-Linkous/fox-bench:
       stars: 0
       forks: 1
-      pushed_at: '2026-11-19'
+      pushed_at: '2026-11-20'
       latest_release: 'v0.7.12'
       latest_release_date: '2026-10-23'
 pypi:
   tsapython:
     version: '4.0.0'
-    last_month: 168
-    total: 1291
+    last_month: 150
+    total: 1292
   nvnapython:
     version: '2.0.1'
     last_month: 39
-    total: 430
+    total: 431
   hackrfpy:
     version: '1.2.0'
-    last_month: 307
-    total: 781
+    last_month: 304
+    total: 784
