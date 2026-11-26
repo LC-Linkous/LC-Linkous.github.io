@@ -1,0 +1,104 @@
+---
+layout: page
+title: Tools
+nav: tools
+permalink: /tools/
+---
+
+{% comment %}
+  Everything on this page comes from _data/tools.yml: the card grid at the top
+  and the full entries below are rendered from the same list. To add a tool or
+  swap a placeholder for a real image, edit the data file, not this page.
+{% endcomment %}
+{% assign placeholder = "/media/imgs/tools/placeholder.webp" %}
+
+<p>Browser-based instruments for RF work and for teaching. Each one is a static
+page: open it, connect the hardware over USB, and work. Nothing to install for
+the serial devices, and every page has a <strong>Try without hardware</strong> button that
+runs it against a simulated device, so any of them can be tried right now.</p>
+
+<p class="tools-browsers">Direct-USB tools need Chrome or Edge, the browsers that implement
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial</a>.
+Firefox and Safari run the demo modes, and Firefox runs hackrf-web through its bridge.</p>
+
+<div class="tool-cards">
+{%- for group in site.data.tools.groups %}{% for tool in group.tools %}
+  <div class="tool-card">
+    <a class="tool-card-thumb" href="#{{ tool.id }}" tabindex="-1" aria-hidden="true">
+      <img src="{% if tool.image %}/media/imgs/tools/{{ tool.image }}{% else %}{{ placeholder }}{% endif %}" alt="" loading="lazy">
+    </a>
+    <div class="tool-card-body">
+      <p class="tool-card-group">{{ group.name }}</p>
+      <p class="tool-card-name"><a href="#{{ tool.id }}">{{ tool.name }}</a></p>
+      <p class="tool-card-summary">{{ tool.summary }}</p>
+      <p class="tool-card-links"><a href="{{ tool.links[0].url }}">Try it</a> · <a href="{{ tool.links[1].url }}">Source</a></p>
+    </div>
+  </div>
+{%- endfor %}{% endfor %}
+</div>
+
+{% for group in site.data.tools.groups %}
+<hr>
+
+<h2 id="{{ group.id }}">{{ group.name }}</h2>
+
+{{ group.intro | markdownify }}
+
+{% for tool in group.tools %}
+<section class="tool-entry">
+  <h3 id="{{ tool.id }}">{{ tool.name }}</h3>
+  <div class="tool-row">
+    <figure class="tool-shot">
+      {% if tool.image -%}
+      <a href="/media/imgs/tools/{{ tool.image }}"><img src="/media/imgs/tools/{{ tool.image }}" alt="{{ tool.alt | escape }}" loading="lazy"></a>
+      {%- else -%}
+      <img src="{{ placeholder }}" alt="Screenshot of {{ tool.name | escape }} coming soon" loading="lazy">
+      {%- endif %}
+    </figure>
+    <div class="tool-side">
+      <ul class="tool-features">
+        {% for f in tool.features %}<li>{{ f | escape }}</li>
+        {% endfor %}
+      </ul>
+      <dl class="tool-meta">
+        <dt>Hardware</dt><dd>{{ tool.hardware | escape }}</dd>
+        <dt>Browser</dt><dd>{{ tool.browser | escape }}</dd>
+      </dl>
+      <p class="tool-links">
+        <a class="tool-open" href="{{ tool.links[0].url }}">{{ tool.links[0].label }}</a>
+        <span class="tool-demo-note">no hardware needed in demo mode</span><br>
+        {% for l in tool.links offset: 1 %}<a href="{{ l.url }}">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+      </p>
+    </div>
+  </div>
+  <div class="tool-body">
+{{ tool.body | markdownify }}
+{% if tool.tested %}<p class="tool-tested">{{ tool.tested | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
+  </div>
+</section>
+{% endfor %}
+{% endfor %}
+
+<hr>
+
+<h2 id="how-these-are-built">How these are built</h2>
+
+<p>Each tool is its own repository with its own device layer. What they share is
+a convention: a <code>PROTOCOL.md</code> that the page, the simulated device, and (where
+there is one) the firmware are all written against. Where a tool has a Python
+library for the same hardware, the two mirror each other so a measurement can
+start in the browser and finish in a script. The Python libraries, the
+command-line tools, and the firmware are listed on <a href="/projects/">Projects</a>.</p>
+
+<p>Anything that can transmit or drive an output starts in a safe state:
+hackrf-web's transmit is locked behind a bridge flag, the fox firmware ships
+receive-only, and the LED lab zeroes its outputs whenever it lets go of the
+board.</p>
+
+<p>The measurement tools each have a <strong>Diagnostics</strong> section that downloads a JSON
+report of raw device replies, and fox-hunt-web can download its console log.
+Attached to a GitHub issue, either one helps validate the hardware listed as
+untested above.</p>
+
+<p>Source is on <a href="https://github.com/LC-Linkous">GitHub</a> under the GPL; licenses
+are in each repository.</p>

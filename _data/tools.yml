@@ -1,0 +1,275 @@
+# Tools page data. tools.md renders the card grid at the top and the full
+# entries below from this one list, so each tool is described once.
+#
+# Per tool:
+#   id          anchor on the page (/tools/#id); keep stable, other pages link to it
+#   name        heading
+#   image       path under /media/imgs/tools/; omit to show the placeholder
+#   alt         alt text for the image
+#   summary     one line for the card at the top
+#   features    short list beside the image
+#   hardware    what it connects to
+#   browser     where it runs
+#   links       ordered list of {label, url}; the first is the "Open" link
+#   body        longer text under the image row (markdown)
+#   tested      the tested / untested line (markdown); optional
+
+groups:
+  - id: measurement
+    name: Measurement
+    intro: >-
+      Front ends for RF test equipment. Each has a Python library for the same
+      hardware, so a measurement can start in the browser and finish in a
+      script.
+    tools:
+      - id: nanovna-web
+        name: nanoVNA Web
+        image: nanovna-web.webp
+        alt: "nanoVNA Web: sweep controls in the sidebar, an S11 trace with markers, and the device console below"
+        summary: Browser front end for the NanoVNA-F V2 and V3.
+        features:
+          - "|S11|, |S21|, SWR, phase, Smith chart, waterfall"
+          - Markers with frequency, SWR, and R + jX
+          - On-device SOLT calibration and electrical delay
+          - CW meter for trimming an antenna
+          - Exports CSV, Touchstone, and PNG
+        hardware: NanoVNA-F V2 / V3 over USB
+        browser: Chrome or Edge
+        links:
+          - { label: Open, url: "https://lc-linkous.github.io/nanovna-web/" }
+          - { label: Source, url: "https://github.com/LC-Linkous/nanovna-web" }
+          - { label: Changelog, url: "https://github.com/LC-Linkous/nanovna-web/blob/main/CHANGELOG.md" }
+          - { label: nanoVNA_python, url: "https://github.com/LC-Linkous/nanoVNA_python" }
+        body: >-
+          A front end for the NanoVNA-F V2 and F V3. |S11| and |S21| in dB, SWR, phase, a Smith chart, and a rolling
+          waterfall, with markers reading frequency, SWR, and R + jX.
+          Step-through SOLT calibration and electrical delay run on the device;
+          the page sends the commands and shows what it last sent. A CW meter
+          gives a single-frequency readout for trimming an antenna while
+          watching one number. Exports CSV, Touchstone `.s1p` / `.s2p`, and plot
+          PNGs, and pulls a screenshot of the instrument's own screen over the
+          same cable.
+        tested: >-
+          *Tested on:* NanoVNA-F V3. *Selectable but untested:* NanoVNA-H4 and
+          the generic profile. Devices that speak the V2/SAA-2 binary protocol
+          will not work.
+
+      - id: tinysa-web
+        name: tinySA Web
+        image: tinysa-web.webp
+        alt: "tinySA Web: live spectrum with peak markers, waterfall, and peak history windows"
+        summary: Browser front end for the tinySA and tinySA Ultra.
+        features:
+          - Live spectrum, waterfall, and peak history in 1, 2, or 4 windows
+          - Max / min hold, averaging, and smoothing that leave raw data untouched
+          - Interpolated peak markers, −3 dB bandwidth, band power
+          - Text or binary acquisition, about 3× faster in binary
+          - Generator mode for a commanded tone
+        hardware: tinySA / tinySA Ultra over USB
+        browser: Chrome or Edge
+        links:
+          - { label: Open, url: "https://lc-linkous.github.io/tinysa-web/" }
+          - { label: Source, url: "https://github.com/LC-Linkous/tinysa-web" }
+          - { label: Changelog, url: "https://github.com/LC-Linkous/tinysa-web/blob/main/CHANGELOG.md" }
+          - { label: tinySA_python, url: "https://github.com/LC-Linkous/tinySA_python" }
+        body: >-
+          Live spectrum in dBm, waterfall, and peak history across one, two, or
+          four windows, with max hold, min hold, power averaging, and display
+          smoothing done on the page so the recorded data stays raw. Markers
+          interpolate the peak frequency between bins and report −3 dB
+          bandwidth and band power. RBW, attenuation, LNA, and spur removal are
+          set on the device. Both acquisition paths are available, `scan` for
+          text and `scanraw` for binary at roughly three times the speed, and a
+          diagnostic runs the two over the same range and reports the offset
+          between them. Generator mode puts the device into output mode for a
+          commanded tone.
+        tested: >-
+          *Tested on:* tinySA Ultra (ZS405). *Selectable but untested:* tinySA
+          Basic (ZS304) and Ultra+ (ZS406/ZS407). Needs device firmware
+          v1.4-182 or later.
+
+      - id: hackrf-web
+        name: hackrf-web
+        image: hackrf-web.webp
+        alt: "hackrf-web: swept spectrum of the FM band with markers, waterfall, IQ time-domain and constellation views"
+        summary: Bench page for the HackRF One, through a small Python bridge.
+        features:
+          - Swept spectrum and waterfall across any span to 6 GHz
+          - IQ at one center frequency, time-domain and constellation views
+          - IQ recording to SigMF
+          - Transmit locked unless the bridge allows it
+        hardware: HackRF One, plus a small Python bridge
+        browser: Chrome, Edge, or Firefox
+        links:
+          - { label: Open, url: "https://lc-linkous.github.io/hackrf-web/" }
+          - { label: Source, url: "https://github.com/LC-Linkous/hackrf-web" }
+          - { label: Protocol, url: "https://lc-linkous.github.io/hackrf-web/protocol/" }
+          - { label: Changelog, url: "https://github.com/LC-Linkous/hackrf-web/blob/main/CHANGELOG.md" }
+          - { label: hackRF_python, url: "https://github.com/LC-Linkous/hackRF_python" }
+        body: |-
+          Swept spectrum and waterfall across any span to 6 GHz, IQ at one
+          center frequency with the FFT computed off the browser, IQ snapshots
+          as time-domain and constellation views, and IQ recording to SigMF.
+
+          The HackRF is not a serial device, so unlike the two tools above this
+          one needs a small Python bridge on the machine the board is plugged
+          into:
+
+          ```
+          pip install hackrf-web
+          hackrf-web          # starts the bridge, prints a token, opens the page
+          ```
+
+          Levels are dBFS, not dBm: the HackRF is not a calibrated instrument,
+          and the unit is carried on the axis, the markers, and every export
+          rather than quietly assumed. Transmit is locked unless the bridge is
+          started with `--allow-tx`, and then it is time-capped and confirmed.
+          Demo mode needs no bridge; it replays frames computed from a real
+          recording of the FM band. Because the page talks to the bridge over a
+          WebSocket rather than Web Serial, it also runs in Firefox.
+
+  - id: fox-hunting
+    name: Fox hunting
+    intro: >-
+      Two tools for the same hobby from opposite ends: one builds and
+      configures fox transmitters, the other finds them in the field. Both
+      target the hardware used in the
+      [Ham Radio Village Fox Hunt](https://github.com/HamRadioVillage/dc34fox).
+    tools:
+      - id: fox-bench
+        name: fox-bench
+        alt: "fox-bench"
+        summary: Workbench for configuring, flashing, and logging fox transmitters.
+        features:
+          - Configure a fox in a form, then hear and see its transmission
+          - Morse ID, song, SSTV picture, and QRSS trace previews
+          - Writes firmware and settings over USB
+          - Bench test and fleet log, with a headless batch flasher
+        hardware: DC34 fox (XIAO ESP32-C3 + SA868), AI6YM PicoFox, ESP32 / Arduino network foxes
+        browser: Chrome or Edge
+        links:
+          - { label: Open, url: "https://lc-linkous.github.io/fox-bench/" }
+          - { label: Source, url: "https://github.com/LC-Linkous/fox-bench" }
+          - { label: Changelog, url: "https://github.com/LC-Linkous/fox-bench/blob/main/CHANGELOG.md" }
+        body: >-
+          A workbench for building fox transmitters. Configure a fox in a form,
+          hear and see what it will transmit before it goes on the air (Morse
+          ID, song, SSTV picture, QRSS trace), then write the firmware and
+          settings over USB, bench-test it, and keep a log of the fleet. A
+          headless batch flasher takes the same CSV as the Fleet tab for
+          building more than one at a time. The firmware behind it, `foxlib`
+          (CircuitPython) and `foxlib-c` (C, shipped as UF2), is described on
+          [Projects](/projects/#embedded-and-firmware).
+        tested: >-
+          *On the air:* all FM templates on a XIAO ESP32-C3 + SA868 on 2 m and
+          70 cm; PicoFox; `foxlib-c` on a rev 3 board. *Experimental:* the
+          network-fox templates have not been run on real boards.
+
+      - id: fox-hunt-web
+        name: fox-hunt-web
+        image: fox-hunt-web.webp
+        alt: "fox-hunt-web: signal strength against time, per-channel scan strip, audio passband, and the fox console"
+        summary: Receiver and direction-finding instrument for the DC34 fox.
+        features:
+          - Live signal strength and channel scan on 2 m and 70 cm
+          - Autoseek, cycle timing, and bearing capture on a polar chart
+          - Decodes Morse IDs and SSTV pictures from audio
+          - Phone-width hunt mode, works offline
+        hardware: DC34 fox board, or any receiver through a USB sound card
+        browser: Chrome, Edge, or Android Chrome
+        links:
+          - { label: Open, url: "https://lc-linkous.github.io/fox-hunt-web/" }
+          - { label: Source, url: "https://github.com/LC-Linkous/fox-hunt-web" }
+          - { label: Changelog, url: "https://github.com/LC-Linkous/fox-hunt-web/blob/main/CHANGELOG.md" }
+        body: |-
+          A receiver and direction-finding instrument for the DC34 fox, a Seeed
+          XIAO ESP32-C3 driving a NiceRF SA868. Tune 2 m or 70 cm, watch signal
+          strength live, scan a channel list for the one with a fox on it,
+          decode a fox's Morse ID and SSTV pictures from the audio, and log it
+          all to CSV.
+
+          Beyond the signal meter, it does the things a hunter actually wants:
+          an autoseek that steps a channel list and stops where a signal rises
+          above that channel's own learned noise floor; cycle timing that
+          watches threshold crossings to work out how long the fox keys and how
+          often, then counts down to the next burst; and a bearing capture,
+          where you hold a button, turn through a circle with a directional
+          antenna, and get a lobe center on a polar chart, with two captures
+          from different places giving a fix. A hunt mode collapses everything
+          into one phone-width column for walking with a yagi, the page
+          installs the fox firmware over CircuitPython's REPL, and a service
+          worker keeps it working offline after one visit. The audio decoders
+          (CW, carrier-keyed Morse, and SSTV in Martin, Scottie, and Robot36)
+          run on any receiver through a USB sound card, so a handheld tuned to
+          the fox gets you the ID and the pictures with nothing soldered.
+
+          Transmit ships off: the firmware is receive-only by default, and
+          enabling it puts keying behind a stored callsign, a per-session arm,
+          and a hardware deadline on every key-down. A license is needed to
+          transmit; none is needed to receive.
+        tested: >-
+          *Status:* written and tested against the simulated fox and
+          synthesized audio. Not yet run against a real fox; the in-page
+          installer is unproven on hardware. Runs on Android Chrome over
+          USB-OTG. iOS has no Web Serial, so iPhones get the audio decoders,
+          the simulated fox, and session replay.
+
+  - id: teaching-instruments
+    name: Teaching instruments
+    intro: >-
+      From the
+      [interactive-hardware-interfacing](https://interactive-hardware-interfacing.github.io/)
+      collection of lab instruments and demos for undergraduate electronics and
+      wireless courses. The six ESP-NOW wireless demos from the same collection
+      are on [Projects](/projects/#demos-and-interactive-labs).
+    tools:
+      - id: led-iv-lab
+        name: LED I–V Lab
+        image: led-iv-lab.webp
+        alt: "LED I–V Lab: instrument panel with an LED selected and an I–V chart with one curve per LED color"
+        summary: Diode I–V curve lab, measured live from a microcontroller.
+        features:
+          - Pick one of four LEDs and sweep the drive voltage
+          - Forward voltage and current plotted live
+          - CSV export for the lab report
+          - Outputs driven safe on power-up, disconnect, and sweep end
+        hardware: Adafruit ItsyBitsy M4 over USB
+        browser: Chrome or Edge
+        links:
+          - { label: Open, url: "https://interactive-hardware-interfacing.github.io/led-iv-lab/" }
+          - { label: Source, url: "https://github.com/interactive-hardware-interfacing/led-iv-lab" }
+        body: >-
+          A browser instrument for an electronics lab on diode I–V curves.
+          Students pick one of four LEDs, sweep the drive voltage, and watch
+          forward voltage and current plot live from an Adafruit ItsyBitsy M4
+          over USB. Results export as CSV for the lab report. The repository
+          carries the whole experiment: a documented serial protocol, Arduino
+          firmware built to a `.uf2` by CI and attached to each release, and a
+          CircuitPython build speaking the same protocol as a swap-in option.
+          Every LED switch is driven off and the DAC set to zero on power-up, on
+          disconnect, and at the end of every sweep.
+
+      - id: intro-emf-lab
+        name: Intro EMF Lab
+        alt: "Intro EMF Lab"
+        summary: Field simulators for an introductory electromagnetism course.
+        features:
+          - "A tab per topic: charges, Gauss's law, capacitors, magnetic fields, transmission lines, FDTD, and a sandbox"
+          - Governing equations beside every plot
+          - Every tab's state shareable as a link
+          - Checked against closed-form benchmarks before each deploy
+        hardware: None; simulation only
+        browser: Any modern browser
+        links:
+          - { label: Open, url: "https://interactive-hardware-interfacing.github.io/intro-emf-lab/" }
+          - { label: Source, url: "https://github.com/interactive-hardware-interfacing/intro-emf-lab" }
+        body: >-
+          Browser-based field simulators for an introductory electromagnetism
+          course, in one static page with a tab per topic: point and line
+          charges in 2D and 3D, Gauss's law, capacitors, conduction, dielectric
+          interfaces, magnetic fields, inductors, transmission lines, FDTD, and
+          a sandbox, each with its governing equations shown beside the plot.
+          The relaxation solver runs in a web worker so the page stays
+          responsive, the full state of every tab is encoded in the URL so a
+          configuration can be handed to students as a link, and a set of
+          closed-form benchmarks runs before each deploy.
