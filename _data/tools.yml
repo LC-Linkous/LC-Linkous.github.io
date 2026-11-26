@@ -11,7 +11,8 @@
 #   hardware    what it connects to
 #   browser     where it runs
 #   links       ordered list of {label, url}; the first is the "Open" link
-#   body        longer text under the image row (markdown)
+#   body        longer text under the image row (markdown; write a literal
+#               pipe as &#124; or kramdown turns the paragraph into a table)
 #   tested      the tested / untested line (markdown); optional
 
 groups:
@@ -41,7 +42,7 @@ groups:
           - { label: Changelog, url: "https://github.com/LC-Linkous/nanovna-web/blob/main/CHANGELOG.md" }
           - { label: nanoVNA_python, url: "https://github.com/LC-Linkous/nanoVNA_python" }
         body: >-
-          A front end for the NanoVNA-F V2 and F V3. |S11| and |S21| in dB, SWR, phase, a Smith chart, and a rolling
+          A front end for the NanoVNA-F V2 and F V3. &#124;S11&#124; and &#124;S21&#124; in dB, SWR, phase, a Smith chart, and a rolling
           waterfall, with markers reading frequency, SWR, and R + jX.
           Step-through SOLT calibration and electrical delay run on the device;
           the page sends the commands and shows what it last sent. A CW meter

@@ -83,22 +83,14 @@ Firefox and Safari run the demo modes, and Firefox runs hackrf-web through its b
 
 <h2 id="how-these-are-built">How these are built</h2>
 
-<p>Each tool is its own repository with its own device layer. What they share is
-a convention: a <code>PROTOCOL.md</code> that the page, the simulated device, and (where
-there is one) the firmware are all written against. Where a tool has a Python
-library for the same hardware, the two mirror each other so a measurement can
-start in the browser and finish in a script. The Python libraries, the
+<p>Each tool is its own repository with its own device layer, designed to be
+used with minimal (or no) installs.</p>
+
+<p>Many of these tools started as a Python library to address a need with
+specific benchtop hardware functionality. The browser versions of the tools are
+designed to mirror the library so that data collection can be done in the
+browser and work can be moved to a script. The Python libraries, the
 command-line tools, and the firmware are listed on <a href="/projects/">Projects</a>.</p>
-
-<p>Anything that can transmit or drive an output starts in a safe state:
-hackrf-web's transmit is locked behind a bridge flag, the fox firmware ships
-receive-only, and the LED lab zeroes its outputs whenever it lets go of the
-board.</p>
-
-<p>The measurement tools each have a <strong>Diagnostics</strong> section that downloads a JSON
-report of raw device replies, and fox-hunt-web can download its console log.
-Attached to a GitHub issue, either one helps validate the hardware listed as
-untested above.</p>
 
 <p>Source is on <a href="https://github.com/LC-Linkous">GitHub</a> under the GPL; licenses
 are in each repository.</p>
