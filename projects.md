@@ -8,6 +8,20 @@ permalink: /projects/
 Research software, optimizers, Python libraries, firmware, course material,
 hardware, teaching demos, and community projects. The browser instruments have their own page: [Tools](/tools/).
 
+<nav class="jumpbar" aria-label="Sections on this page">
+<a href="#antennacat">AntennaCAT</a>
+<a href="#optimization">Optimization</a>
+<a href="#python-device-libraries">Device libraries</a>
+<a href="#embedded-and-firmware">Embedded and firmware</a>
+<a href="#teaching-material">Teaching material</a>
+<a href="#demos-and-interactive-labs">Demos and labs</a>
+<a href="#amateur-radio-hardware">Amateur radio</a>
+<a href="#little-ram-pantries">Little Ram Pantries</a>
+<a href="#research-antennas">Research antennas</a>
+<a href="#code-from-papers">Code from papers</a>
+<a href="#collaborations">Collaborations</a>
+</nav>
+
 ---
 
 ## AntennaCAT
@@ -310,3 +324,10 @@ machine-learning tutorial series under Teaching material.
 Dollarhyde's CLI tool for basic antenna design. The
 [fork](https://github.com/LC-Linkous/AntennaCalculator) adds a GUI alongside
 the CLI.
+
+**[PECS](https://github.com/blumjn/PECS)** —
+proximity effect correction for electron-beam lithography on a Raith Voyager,
+using particle swarm optimization to tune exposure for plasmonic bowtie
+nanoantennas. Code behind
+[*Optimization of Plasmonic Bowtie Nanoantenna Design and Fabrication with Swarm Algorithm Proximity Effect Correction*](https://doi.org/10.1117/12.3081068)
+(SPIE 2026).

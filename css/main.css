@@ -245,6 +245,19 @@ figure { margin: 0; }
   .tool-row { grid-template-columns: 1fr; }
 }
 
+/* --- Jump bar (section links at the top of a long page, e.g. projects.md) --- */
+.jumpbar { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.75em; }
+.entry-content .jumpbar a {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: none;
+  font-family: var(--font-heading);
+  font-size: .8125rem;
+  padding: .2em .75em;
+}
+.entry-content .jumpbar a:hover, .entry-content .jumpbar a:focus { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
 embed, iframe, object, video { margin-bottom: 1.75em; max-width: 100%; vertical-align: middle; }
 figcaption {
   color: var(--color-muted);
