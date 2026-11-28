@@ -2,7 +2,7 @@
 # (nightly). Do not edit by hand; edits are overwritten on the next run.
 # Download counts exclude PyPI mirrors. Stars and forks are summed over
 # repositories the user owns that are not themselves forks.
-updated: '2026-11-27'
+updated: '2026-11-28'
 github:
   user: 'LC-Linkous'
   public_repos: 49
@@ -52,13 +52,13 @@ github:
 pypi:
   tsapython:
     version: '4.0.0'
-    last_month: 124
-    total: 1316
+    last_month: 127
+    total: 1320
   nvnapython:
     version: '2.0.1'
-    last_month: 38
-    total: 437
+    last_month: 37
+    total: 438
   hackrfpy:
     version: '1.2.0'
-    last_month: 250
-    total: 807
+    last_month: 255
+    total: 813
